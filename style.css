@@ -1,0 +1,21 @@
+/******************General CSS****************/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+.shop-container {
+  margin: 50px;
+}
+.shop-container:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.shop-item {
+}
