@@ -19,3 +19,111 @@ img {
 
 .shop-item {
 }
+
+/**Compendium**/
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.compendium {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+/**Build-a-Florb**/
+nav {
+  position: absolute;
+}
+.builder {
+  background-image: url(images/build-a-florb/bg.png);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+}
+.circle {
+  height: 400px;
+  width: 400px;
+  background: #9987b7;
+  border-radius: 50%;
+  opacity: 0.999;
+}
+/* .eye {
+  height: 100px;
+  width: 100px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.999;
+} */
+
+.toolbox {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  height: 200px;
+  width: 100vw;
+  background-color: rgb(116, 116, 116);
+  bottom: 0;
+  z-index: 1;
+}
+
+.eye {
+  height: 200px;
+  width: 200px;
+}
+
+.color-picker {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  background: #e5e5e5;
+  left: 0;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+}
+.color-1 {
+  background-color: #75b8cb;
+}
+.color-2 {
+  background-color: #3a4e64;
+}
+.color-3 {
+  background-color: #a45c5c;
+}
+.color-4 {
+  background-color: #9987b7;
+}
+.color-5 {
+  background-color: #6b747d;
+}
+.color-6 {
+  background-color: #8fa3a0;
+}
+.color-7 {
+  background-color: #305a82;
+}
+.color-8 {
+  background-color: #2f2d3a;
+}
+.color-9 {
+  background-color: #5fa5cd;
+}
+.color-10 {
+  background-color: #64456a;
+}

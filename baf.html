@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Florbs | Build-a-Florb</title>
+  </head>
+  <body>
+    <header>
+      <nav class="mobile-nav"></nav>
+      <nav class="desktop-nav">
+        <ul class="links-nav">
+          <li class="link-nav"><a href="#">Home</a></li>
+          <li class="link-nav"><a href="#">Product Info</a></li>
+          <li class="link-nav"><a href="#">Compendium</a></li>
+          <li class="link-nav"><a href="#">Shop</a></li>
+          <li class="link-nav"><a href="#">Build-a-Florb</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="builder">
+      <div class="wrapper">
+        <div class="circle"></div>
+      </div>
+      <input class="draggable" type="color" />
+      <div class="color-picker">
+        <div class="color color-1"></div>
+        <div class="color color-2"></div>
+        <div class="color color-3"></div>
+        <div class="color color-4"></div>
+        <div class="color color-5"></div>
+        <div class="color color-6"></div>
+        <div class="color color-7"></div>
+        <div class="color color-8"></div>
+        <div class="color color-9"></div>
+        <div class="color color-10"></div>
+      </div>
+      <div class="toolbox">
+        <div class="tool-item">
+          <img class="draggable eye" src="images/build-a-florb/eye-1.svg" alt="" />
+        </div>
+        <div class="tool-item">
+          <img class="draggable eye" src="images/build-a-florb/eye-2.svg" alt="" />
+        </div>
+        <div class="tool-item">
+          <img class="draggable" src="images/build-a-florb/brow-1.svg" alt="" />
+        </div>
+        <div class="tool-item">
+          <img class="draggable" src="images/build-a-florb/brow-2.svg" alt="" />
+        </div>
+        <div class="tool-item">
+          <img class="draggable" src="images/build-a-florb/mouth.svg" alt="" />
+        </div>
+        <div class="tool-item">
+          <img class="draggable" src="images/build-a-florb/pupil-1.svg" alt="" />
+        </div>
+        <div class="tool-item">
+          <img class="draggable" src="images/build-a-florb/pupil-2.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+    <script>
+      var elem = document.querySelector(".draggable");
+      var draggie = new Draggabilly(elem, {
+        // options...
+      });
+
+      // or pass in selector string as first argument
+      var draggie = new Draggabilly(".draggable", {
+        // options...
+      });
+
+      // if you have multiple .draggable elements
+      // get all draggie elements
+      var draggableElems = document.querySelectorAll(".draggable");
+      // array of Draggabillies
+      var draggies = [];
+      // init Draggabillies
+      for (var i = 0; i < draggableElems.length; i++) {
+        var draggableElem = draggableElems[i];
+        var draggie = new Draggabilly(draggableElem, {
+          // options...
+        });
+        draggies.push(draggie);
+      }
+    </script>
+    <script src="baf.js"></script>
+  </body>
+</html>
