@@ -1,7 +1,103 @@
-/******************General CSS****************/
+/******************Fonts****************/
 
+@font-face {
+  font-family: "lufgabold";
+  src: url("fonts/lufga-bold-webfont.woff2") format("woff2"), url("fonts/lufga-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgabold_italic";
+  src: url("fonts/lufga-bolditalic-webfont.woff2") format("woff2"), url("fonts/lufga-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgaextrabold";
+  src: url("fonts/lufga-extrabold-webfont.woff2") format("woff2"), url("fonts/lufga-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgaextrabold_italic";
+  src: url("fonts/lufga-extrabolditalic-webfont.woff2") format("woff2"), url("fonts/lufga-extrabolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgaextralight";
+  src: url("fonts/lufga-extralight-webfont.woff2") format("woff2"), url("fonts/lufga-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgaextralight_italic";
+  src: url("fonts/lufga-extralightitalic-webfont.woff2") format("woff2"), url("fonts/lufga-extralightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgaitalic";
+  src: url("fonts/lufga-italic-webfont.woff2") format("woff2"), url("fonts/lufga-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgalight";
+  src: url("fonts/lufga-light-webfont.woff2") format("woff2"), url("fonts/lufga-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgalight_italic";
+  src: url("fonts/lufga-lightitalic-webfont.woff2") format("woff2"), url("fonts/lufga-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgamedium";
+  src: url("fonts/lufga-medium-webfont.woff2") format("woff2"), url("fonts/lufga-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgamedium_italic";
+  src: url("fonts/lufga-mediumitalic-webfont.woff2") format("woff2"), url("fonts/lufga-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "lufgaregular";
+  src: url("fonts/lufga-regular-webfont.woff2") format("woff2"), url("fonts/lufga-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/******************General CSS****************/
+:root {
+  --primary-color: hotpink;
+  --secondary-color: #4f4f4f;
+}
 * {
   box-sizing: border-box;
+}
+p {
+  color: var(--primary-color);
+}
+
+.children {
+  --primary-color: blue;
 }
 body {
   margin: 0;
@@ -36,15 +132,17 @@ main {
 /**Build-a-Florb**/
 nav {
   position: absolute;
+  display: none;
 }
 .builder {
-  background-image: url(images/build-a-florb/bg.png);
-  background-size: cover;
+  /* background-image: url(images/build-a-florb/bg.png);
+  background-size: cover; */
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #f4f4f4;
 }
 .wrapper {
 }
@@ -69,7 +167,7 @@ nav {
   position: fixed;
   height: 200px;
   width: 100vw;
-  background-color: rgb(116, 116, 116);
+  /* background-color: rgb(116, 116, 116); */
   bottom: 0;
   z-index: 1;
 }
@@ -80,50 +178,62 @@ nav {
 }
 
 .color-picker {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  align-content: center;
-  width: 200px;
-  height: 100vh;
-  position: absolute;
-  background: #e5e5e5;
+  position: fixed;
   left: 0;
+  top: 40px;
+  margin-left: 20px;
 }
-
+.color-picker h4 {
+  margin-left: 10px;
+}
+.current-color {
+  width: 40px;
+  height: 40px;
+}
 .color {
   width: 40px;
   height: 40px;
-  border: 2px solid white;
 }
-.color-1 {
-  background-color: #75b8cb;
+.color:hover {
+  transform: scale(1.05);
 }
-.color-2 {
-  background-color: #3a4e64;
+
+.faced {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  bottom: 110px;
 }
-.color-3 {
-  background-color: #a45c5c;
+
+.is-dragging {
+  outline: 5px solid hotpink;
 }
-.color-4 {
-  background-color: #9987b7;
+
+.menu-full {
+  position: relative;
+  width: 100%;
+  left: 0;
+  bottom: 125px;
 }
-.color-5 {
-  background-color: #6b747d;
+
+h4 {
+  font-family: "Love Ya Like A Sister", cursive;
 }
-.color-6 {
-  background-color: #8fa3a0;
+/* .menu-1 {
+  filter: grayscale(100%);
+} */
+
+.menu-item {
+  pointer-events: none;
 }
-.color-7 {
-  background-color: #305a82;
+.board {
+  stroke: black;
+  stroke-width: 5px;
 }
-.color-8 {
-  background-color: #2f2d3a;
+.selected {
+  stroke: black;
+  stroke-width: 5px;
 }
-.color-9 {
-  background-color: #5fa5cd;
-}
-.color-10 {
-  background-color: #64456a;
+.tab {
+  cursor: pointer;
 }
