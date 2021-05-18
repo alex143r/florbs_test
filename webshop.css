@@ -1,0 +1,59 @@
+h1 {
+    font-family: "lufgabold";
+    font-weight: 700;
+    font-size: 100px;
+    color: #2d3331;
+}
+
+h3 {
+    font-family: "lufgalight";
+    font-size: 15px;
+    color: #000000;
+}
+
+.webshop-splash {
+    height: 100vh;
+    position: relative;
+}
+
+.header-image {
+    background-image: url("images/webshop/webshop_img.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    background-position: 58%;
+
+}
+
+.splash-element {
+    height: 100%;
+
+}
+
+.header-image,
+.header-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 302px
+}
+
+.green-florb {
+    width: 258px;
+    height: 258px;
+}
