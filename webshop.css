@@ -35,7 +35,10 @@ p {
 .webshop-splash {
     height: 100vh;
     position: relative;
+    margin-bottom: 100px;
+
 }
+
 
 .header-image {
     background-image: url("images/webshop/webshop_img.jpg");
@@ -73,6 +76,8 @@ p {
     max-width: 302px;
 }
 
+
+
 .header-text h1,
 .header-text p {
     margin: 0;
@@ -102,9 +107,7 @@ p {
     justify-content: center;
 }
 
-.image-con img {
-    margin-top: 100px;
-}
+.image-con img {}
 
 
 
@@ -169,8 +172,9 @@ p {
     transform: translate(-50%, -50%);
 }
 
-.image-text-text {
+.image-text-content {
     padding: 50px;
+
 }
 
 .webshop-icons {
@@ -204,26 +208,27 @@ p {
 
 .pack {
     position: relative;
-    background-image: url("images/webshop/webshop_img.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-    /* width: calc(100% + 100px) !important;
-    margin-left: -50px !important; */
-    background-position: 54%;
     height: 873px;
-    margin-bottom: 0 !important;
     display: Flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 0 !important;
+
 
 }
 
-.pack img {
-    clip: rect(0px, 1920px, 1080px, 50vw);
-    overflow: none;
-    left: -50vw;
+.pack-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("images/webshop/webshop_img.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 60%;
+
     height: 100%;
-    width: 175%;
+    width: 100%;
+    z-index: -1;
 }
 
 .pack-text {
@@ -239,4 +244,152 @@ p {
     background-color: #C4C4C4;
     Width: 223px;
     Height: 67px;
+}
+
+@media screen and (min-width: 1000px) {
+    h1 {
+        font-family: "lufgaextralight";
+        font-weight: 200;
+        font-size: 200px;
+        color: #2d3331;
+    }
+
+    h3 {
+        font-family: "lufgamedium";
+        font-size: 100px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+    h4 {
+        font-family: "lufgamedium";
+        font-size: 24px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+    .webshop-splash {
+        display: flex;
+        padding: 50px;
+    }
+
+    .header-image {
+        position: relative;
+        width: 50%;
+
+    }
+
+    .header-text {
+        max-width: 575px;
+    }
+
+    .webshop-element {
+        height: 100vh;
+        margin-bottom: 0 !important;
+        padding: 0 !important;
+    }
+
+    .intro-text {
+        max-width: 575px;
+        height: 100%;
+        display: Flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .webshop-intro p {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .webshop-intro h2 {
+        font-size: 150px;
+        margin: 0;
+    }
+
+    .green-florb {
+        margin: 0 auto;
+    }
+
+    .materials-img {
+        border-radius: 50%;
+        width: 188px;
+        height: 188px;
+        align-self: center;
+    }
+
+    .materials-text {
+        margin-bottom: 0;
+        display: block;
+        width: auto !important;
+        margin-left: auto;
+
+    }
+
+    .image-text {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .image-text:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+
+    .image-text-content {
+        width: 575px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -50px;
+    }
+
+
+    .image-text-title {
+        position: relative;
+        transform: none;
+        top: 0;
+        left: 0;
+    }
+
+    .image-text img {
+        width: 50%;
+        padding: 50px;
+    }
+
+    .pack {
+        flex-direction: row;
+    }
+
+    div.pack:nth-child(7) {
+        flex-direction: row-reverse !important;
+    }
+
+    .pack-image {
+        width: 50%;
+        position: relative;
+        margin: 50px;
+    }
+
+    .pack-text {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 50px;
+
+    }
+
+    .pack-text p {
+        width: 620px;
+        font-size: 24px;
+    }
+
+    .pack-title {
+        width: 100%;
+        width: 620px;
+
+    }
 }
