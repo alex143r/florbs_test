@@ -46,7 +46,6 @@ function toggleBackForgot() {}
 
 let auth = new GoTrue({
   APIUrl: "https://confident-hoover-cccfcc.netlify.app/.netlify/identity",
-  audience: "",
   setCookie: false,
 });
 document
