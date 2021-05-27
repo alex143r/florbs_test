@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>florbs gotruey</title>
+  <meta charset="UTF-8" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500|Roboto+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+</head>
+
+<body>
+  <div class="row">
+
+    <div class="col s12 m8 l8 push-l2 push-m2">
+      <h1>Florbs</h1>
+      <div class="options">
+        <div class="option login-switch selected">
+          <h4>Existing User</h4>
+          <p>Ya yeet</p>
+        </div>
+        <div class="option create-switch">
+          <h4>Create User</h4>
+          <p>summalummadommalamma</p>
+        </div>
+      </div>
+      <form name="signup" class="signup hide">
+        <p>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+        </p>
+        <p>
+          <label>Password
+            <input type="password" name="password" required />
+          </label>
+        </p>
+        <p>
+          <label>Repeat password
+            <input type="password" name="password2" required />
+          </label>
+        </p>
+
+        <button type="submit">Sign me up!</button>
+        <div class="message">
+        </div>
+      </form>
+      <form name="login" class="login">
+        <p>
+          <label>Email
+            <input type="email" name="email" required />
+          </label>
+        </p>
+        <p>
+          <div class="password-title">
+            <label>Password </label>
+            <p class="forgot-btn">Forgot password?</p>
+          </div>
+
+          <input type="password" name="password" required />
+        </p>
+        <p>
+          <button type="submit">Log in</button>
+        </p>
+        <div class="message"></div>
+      </form>
+      <form name="recover-pass" class="recover-pass hide">
+        <p>
+          <div class="forgot-title">
+            <label>Email </label>
+            <p class="forgot-back-btn">Back</p>
+          </div>
+          <input type="email" name="email" required />
+        </p>
+
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+        <div class="message"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+  <script src="login.js"></script>
+</body>
+
+</html>

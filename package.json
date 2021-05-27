@@ -1,0 +1,32 @@
+{
+  "name": "florb_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "draggabilly": "^2.3.0",
+    "gotrue-js": "^0.9.29",
+    "less": "^4.1.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "parcel": "^2.0.0-beta.3.1",
+    "parcel-bundler": "^1.12.5"
+  },
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.0.0-beta.3.1"
+  },
+  "scripts": {
+    "start": "parcel *.html",
+    "prod": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex143r/florbs_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex143r/florbs_test.git/issues"
+  },
+  "homepage": "https://github.com/alex143r/florbs_test#readme"
+}

@@ -103,9 +103,11 @@
   --bakground-color: #ffffff;
   --primary-font: "lufgaregular";
 }
+
 * {
   box-sizing: border-box;
 }
+
 p {
   color: var(--primary-color);
   font-family: var(--primary-font);
@@ -114,34 +116,40 @@ p {
 .children {
   --primary-color: blue;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
 .landing-element {
   height: 100vh;
 }
+
 .col {
   padding: 0 !important;
   margin: 0 !important;
 }
+
 .florb-wrapper {
   display: grid;
   place-content: center;
   height: 100%;
 }
+
 img {
   width: 100%;
 }
+
 .shop-container {
   margin: 50px;
 }
+
 .shop-container:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
-.shop-item {
-}
+.shop-item {}
 
 /**Compendium**/
 main {
@@ -149,6 +157,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .compendium {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -156,11 +165,13 @@ main {
   max-width: 1300px;
   margin: 0 auto;
 }
+
 /**Build-a-Florb**/
 nav {
   position: absolute;
   display: none;
 }
+
 .builder {
   /* background-image: url(images/build-a-florb/bg.png);
   background-size: cover; */
@@ -171,8 +182,9 @@ nav {
   align-items: center;
   background: #f4f4f4;
 }
-.wrapper {
-}
+
+.wrapper {}
+
 .circle {
   height: 400px;
   width: 400px;
@@ -180,6 +192,7 @@ nav {
   border-radius: 50%;
   opacity: 0.999;
 }
+
 /* .eye {
   height: 100px;
   width: 100px;
@@ -210,17 +223,21 @@ nav {
   top: 40px;
   margin-left: 20px;
 }
+
 .color-picker h4 {
   margin-left: 10px;
 }
+
 .current-color {
   width: 40px;
   height: 40px;
 }
+
 .color {
   width: 40px;
   height: 40px;
 }
+
 .color:hover {
   transform: scale(1.05);
 }
@@ -246,6 +263,7 @@ nav {
 h4 {
   /* font-family: "Love Ya Like A Sister", cursive; */
 }
+
 /* .menu-1 {
   filter: grayscale(100%);
 } */
@@ -253,14 +271,17 @@ h4 {
 .menu-item {
   pointer-events: none;
 }
+
 .board {
   stroke: black;
   stroke-width: 5px;
 }
+
 .selected {
   stroke: black;
   stroke-width: 5px;
 }
+
 .tab {
   cursor: pointer;
 }
@@ -268,7 +289,7 @@ h4 {
 /**Landing page**/
 
 .sidebar-left {
-  position: absolute;
+  position: fixed;
   width: 100px;
   height: 100vh;
   box-shadow: 0px 4px 18px 6px rgba(0, 0, 0, 0.1);
@@ -277,7 +298,9 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #ffffff
 }
+
 .sidebar-right {
   height: 100vh;
   background: #ffffff;
@@ -288,13 +311,16 @@ h4 {
   display: flex;
   flex-direction: column;
 }
+
 .sidebar-content-1 {
   display: Flex;
 }
+
 .sidebar-content-1 img {
   width: 60px;
   height: 60px;
 }
+
 .sidebar-content-2 {
   display: Flex;
   align-items: center;
@@ -307,57 +333,68 @@ h4 {
   width: 60px;
   height: 60px;
 }
+
 .sidebar-content-3 {
   border: 1px solid #e1e4eb;
   box-sizing: border-box;
   border-radius: 35px;
 }
+
 .medalje {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
+
 .medalje img {
   width: 40px;
   height: 40px;
 }
+
 .sidebar-content-4 {
   border: 1px solid #e1e4eb;
   box-sizing: border-box;
   border-radius: 35px;
 }
+
 .friend {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 .medalje-img {
   height: 40px;
   width: 40px;
 }
+
 .friend-img {
   height: 50px;
   width: 50px;
 }
+
 .friend h4 {
   font-size: 20px;
   color: black;
   font-weight: 800;
   margin: 0;
 }
+
 .friend p {
   font-size: 10px;
   color: black;
   font-weight: 400;
 }
+
 .logo {
   position: absolute;
   width: 50px;
   left: 25px;
   top: 75px;
 }
-.icon-wrapper {
-}
+
+.icon-wrapper {}
+
 .icon {
   display: grid;
   place-content: center;
@@ -369,62 +406,79 @@ h4 {
   height: 50px;
   margin: 10px;
 }
+
 .icon:hover {
   transform: scale(1.1);
 }
+
 .icon-1 {
   background: #fbc666;
 }
+
 .icon-2 {
   background: #fb7f7d;
 }
+
 .icon-3 {
   background: #f6acf8;
 }
+
 .icon-4 {
   background: #62d0da;
 }
+
 .icon-5 {
   background: #4aa67b;
 }
+
 .boxes {
   display: Flex;
 }
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .content-left {
   flex-grow: 1;
   display: grid;
   place-content: center;
 }
+
 .content-right {
   flex-grow: 1;
 }
+
 .box {
   height: 260px;
   width: 100%;
   border-radius: 25px;
   margin: 10px;
 }
+
 .box-1 {
   background: #fb7f7d76;
 }
+
 .box-2 {
   background: #f6acf87e;
 }
+
 .box-3 {
   background: #62d0da7f;
 }
+
 .box-4 {
   background: #4aa67b74;
 }
+
 .menu-img {
   width: 86px;
   height: 86px;
 }
+
 .menu-option {
   display: flex;
   flex-direction: column;
@@ -432,12 +486,14 @@ main {
   height: 100%;
   justify-content: center;
 }
+
 h3 {
   font-family: "lufgaextralight";
   font-weight: 400;
   font-size: 24px;
   color: #2d3331;
 }
+
 .box-wrapper {
   height: 100%;
   justify-content: center;
@@ -445,6 +501,7 @@ h3 {
   align-items: flex;
   flex-direction: column;
 }
+
 .placeholder {
   max-width: 400px;
 }

@@ -1,13 +1,35 @@
 .game-element {
   height: 100vh;
-  background-color: #FCFAFB
+  background: none
 
 }
-
+.hide {
+  display:none;
+}
+.games-background {
+  position: absolute;
+  z-index: -1;
+}
+.background-img1{
+  width:684px;
+  height:684px;
+  position:absolute;
+  top:-100px;
+  left:-100px;
+  transform: rotate(15deg);
+  opacity: .2;
+}
+.background-img2{
+  width: 684px;
+height: 684px;
+position: absolute;
+top: 50vh;
+left: 70vh;
+transform: rotate(-15deg);
+opacity: 0.2;
+}
 .arrow-con {
-  background: #ffffff;
 
-  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -16,6 +38,8 @@
   width: 230px;
   height: 122px;
   color: #fbc666;
+  background-color:   #ffffff;
+  cursor: pointer;
   font-size: 50px;
   box-shadow: 0px 6px 16px 8px rgba(0, 0, 0, 0.08);
   border-radius: 25px;
@@ -24,13 +48,12 @@
   align-items: center;
   font-weight: 700;
 }
-.games-caro {
+.arrow:hover{transition-duration: .5s;  
+  font-size: 70px;
 }
 
 .game-caro {
  
-    padding: 0 !important;
-    margin-top: -100px !important;
 
-    height: 600px !important;
+    height: 100vh !important;
 }
