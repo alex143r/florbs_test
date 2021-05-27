@@ -2,7 +2,6 @@
   "name": "florb_test",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
   "dependencies": {
     "draggabilly": "^2.3.0",
     "gotrue-js": "^0.9.29",
@@ -16,6 +15,7 @@
   },
   "scripts": {
     "start": "parcel *.html",
+    "build": "parcel build *.html --public-url ./",
     "prod": "parcel index.html"
   },
   "repository": {
