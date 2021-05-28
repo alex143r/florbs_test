@@ -1,138 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="stylesheet/less" type="text/css" href="/styles.5d4c1a48.css">
-  <link rel="stylesheet" href="/baf.b2259128.css">
-  <title>Florbs | Shop Test</title>
-</head>
-
-<body>
-  <header>
-    <nav class="mobile-nav"></nav>
-    <nav class="desktop-nav">
-      <ul class="links-nav">
-        <li class="link-nav"><a href="#">Home</a></li>
-        <li class="link-nav"><a href="#">Product Info</a></li>
-        <li class="link-nav"><a href="#">Compendium</a></li>
-        <li class="link-nav"><a href="#">Shop</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <h1>Florbs Shop</h1>
-  <div class="container">
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -274,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"68bS4":[function(require,module,exports) {
+})({"2MqaP":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "d47b2f011984b77c31b7868fdd3089cd"; // @flow
+module.bundle.HMR_BUNDLE_ID = "79b02c6f045ac9b4a85ae5466d44b1c4"; // @flow
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE */ /*::
 import type {
   HMRAsset,
@@ -514,11 +380,33 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
     acceptedAssets[id] = true;
 }
 
-},{}],"265G3":[function(require,module,exports) {
+},{}],"3eBqV":[function(require,module,exports) {
+document.addEventListener("DOMContentLoaded", start);
+const endpoint = "http://www.ddalby.dk/florbs/wordpress/wp-json/wp/v2/florbs";
+let allFlorbs;
+let filter = "all";
+function start() {
+    getData();
+}
+async function getData() {
+    const response = await fetch(endpoint);
+    allFlorbs = await response.json();
+    showFlorbs();
+}
+function showFlorbs() {
+    const container = document.querySelector(".compendium");
+    const florbTemplate = document.querySelector("template");
+    container.innerHTML = "";
+    allFlorbs.forEach((florb)=>{
+        let clone = florbTemplate.cloneNode(true).content;
+        clone.querySelector(".florb-name").textContent = florb.title.rendered;
+        clone.querySelector(".florb-img").src = florb.image.guid;
+        clone.querySelector(".florb-img").alt = florb.title.rendered;
+        clone.querySelector(".florb-phrase").textContent = florb.phrase;
+        container.appendChild(clone);
+    });
+}
 
-},{}]},["68bS4","265G3"], "265G3", "parcelRequire84f5")
+},{}]},["2MqaP","3eBqV"], "3eBqV", "parcelRequire84f5")
 
-</script>
-</body>
-
-</html>
+//# sourceMappingURL=compendium.6d44b1c4.js.map

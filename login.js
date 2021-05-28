@@ -46,7 +46,7 @@ function toggleBackForgot() {}
 
 let auth = new GoTrue({
   APIUrl: "https://confident-hoover-cccfcc.netlify.app/.netlify/identity",
-  setCookie: false,
+  setCookie: true,
 });
 document
   .querySelector("form[name='signup']")

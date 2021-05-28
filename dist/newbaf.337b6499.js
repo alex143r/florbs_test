@@ -1,138 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <link rel="stylesheet/less" type="text/css" href="/styles.5d4c1a48.css">
-  <link rel="stylesheet" href="/baf.b2259128.css">
-  <title>Florbs | Shop Test</title>
-</head>
-
-<body>
-  <header>
-    <nav class="mobile-nav"></nav>
-    <nav class="desktop-nav">
-      <ul class="links-nav">
-        <li class="link-nav"><a href="#">Home</a></li>
-        <li class="link-nav"><a href="#">Product Info</a></li>
-        <li class="link-nav"><a href="#">Compendium</a></li>
-        <li class="link-nav"><a href="#">Shop</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <h1>Florbs Shop</h1>
-  <div class="container">
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-    <div class="row shop-container">
-      <div class="col shop-item"><img class="shop-img" src="/LANDING.5f3cb471.png" alt=""></div>
-      <div class="col shop-item">
-        <h2>10 MEGA pack Monster Circles</h2>
-        <p>
-          Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum
-          ponderum. Est audiam animal
-          molestiae te. Ex duo eripuit mentitum.
-        </p>
-        <p>Price: 99$</p>
-        <p>Save 40% and FREE Shipping</p>
-
-        <button>Buy</button>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -274,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"68bS4":[function(require,module,exports) {
+})({"4gQW1":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "d47b2f011984b77c31b7868fdd3089cd"; // @flow
+module.bundle.HMR_BUNDLE_ID = "a3581693d4475c9fb10901d6337b6499"; // @flow
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE */ /*::
 import type {
   HMRAsset,
@@ -514,11 +380,8 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
     acceptedAssets[id] = true;
 }
 
-},{}],"265G3":[function(require,module,exports) {
+},{}],"FcxVG":[function(require,module,exports) {
 
-},{}]},["68bS4","265G3"], "265G3", "parcelRequire84f5")
+},{}]},["4gQW1","FcxVG"], "FcxVG", "parcelRequire84f5")
 
-</script>
-</body>
-
-</html>
+//# sourceMappingURL=newbaf.337b6499.js.map
