@@ -135,6 +135,9 @@ document
       });
   });
 
+//confirm user
+auth.confirm(token, remember);
+
 //helper functions
 
 function noAuthFound(form) {

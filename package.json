@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "parcel *.html",
-    "build": "parcel build *.html",
+    "build": "parcel build *.html --public-url ./",
     "prod": "parcel index.html"
   },
   "repository": {
