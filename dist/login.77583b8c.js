@@ -382,8 +382,10 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 
 },{}],"5vo5L":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
 var _gotrueJs = require("gotrue-js");
 var _gotrueJsDefault = parcelHelpers.interopDefault(_gotrueJs);
+let user;
 //add eventlisteners
 window.addEventListener("DOMContentLoaded", initListeners);
 function initListeners() {
@@ -447,9 +449,10 @@ document.querySelector("form[name='login']").addEventListener("submit", (e)=>{
     if (!auth) noAuthFound(form);
     const { email , password  } = form.elements;
     auth.login(email.value, password.value).then((response)=>{
-        document.querySelector("#user-email").textContent = email.value;
         showMessage(`<p>Log in successful! </p>`, form);
         console.log(response);
+        user = auth.currentUser();
+        window.location.href = "/index.html";
     }).catch((error)=>{
         showMessage(`Failed to log in :`, form);
         console.log(error);
@@ -461,8 +464,8 @@ document.querySelector("form[name='recover-pass']").addEventListener("submit", (
     const form = e.target;
     if (!auth) noAuthFound(form);
     if (!auth.currentUser()) noUserFound(form);
-    const user = auth.currentUser();
-    const email = user.email;
+    const user1 = auth.currentUser();
+    const email = user1.email;
     auth.requestPasswordRecovery(email).then((response)=>{
         showMessage(`<p>Recovery email sent, check your inbox! </p>`, form);
         console.log(response);
@@ -486,6 +489,7 @@ function clearPage() {
         el.textContent = "";
     });
 }
+exports.default = user;
 
 },{"gotrue-js":"67DNY","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"67DNY":[function(require,module,exports) {
 "use strict";

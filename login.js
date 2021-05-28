@@ -1,5 +1,6 @@
 import GoTrue from "gotrue-js";
 
+let user;
 //add eventlisteners
 window.addEventListener("DOMContentLoaded", initListeners);
 function initListeners() {
@@ -97,6 +98,9 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
     .then((response) => {
       showMessage(`<p>Log in successful! </p>`, form);
       console.log(response);
+      user = auth.currentUser();
+
+      window.location.href = "/index.html";
     })
     .catch((error) => {
       showMessage(`Failed to log in :`, form);
@@ -153,3 +157,5 @@ function clearPage() {
     el.textContent = "";
   });
 }
+
+export default user;
