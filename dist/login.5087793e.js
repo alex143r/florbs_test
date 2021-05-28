@@ -946,11 +946,6 @@ if (typeof window !== 'undefined') {
 },{"micro-api-client":"node_modules/micro-api-client/lib/index.js","./user.js":"node_modules/gotrue-js/lib/user.js"}],"login.js":[function(require,module,exports) {
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
 var _gotrueJs = _interopRequireDefault(require("gotrue-js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -1039,7 +1034,9 @@ document.querySelector("form[name='login']").addEventListener("submit", function
   auth.login(email.value, password.value).then(function (response) {
     showMessage("<p>Log in successful! </p>", form);
     console.log(response);
-    user = auth.currentUser(); //window.location.href = "/index.html";
+    user = auth.currentUser();
+    localStorage.setItem("user", JSON.stringify(user.token));
+    window.location.href = "/index.html";
   }).catch(function (error) {
     showMessage("Failed to log in :", form);
     console.log(error);
@@ -1086,9 +1083,6 @@ function clearPage() {
     el.textContent = "";
   });
 }
-
-var _default = user;
-exports.default = _default;
 },{"gotrue-js":"node_modules/gotrue-js/lib/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1117,7 +1111,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56262" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50768" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

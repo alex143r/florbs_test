@@ -99,8 +99,9 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
       showMessage(`<p>Log in successful! </p>`, form);
       console.log(response);
       user = auth.currentUser();
+      localStorage.setItem("user", JSON.stringify(user.token));
 
-      //window.location.href = "/index.html";
+      window.location.href = "/index.html";
     })
     .catch((error) => {
       showMessage(`Failed to log in :`, form);
@@ -157,5 +158,3 @@ function clearPage() {
     el.textContent = "";
   });
 }
-
-export default user;
