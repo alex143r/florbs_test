@@ -7,9 +7,11 @@ function initListeners() {
     .querySelector(".confirm-btn")
     .addEventListener("click", clickConfirm);
   token = window.location.href.split("=")[1];
-  console.log(window.location.href.split("=")[1]);
 }
-
+let auth = new GoTrue({
+  APIUrl: "https://confident-hoover-cccfcc.netlify.app/.netlify/identity",
+  setCookie: true,
+});
 function clickConfirm() {
   auth.confirm(token, true);
 }
