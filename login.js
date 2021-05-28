@@ -95,7 +95,6 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
   auth
     .login(email.value, password.value)
     .then((response) => {
-      document.querySelector("#user-email").textContent = email.value;
       showMessage(`<p>Log in successful! </p>`, form);
       console.log(response);
     })
