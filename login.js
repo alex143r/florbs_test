@@ -100,7 +100,7 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
       console.log(response);
       user = auth.currentUser();
 
-      window.location.href = "/index.html";
+      //window.location.href = "/index.html";
     })
     .catch((error) => {
       showMessage(`Failed to log in :`, form);
