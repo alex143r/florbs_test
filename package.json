@@ -9,15 +9,23 @@
     "materialize-css": "^1.0.0-rc.2",
     "parcel": "^2.0.0-beta.3.1",
     "parcel-bundler": "^1.12.5",
-    "parcel-plugin-asset-fourohfour": "^0.1.13"
+    "parcel-plugin-asset-fourohfour": "^0.1.13",
+    "parcel-plugin-html-externals": "^0.3.0",
+    "parcel-resolver-exclude-assets": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-less": "^2.0.0-beta.3.1"
   },
   "scripts": {
     "start": "parcel *.html",
-    "build": "parcel build *.html --public-url ./",
+    "build": "parcel build *.html",
     "prod": "parcel index.html"
+  },
+  "resolverExcludeAssets": [
+    "{{ .SiteURL }}"
+  ],
+  "externals": {
+    "yeet/*": false
   },
   "repository": {
     "type": "git",
