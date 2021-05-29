@@ -1031,7 +1031,7 @@ document.querySelector("form[name='login']").addEventListener("submit", function
   var _form$elements2 = form.elements,
       email = _form$elements2.email,
       password = _form$elements2.password;
-  auth.login(email.value, password.value).then(function (response) {
+  auth.login(email.value, password.value, true).then(function (response) {
     showMessage("<p>Log in successful! </p>", form);
     console.log(response);
     user = auth.currentUser();
@@ -1111,7 +1111,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50768" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59504" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

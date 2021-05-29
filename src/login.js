@@ -94,7 +94,7 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
   }
   const { email, password } = form.elements;
   auth
-    .login(email.value, password.value)
+    .login(email.value, password.value, true)
     .then((response) => {
       showMessage(`<p>Log in successful! </p>`, form);
       console.log(response);

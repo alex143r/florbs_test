@@ -1,0 +1,105 @@
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.375em;
+  margin-top: 3em;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+p {
+  margin: 1em 0 1.5em;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline lightblue;
+}
+
+/* ol li::before {
+    counter-increment: step;
+    content: counter(step) ". ";
+    float: left;
+    margin-right: 0.3em;
+  } */
+
+input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0 0.5em;
+  height: 2.5em;
+  line-height: 2.5;
+  border: 2px solid blue;
+  border-radius: 4px;
+  color: #3297d3;
+}
+
+.message {
+  margin: 1em;
+}
+
+#toTop:hover {
+  background-color: #064508;
+}
+
+.options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.option {
+  cursor: pointer;
+  padding: 10px;
+  margin: 10px;
+}
+
+.selected {
+  border: 2px solid green;
+  border-radius: 25px;
+}
+
+.login {
+  justify-content: center;
+}
+
+.signup,
+.login {
+}
+
+.password-title,
+.forgot-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.password-title p,
+.forgot-title p {
+  margin: 0;
+  font-size: 0.8em;
+  color: grey;
+  cursor: pointer;
+}
+
+.password-title p:hover,
+.forgot-title p:hover {
+  text-decoration: underline;
+}
+
+label {
+  font-size: 1rem !important;
+  color: black !important;
+}
