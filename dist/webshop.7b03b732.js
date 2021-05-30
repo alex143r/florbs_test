@@ -390,6 +390,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var instances = M.Carousel.init(elems, options);
 });
 
-},{}]},["2UpT3","5MVIM"], "5MVIM", "parcelRequire84f5")
+},{}]},["2UpT3","5MVIM"], "5MVIM", "parcelRequiredca8")
 
 //# sourceMappingURL=webshop.7b03b732.js.map

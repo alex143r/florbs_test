@@ -420,6 +420,6 @@ function setBackground() {
     } else document.querySelector(`.background-img${i + 1}`).classList.add("hide");
 }
 
-},{}]},["5iilH","1Q2nK"], "1Q2nK", "parcelRequire84f5")
+},{}]},["5iilH","1Q2nK"], "1Q2nK", "parcelRequiredca8")
 
 //# sourceMappingURL=games.e2a1de74.js.map

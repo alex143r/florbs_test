@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <title>Florbs | Landing</title>
+</head>
+
+<body class="bodyclass">
+  <div class="testwrapper">
+    <div class="drag-item draggable"></div>
+  </div>
+
+  <footer class=""></footer>
+
+  <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+  </script>
+  <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+
+  <script>
+    var elem = document.querySelector(".draggable");
+    var draggie = new Draggabilly(elem, {});
+
+    var draggableElems = document.querySelectorAll(".draggable");
+
+    var draggies = [];
+
+    for (var i = 0; i < draggableElems.length; i++) {
+      var draggableElem = draggableElems[i];
+      var draggie = new Draggabilly(draggableElem, {});
+      draggies.push(draggie);
+    }
+  </script>
+  <script src="test.js"></script>
+</body>
+
+</html>

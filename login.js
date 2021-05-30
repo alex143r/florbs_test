@@ -46,7 +46,7 @@ function toggleBackForgot() {}
 //Instantiate the GoTrue auth client + GoTrue functions
 
 let auth = new GoTrue({
-  APIUrl: "https://confident-hoover-cccfcc.netlify.app/.netlify/identity",
+  APIUrl: "https://serene-clarke-d069ee.netlify.app/.netlify/identity",
   setCookie: true,
 });
 document
@@ -65,7 +65,9 @@ document
 
       const { email, password, name } = form.elements;
       auth
-        .signup(email.value, password.value)
+        .signup(email.value, password.value, {
+          data: { full_name: name.value },
+        })
         .then((response) => {
           console.log(name.value);
           console.log(response);
@@ -102,8 +104,7 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
 
       localStorage.setItem("user", JSON.stringify(user));
 
-      updateThing();
-      //window.location.href = "/index.html";
+      window.location.href = "/dashboard.html";
     })
     .catch((error) => {
       showMessage(`Failed to log in :`, form);
@@ -114,12 +115,12 @@ function updateThing() {
   user = auth.currentUser();
 
   user
-    .update({ email: user.email, user_metadata: { full_name: "larry" } })
-    .then((user) => console.log(auth.currentUser().user_metadata))
-    .catch((error) => {
-      console.log("Failed to update user: %o", error);
-      throw error;
-    });
+    .update({
+      data: {
+        you: "are awesome",
+      },
+    })
+    .then((user) => console.log(user));
 }
 
 //request recovery email

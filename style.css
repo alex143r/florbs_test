@@ -2,96 +2,84 @@
 
 @font-face {
   font-family: "lufgabold";
-  src: url("fonts/lufga-bold-webfont.woff2") format("woff2"),
-    url("fonts/lufga-bold-webfont.woff") format("woff");
+  src: url("fonts/lufga-bold-webfont.woff2") format("woff2"), url("fonts/lufga-bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgabold_italic";
-  src: url("fonts/lufga-bolditalic-webfont.woff2") format("woff2"),
-    url("fonts/lufga-bolditalic-webfont.woff") format("woff");
+  src: url("fonts/lufga-bolditalic-webfont.woff2") format("woff2"), url("fonts/lufga-bolditalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgaextrabold";
-  src: url("fonts/lufga-extrabold-webfont.woff2") format("woff2"),
-    url("fonts/lufga-extrabold-webfont.woff") format("woff");
+  src: url("fonts/lufga-extrabold-webfont.woff2") format("woff2"), url("fonts/lufga-extrabold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgaextrabold_italic";
-  src: url("fonts/lufga-extrabolditalic-webfont.woff2") format("woff2"),
-    url("fonts/lufga-extrabolditalic-webfont.woff") format("woff");
+  src: url("fonts/lufga-extrabolditalic-webfont.woff2") format("woff2"), url("fonts/lufga-extrabolditalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgaextralight";
-  src: url("fonts/lufga-extralight-webfont.woff2") format("woff2"),
-    url("fonts/lufga-extralight-webfont.woff") format("woff");
+  src: url("fonts/lufga-extralight-webfont.woff2") format("woff2"), url("fonts/lufga-extralight-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgaextralight_italic";
-  src: url("fonts/lufga-extralightitalic-webfont.woff2") format("woff2"),
-    url("fonts/lufga-extralightitalic-webfont.woff") format("woff");
+  src: url("fonts/lufga-extralightitalic-webfont.woff2") format("woff2"), url("fonts/lufga-extralightitalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgaitalic";
-  src: url("fonts/lufga-italic-webfont.woff2") format("woff2"),
-    url("fonts/lufga-italic-webfont.woff") format("woff");
+  src: url("fonts/lufga-italic-webfont.woff2") format("woff2"), url("fonts/lufga-italic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgalight";
-  src: url("fonts/lufga-light-webfont.woff2") format("woff2"),
-    url("fonts/lufga-light-webfont.woff") format("woff");
+  src: url("fonts/lufga-light-webfont.woff2") format("woff2"), url("fonts/lufga-light-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgalight_italic";
-  src: url("fonts/lufga-lightitalic-webfont.woff2") format("woff2"),
-    url("fonts/lufga-lightitalic-webfont.woff") format("woff");
+  src: url("fonts/lufga-lightitalic-webfont.woff2") format("woff2"), url("fonts/lufga-lightitalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgamedium";
-  src: url("fonts/lufga-medium-webfont.woff2") format("woff2"),
-    url("fonts/lufga-medium-webfont.woff") format("woff");
+  src: url("fonts/lufga-medium-webfont.woff2") format("woff2"), url("fonts/lufga-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgamedium_italic";
-  src: url("fonts/lufga-mediumitalic-webfont.woff2") format("woff2"),
-    url("fonts/lufga-mediumitalic-webfont.woff") format("woff");
+  src: url("fonts/lufga-mediumitalic-webfont.woff2") format("woff2"), url("fonts/lufga-mediumitalic-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "lufgaregular";
-  src: url("fonts/lufga-regular-webfont.woff2") format("woff2"),
-    url("fonts/lufga-regular-webfont.woff") format("woff");
+  src: url("fonts/lufga-regular-webfont.woff2") format("woff2"), url("fonts/lufga-regular-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -103,53 +91,50 @@
   --bakground-color: #ffffff;
   --primary-font: "lufgaregular";
 }
-
 * {
   box-sizing: border-box;
 }
-
+h1 {
+  font-family: var(--primary-font);
+}
 p {
   color: var(--primary-color);
   font-family: var(--primary-font);
 }
-
+.bodyclass {
+  max-height: 100vh;
+}
 .children {
   --primary-color: blue;
 }
-
 body {
   margin: 0;
   padding: 0;
 }
-
 .landing-element {
   height: 100vh;
 }
-
 .col {
   padding: 0 !important;
   margin: 0 !important;
 }
-
 .florb-wrapper {
   display: grid;
   place-content: center;
   height: 100%;
 }
-
 img {
   width: 100%;
 }
-
 .shop-container {
   margin: 50px;
 }
-
 .shop-container:nth-child(odd) {
   flex-direction: row-reverse;
 }
 
-.shop-item {}
+.shop-item {
+}
 
 /**Compendium**/
 main {
@@ -157,7 +142,6 @@ main {
   justify-content: center;
   align-items: center;
 }
-
 .compendium {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -165,13 +149,11 @@ main {
   max-width: 1300px;
   margin: 0 auto;
 }
-
 /**Build-a-Florb**/
 nav {
   position: absolute;
   display: none;
 }
-
 .builder {
   /* background-image: url(images/build-a-florb/bg.png);
   background-size: cover; */
@@ -182,17 +164,15 @@ nav {
   align-items: center;
   background: #f4f4f4;
 }
-
-.wrapper {}
-
-.circle {
+.wrapper {
+}
+.face {
   height: 400px;
   width: 400px;
   background: #9987b7;
   border-radius: 50%;
   opacity: 0.999;
 }
-
 /* .eye {
   height: 100px;
   width: 100px;
@@ -223,30 +203,19 @@ nav {
   top: 40px;
   margin-left: 20px;
 }
-
 .color-picker h4 {
   margin-left: 10px;
 }
-
 .current-color {
   width: 40px;
   height: 40px;
 }
-
 .color {
   width: 40px;
   height: 40px;
 }
-
 .color:hover {
   transform: scale(1.05);
-}
-
-.faced {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  bottom: 110px;
 }
 
 .is-dragging {
@@ -260,28 +229,17 @@ nav {
   bottom: 125px;
 }
 
-h4 {
-  /* font-family: "Love Ya Like A Sister", cursive; */
-}
-
-/* .menu-1 {
-  filter: grayscale(100%);
-} */
-
 .menu-item {
   pointer-events: none;
 }
-
 .board {
   stroke: black;
   stroke-width: 5px;
 }
-
-.selected {
+/* .selected {
   stroke: black;
   stroke-width: 5px;
-}
-
+} */
 .tab {
   cursor: pointer;
 }
@@ -289,18 +247,8 @@ h4 {
 /**Landing page**/
 
 .sidebar-left {
-  position: fixed;
-  width: 100px;
-  height: 100vh;
-  box-shadow: 0px 4px 18px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 0px 50px 50px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff
+  display: none;
 }
-
 .sidebar-right {
   height: 100vh;
   background: #ffffff;
@@ -311,16 +259,13 @@ h4 {
   display: flex;
   flex-direction: column;
 }
-
 .sidebar-content-1 {
   display: Flex;
 }
-
 .sidebar-content-1 img {
-  width: 60px;
-  height: 60px;
+  width: 170px;
+  height: 170px;
 }
-
 .sidebar-content-2 {
   display: Flex;
   align-items: center;
@@ -333,48 +278,51 @@ h4 {
   width: 60px;
   height: 60px;
 }
-
 .sidebar-content-3 {
   border: 1px solid #e1e4eb;
   box-sizing: border-box;
   border-radius: 35px;
 }
-
 .medalje {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-
 .medalje img {
   width: 40px;
   height: 40px;
 }
-
 .sidebar-content-4 {
   border: 1px solid #e1e4eb;
   box-sizing: border-box;
   border-radius: 35px;
-}
-
-.friend {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  flex-direction: column;
 }
-
+.sidebar-content-4 h2 {
+  margin-bottom: 0;
+  font-family: "lufgaregular";
+  font-size: 25px;
+}
+.friend-wrapper {
+  display: flex;
+  margin: 15px 0 15px 0;
+}
+.friend-item {
+  flex-grow: 1;
+  width: 33%;
+}
 .medalje-img {
   height: 40px;
   width: 40px;
+  align-items: flex-end;
 }
-
 .friend-img {
   height: 50px;
   width: 50px;
 }
-
-.friend h4 {
-  font-size: 20px;
+.friend-wrapper h3 {
+  font-size: 16px;
   color: black;
   font-weight: 800;
   margin: 0;
@@ -385,16 +333,42 @@ h4 {
   color: black;
   font-weight: 400;
 }
-
 .logo {
   position: absolute;
   width: 50px;
   left: 25px;
   top: 75px;
 }
+.row {
+  margin-bottom: 0;
+}
+.scores {
+  font-size: 10px;
+  color: #2d3331;
+  font-family: "lufgaextralight";
+  margin-bottom: 20px;
+}
 
-.icon-wrapper {}
-
+.name-tag-1 {
+  font-size: 10px;
+  position: relative;
+  left: -50px;
+  top: 12px;
+}
+.name-tag-2 {
+  font-size: 10px;
+  position: relative;
+  left: -77px;
+  top: 12px;
+}
+.name-tag-3 {
+  font-size: 10px;
+  position: relative;
+  left: -79px;
+  top: 12px;
+}
+.icon-wrapper {
+}
 .icon {
   display: grid;
   place-content: center;
@@ -406,79 +380,62 @@ h4 {
   height: 50px;
   margin: 10px;
 }
-
 .icon:hover {
   transform: scale(1.1);
 }
-
 .icon-1 {
   background: #fbc666;
 }
-
 .icon-2 {
   background: #fb7f7d;
 }
-
 .icon-3 {
   background: #f6acf8;
 }
-
 .icon-4 {
   background: #62d0da;
 }
-
 .icon-5 {
   background: #4aa67b;
 }
-
 .boxes {
   display: Flex;
 }
-
 main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .content-left {
   flex-grow: 1;
   display: grid;
   place-content: center;
 }
-
 .content-right {
   flex-grow: 1;
 }
-
 .box {
   height: 260px;
   width: 100%;
   border-radius: 25px;
   margin: 10px;
 }
-
 .box-1 {
   background: #fb7f7d76;
 }
-
 .box-2 {
   background: #f6acf87e;
 }
-
 .box-3 {
   background: #62d0da7f;
 }
-
 .box-4 {
   background: #4aa67b74;
 }
-
 .menu-img {
   width: 86px;
   height: 86px;
 }
-
 .menu-option {
   display: flex;
   flex-direction: column;
@@ -486,14 +443,12 @@ main {
   height: 100%;
   justify-content: center;
 }
-
 h3 {
   font-family: "lufgaextralight";
   font-weight: 400;
   font-size: 24px;
   color: #2d3331;
 }
-
 .box-wrapper {
   height: 100%;
   justify-content: center;
@@ -501,7 +456,129 @@ h3 {
   align-items: flex;
   flex-direction: column;
 }
-
 .placeholder {
-  max-width: 400px;
+  max-width: 500px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 18px 6px rgba(0, 0, 0, 0.1);
+}
+
+.colorpick {
+  height: 90vh;
+}
+
+.build-face {
+  width: 434px;
+  height: 434px;
+}
+
+.eyes {
+  position: absolute;
+  z-index: 100;
+}
+
+.faced {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  bottom: 110px;
+  z-index: 10;
+}
+
+.eyes {
+  position: absolute;
+  bottom: 200px;
+  left: 70px;
+  z-index: 100;
+}
+.pupils {
+  position: relative;
+  bottom: 200px;
+  left: 70px;
+  z-index: 101;
+}
+
+.brows {
+  position: relative;
+  bottom: 200px;
+  left: 70px;
+  z-index: 102;
+}
+
+.mouths {
+  position: relative;
+  bottom: 200px;
+  left: 70px;
+  z-index: 103;
+}
+.build-tool {
+  /* position: absolute;
+  bottom: 185px;
+  left: 0; */
+}
+.landing {
+  max-height: 100vh;
+}
+
+.florb-header {
+  text-align: center;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-2 {
+  height: 100vh;
+}
+
+.right-builder-sidebar {
+  height: 100vh;
+  background: #ffffff;
+  box-shadow: 0px 4px 18px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 50px 0px 0px 50px;
+}
+
+.form-field {
+  margin: 20px;
+}
+
+.save-button {
+  font-family: "lufgaregular";
+  width: 150px;
+  height: 50px;
+  background: #62d0da;
+  border: 2px solid #e1e4eb;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 16px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.eyes-tab {
+}
+
+/* .hide {
+  display: none;
+} */
+
+.inuse {
+  fill: red;
+}
+@media only screen and (min-width: 768px) {
+  .sidebar-left {
+    position: absolute;
+    width: 100px;
+    height: 100vh;
+    box-shadow: 0px 4px 18px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 50px 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }

@@ -418,7 +418,7 @@ function toggleBackForgot() {
 }
 //Instantiate the GoTrue auth client + GoTrue functions
 let auth = new _gotrueJsDefault.default({
-    APIUrl: "https://confident-hoover-cccfcc.netlify.app/.netlify/identity",
+    APIUrl: "https://serene-clarke-d069ee.netlify.app/.netlify/identity",
     setCookie: true
 });
 document.querySelector("form[name='signup']").addEventListener("submit", (e)=>{
@@ -428,7 +428,11 @@ document.querySelector("form[name='signup']").addEventListener("submit", (e)=>{
         const form = e.target;
         if (!auth) noAuthFound(form);
         const { email , password , name  } = form.elements;
-        auth.signup(email.value, password.value).then((response)=>{
+        auth.signup(email.value, password.value, {
+            data: {
+                full_name: name.value
+            }
+        }).then((response)=>{
             console.log(name.value);
             console.log(response);
             showMessage(`<p>Created a user! </p><p>Response: </p><code>${JSON.stringify(response)}</code>`, form);
@@ -452,8 +456,7 @@ document.querySelector("form[name='login']").addEventListener("submit", (e)=>{
         console.log(response);
         user = auth.currentUser();
         localStorage.setItem("user", JSON.stringify(user));
-        updateThing();
-    //window.location.href = "/index.html";
+        window.location.href = "/dashboard.html";
     }).catch((error)=>{
         showMessage(`Failed to log in :`, form);
         console.log(error);
@@ -462,15 +465,11 @@ document.querySelector("form[name='login']").addEventListener("submit", (e)=>{
 function updateThing() {
     user = auth.currentUser();
     user.update({
-        email: user.email,
-        user_metadata: {
-            full_name: "larry"
+        data: {
+            you: "are awesome"
         }
-    }).then((user1)=>console.log(auth.currentUser().user_metadata)
-    ).catch((error)=>{
-        console.log("Failed to update user: %o", error);
-        throw error;
-    });
+    }).then((user1)=>console.log(user1)
+    );
 }
 //request recovery email
 document.querySelector("form[name='recover-pass']").addEventListener("submit", (e)=>{
@@ -1420,6 +1419,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["3El28","5vo5L"], "5vo5L", "parcelRequire84f5")
+},{}]},["3El28","5vo5L"], "5vo5L", "parcelRequiredca8")
 
 //# sourceMappingURL=login.77583b8c.js.map
