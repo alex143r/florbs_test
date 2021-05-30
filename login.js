@@ -53,7 +53,6 @@ document
   .querySelector("form[name='signup']")
   .addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log(e.target.elements.password.value);
     if (
       e.target.elements.password.value === e.target.elements.password2.value
     ) {
@@ -64,10 +63,11 @@ document
         noAuthFound(form);
       }
 
-      const { email, password } = form.elements;
+      const { email, password, name } = form.elements;
       auth
         .signup(email.value, password.value)
         .then((response) => {
+          console.log(name.value);
           console.log(response);
           showMessage(
             `<p>Created a user! </p><p>Response: </p><code>${JSON.stringify(
@@ -99,15 +99,28 @@ document.querySelector("form[name='login']").addEventListener("submit", (e) => {
       showMessage(`<p>Log in successful! </p>`, form);
       console.log(response);
       user = auth.currentUser();
-      localStorage.setItem("user", JSON.stringify(user.token));
 
-      window.location.href = "/index.html";
+      localStorage.setItem("user", JSON.stringify(user));
+
+      updateThing();
+      //window.location.href = "/index.html";
     })
     .catch((error) => {
       showMessage(`Failed to log in :`, form);
       console.log(error);
     });
 });
+function updateThing() {
+  user = auth.currentUser();
+
+  user
+    .update({ email: user.email, user_metadata: { full_name: "larry" } })
+    .then((user) => console.log(auth.currentUser().user_metadata))
+    .catch((error) => {
+      console.log("Failed to update user: %o", error);
+      throw error;
+    });
+}
 
 //request recovery email
 document

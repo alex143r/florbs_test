@@ -382,7 +382,6 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 
 },{}],"5vo5L":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
 var _gotrueJs = require("gotrue-js");
 var _gotrueJsDefault = parcelHelpers.interopDefault(_gotrueJs);
 let user;
@@ -424,13 +423,13 @@ let auth = new _gotrueJsDefault.default({
 });
 document.querySelector("form[name='signup']").addEventListener("submit", (e)=>{
     e.preventDefault();
-    console.log(e.target.elements.password.value);
     if (e.target.elements.password.value === e.target.elements.password2.value) {
         console.log("succ");
         const form = e.target;
         if (!auth) noAuthFound(form);
-        const { email , password  } = form.elements;
+        const { email , password , name  } = form.elements;
         auth.signup(email.value, password.value).then((response)=>{
+            console.log(name.value);
             console.log(response);
             showMessage(`<p>Created a user! </p><p>Response: </p><code>${JSON.stringify(response)}</code>`, form);
         }).catch((error)=>{
@@ -448,16 +447,31 @@ document.querySelector("form[name='login']").addEventListener("submit", (e)=>{
     const form = e.target;
     if (!auth) noAuthFound(form);
     const { email , password  } = form.elements;
-    auth.login(email.value, password.value).then((response)=>{
+    auth.login(email.value, password.value, true).then((response)=>{
         showMessage(`<p>Log in successful! </p>`, form);
         console.log(response);
         user = auth.currentUser();
-        window.location.href = "/index.html";
+        localStorage.setItem("user", JSON.stringify(user));
+        updateThing();
+    //window.location.href = "/index.html";
     }).catch((error)=>{
         showMessage(`Failed to log in :`, form);
         console.log(error);
     });
 });
+function updateThing() {
+    user = auth.currentUser();
+    user.update({
+        email: user.email,
+        user_metadata: {
+            full_name: "larry"
+        }
+    }).then((user1)=>console.log(auth.currentUser().user_metadata)
+    ).catch((error)=>{
+        console.log("Failed to update user: %o", error);
+        throw error;
+    });
+}
 //request recovery email
 document.querySelector("form[name='recover-pass']").addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -489,7 +503,6 @@ function clearPage() {
         el.textContent = "";
     });
 }
-exports.default = user;
 
 },{"gotrue-js":"67DNY","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"67DNY":[function(require,module,exports) {
 "use strict";

@@ -381,16 +381,12 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 }
 
 },{}],"4ee1I":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _loginJs = require("./login.js");
-var _loginJsDefault = parcelHelpers.interopDefault(_loginJs);
-if (_loginJsDefault.default) {
-    const user = auth.currentUser();
-    console.log("fuck");
+if (localStorage.getItem("user") === null) console.log("naa dude");
+if (localStorage.getItem("user") !== null) {
+    const user = JSON.parse(localStorage.getItem("user"));
     console.log(user);
 }
-console.log(_loginJsDefault.default);
 
-},{"./login.js":"5vo5L","@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}]},["oOezg","4ee1I"], "4ee1I", "parcelRequire84f5")
+},{}]},["oOezg","4ee1I"], "4ee1I", "parcelRequire84f5")
 
 //# sourceMappingURL=index.fd532818.js.map
