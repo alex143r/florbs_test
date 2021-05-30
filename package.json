@@ -148,6 +148,7 @@
     "json-schema-traverse": "^0.4.1",
     "json-stringify-safe": "^5.0.1",
     "kind-of": "^6.0.3",
+    "less": "^4.1.1",
     "lodash": "^4.17.21",
     "materialize-css": "^1.0.0",
     "object-inspect": "^1.10.3",
@@ -158,8 +159,7 @@
     "safe-buffer": "^5.2.1"
   },
   "devDependencies": {
-    "@parcel/transformer-less": "^2.0.0-beta.3.1",
-    "less": "^4.1.1"
+    "@parcel/transformer-less": "^2.0.0-beta.3.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
