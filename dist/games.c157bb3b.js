@@ -383,7 +383,7 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 },{}],"6PZK4":[function(require,module,exports) {
 var global = arguments[3];
 /*!
- * Materialize v1.0.0-rc.2 (http://materializecss.com)
+ * Materialize v1.0.0 (http://materializecss.com)
  * Copyright 2014-2017 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */ var _get = function t6(e, i, n) {
@@ -966,7 +966,7 @@ var Component = function() {
     }, M.jQueryLoaded = !!t1.jQuery;
 })(window), "function" == typeof define && define.amd ? define("M", [], function() {
     return M;
-}) : "undefined" == typeof exports || exports.nodeType || ("undefined" != typeof module && !module.nodeType && module.exports && (exports = module.exports = M), exports.default = M), M.keys = {
+}) : "undefined" == typeof exports || exports.nodeType || ("undefined" != typeof module && !module.nodeType && module.exports && (exports = module.exports = M), exports.default = M), M.version = "1.0.0", M.keys = {
     TAB: 9,
     ENTER: 13,
     ESC: 27,
@@ -1966,7 +1966,7 @@ M.anime = (function() {
         ]), s3;
     }();
     M.Collapsible = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "collapsible", "M_Collapsible");
-})(cash, M.anime), (function(h3, s3) {
+})(cash, M.anime), (function(h3, i7) {
     "use strict";
     var e3 = {
         alignment: "left",
@@ -1986,9 +1986,9 @@ M.anime = (function() {
     }, t7 = function(t8) {
         function n9(t9, e4) {
             _classCallCheck(this, n9);
-            var i7 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e4));
-            return i7.el.M_Dropdown = i7, n9._dropdowns.push(i7), i7.id = M.getIdFromTrigger(t9), i7.dropdownEl = document.getElementById(i7.id), i7.$dropdownEl = h3(i7.dropdownEl), i7.options = h3.extend({
-            }, n9.defaults, e4), i7.isOpen = false, i7.isScrollable = false, i7.isTouchMoving = false, i7.focusedIndex = -1, i7.filterQuery = [], i7.options.container ? h3(i7.options.container).append(i7.dropdownEl) : i7.$el.after(i7.dropdownEl), i7._makeDropdownFocusable(), i7._resetFilterQueryBound = i7._resetFilterQuery.bind(i7), i7._handleDocumentClickBound = i7._handleDocumentClick.bind(i7), i7._handleDocumentTouchmoveBound = i7._handleDocumentTouchmove.bind(i7), i7._handleDropdownClickBound = i7._handleDropdownClick.bind(i7), i7._handleDropdownKeydownBound = i7._handleDropdownKeydown.bind(i7), i7._handleTriggerKeydownBound = i7._handleTriggerKeydown.bind(i7), i7._setupEventHandlers(), i7;
+            var i8 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e4));
+            return i8.el.M_Dropdown = i8, n9._dropdowns.push(i8), i8.id = M.getIdFromTrigger(t9), i8.dropdownEl = document.getElementById(i8.id), i8.$dropdownEl = h3(i8.dropdownEl), i8.options = h3.extend({
+            }, n9.defaults, e4), i8.isOpen = false, i8.isScrollable = false, i8.isTouchMoving = false, i8.focusedIndex = -1, i8.filterQuery = [], i8.options.container ? h3(i8.options.container).append(i8.dropdownEl) : i8.$el.after(i8.dropdownEl), i8._makeDropdownFocusable(), i8._resetFilterQueryBound = i8._resetFilterQuery.bind(i8), i8._handleDocumentClickBound = i8._handleDocumentClick.bind(i8), i8._handleDocumentTouchmoveBound = i8._handleDocumentTouchmove.bind(i8), i8._handleDropdownClickBound = i8._handleDropdownClick.bind(i8), i8._handleDropdownKeydownBound = i8._handleDropdownKeydown.bind(i8), i8._handleTriggerKeydownBound = i8._handleTriggerKeydown.bind(i8), i8._setupEventHandlers(), i8;
         }
         return _inherits(n9, Component), _createClass(n9, [
             {
@@ -2036,17 +2036,17 @@ M.anime = (function() {
             {
                 key: "_handleMouseLeave",
                 value: function(t9) {
-                    var e4 = t9.toElement || t9.relatedTarget, i7 = !!h3(e4).closest(".dropdown-content").length, n10 = false, s10 = h3(e4).closest(".dropdown-trigger");
-                    s10.length && s10[0].M_Dropdown && s10[0].M_Dropdown.isOpen && (n10 = true), n10 || i7 || this.close();
+                    var e4 = t9.toElement || t9.relatedTarget, i8 = !!h3(e4).closest(".dropdown-content").length, n10 = false, s3 = h3(e4).closest(".dropdown-trigger");
+                    s3.length && s3[0].M_Dropdown && s3[0].M_Dropdown.isOpen && (n10 = true), n10 || i8 || this.close();
                 }
             },
             {
                 key: "_handleDocumentClick",
                 value: function(t9) {
-                    var e4 = this, i7 = h3(t9.target);
-                    this.options.closeOnClick && i7.closest(".dropdown-content").length && !this.isTouchMoving ? setTimeout(function() {
+                    var e4 = this, i8 = h3(t9.target);
+                    this.options.closeOnClick && i8.closest(".dropdown-content").length && !this.isTouchMoving ? setTimeout(function() {
                         e4.close();
-                    }, 0) : !i7.closest(".dropdown-trigger").length && i7.closest(".dropdown-content").length || setTimeout(function() {
+                    }, 0) : !i8.closest(".dropdown-trigger").length && i8.closest(".dropdown-content").length || setTimeout(function() {
                         e4.close();
                     }, 0), this.isTouchMoving = false;
                 }
@@ -2078,18 +2078,18 @@ M.anime = (function() {
                     if (t9.which === M.keys.TAB) t9.preventDefault(), this.close();
                     else if (t9.which !== M.keys.ARROW_DOWN && t9.which !== M.keys.ARROW_UP || !this.isOpen) {
                         if (t9.which === M.keys.ENTER && this.isOpen) {
-                            var e5 = this.dropdownEl.children[this.focusedIndex], i7 = h3(e5).find("a, button").first();
-                            i7.length ? i7[0].click() : e5.click();
+                            var e5 = this.dropdownEl.children[this.focusedIndex], i8 = h3(e5).find("a, button").first();
+                            i8.length ? i8[0].click() : e5 && e5.click();
                         } else t9.which === M.keys.ESC && this.isOpen && (t9.preventDefault(), this.close());
                     } else {
                         t9.preventDefault();
-                        var n10 = t9.which === M.keys.ARROW_DOWN ? 1 : -1, s10 = this.focusedIndex, o6 = false;
-                        do if (s10 += n10, this.dropdownEl.children[s10] && -1 !== this.dropdownEl.children[s10].tabIndex) {
+                        var n10 = t9.which === M.keys.ARROW_DOWN ? 1 : -1, s3 = this.focusedIndex, o6 = false;
+                        do if (s3 += n10, this.dropdownEl.children[s3] && -1 !== this.dropdownEl.children[s3].tabIndex) {
                             o6 = true;
                             break;
                         }
-                        while (s10 < this.dropdownEl.children.length && 0 <= s10)
-                        o6 && (this.focusedIndex = s10, this._focusFocusedItem());
+                        while (s3 < this.dropdownEl.children.length && 0 <= s3)
+                        o6 && (this.focusedIndex = s3, this._focusFocusedItem());
                     }
                     var a5 = String.fromCharCode(t9.which).toLowerCase();
                     if (a5 && -1 === [
@@ -2147,22 +2147,22 @@ M.anime = (function() {
                 key: "_getDropdownPosition",
                 value: function() {
                     this.el.offsetParent.getBoundingClientRect();
-                    var t9 = this.el.getBoundingClientRect(), e6 = this.dropdownEl.getBoundingClientRect(), i8 = e6.height, n11 = e6.width, s11 = t9.left - e6.left, o7 = t9.top - e6.top, a5 = {
-                        left: s11,
+                    var t9 = this.el.getBoundingClientRect(), e6 = this.dropdownEl.getBoundingClientRect(), i9 = e6.height, n11 = e6.width, s10 = t9.left - e6.left, o7 = t9.top - e6.top, a5 = {
+                        left: s10,
                         top: o7,
-                        height: i8,
+                        height: i9,
                         width: n11
                     }, r4 = this.dropdownEl.offsetParent ? this.dropdownEl.offsetParent : this.dropdownEl.parentNode, l4 = M.checkPossibleAlignments(this.el, r4, a5, this.options.coverTrigger ? 0 : t9.height), h4 = "top", d3 = this.options.alignment;
-                    if (o7 += this.options.coverTrigger ? 0 : t9.height, this.isScrollable = false, l4.top || (l4.bottom ? h4 = "bottom" : (this.isScrollable = true, l4.spaceOnTop > l4.spaceOnBottom ? (h4 = "bottom", i8 += l4.spaceOnTop, o7 -= l4.spaceOnTop) : i8 += l4.spaceOnBottom)), !l4[d3]) {
+                    if (o7 += this.options.coverTrigger ? 0 : t9.height, this.isScrollable = false, l4.top || (l4.bottom ? h4 = "bottom" : (this.isScrollable = true, l4.spaceOnTop > l4.spaceOnBottom ? (h4 = "bottom", i9 += l4.spaceOnTop, o7 -= l4.spaceOnTop) : i9 += l4.spaceOnBottom)), !l4[d3]) {
                         var u1 = "left" === d3 ? "right" : "left";
-                        l4[u1] ? d3 = u1 : l4.spaceOnLeft > l4.spaceOnRight ? (d3 = "right", n11 += l4.spaceOnLeft, s11 -= l4.spaceOnLeft) : (d3 = "left", n11 += l4.spaceOnRight);
+                        l4[u1] ? d3 = u1 : l4.spaceOnLeft > l4.spaceOnRight ? (d3 = "right", n11 += l4.spaceOnLeft, s10 -= l4.spaceOnLeft) : (d3 = "left", n11 += l4.spaceOnRight);
                     }
-                    return "bottom" === h4 && (o7 = o7 - e6.height + (this.options.coverTrigger ? t9.height : 0)), "right" === d3 && (s11 = s11 - e6.width + t9.width), {
-                        x: s11,
+                    return "bottom" === h4 && (o7 = o7 - e6.height + (this.options.coverTrigger ? t9.height : 0)), "right" === d3 && (s10 = s10 - e6.width + t9.width), {
+                        x: s10,
                         y: o7,
                         verticalAlignment: h4,
                         horizontalAlignment: d3,
-                        height: i8,
+                        height: i9,
                         width: n11
                     };
                 }
@@ -2170,8 +2170,8 @@ M.anime = (function() {
             {
                 key: "_animateIn",
                 value: function() {
-                    var i8 = this;
-                    s3.remove(this.dropdownEl), s3({
+                    var e6 = this;
+                    i7.remove(this.dropdownEl), i7({
                         targets: this.dropdownEl,
                         opacity: {
                             value: [
@@ -2191,10 +2191,7 @@ M.anime = (function() {
                         duration: this.options.inDuration,
                         easing: "easeOutQuint",
                         complete: function(t9) {
-                            if (i8.options.autoFocus && i8.dropdownEl.focus(), "function" == typeof i8.options.onOpenEnd) {
-                                var e6 = t9.animatables[0].target;
-                                i8.options.onOpenEnd.call(e6, i8.el);
-                            }
+                            e6.options.autoFocus && e6.dropdownEl.focus(), "function" == typeof e6.options.onOpenEnd && e6.options.onOpenEnd.call(e6, e6.el);
                         }
                     });
                 }
@@ -2202,8 +2199,8 @@ M.anime = (function() {
             {
                 key: "_animateOut",
                 value: function() {
-                    var e7 = this;
-                    s3.remove(this.dropdownEl), s3({
+                    var e6 = this;
+                    i7.remove(this.dropdownEl), i7({
                         targets: this.dropdownEl,
                         opacity: {
                             value: 0,
@@ -2214,10 +2211,7 @@ M.anime = (function() {
                         duration: this.options.outDuration,
                         easing: "easeOutQuint",
                         complete: function(t9) {
-                            if (e7._resetDropdownStyles(), "function" == typeof e7.options.onCloseEnd) {
-                                t9.animatables[0].target;
-                                e7.options.onCloseEnd.call(e7, e7.el);
-                            }
+                            e6._resetDropdownStyles(), "function" == typeof e6.options.onCloseEnd && e6.options.onCloseEnd.call(e6, e6.el);
                         }
                     });
                 }
@@ -2227,8 +2221,8 @@ M.anime = (function() {
                 value: function() {
                     var t9 = this.options.constrainWidth ? this.el.getBoundingClientRect().width : this.dropdownEl.getBoundingClientRect().width;
                     this.dropdownEl.style.width = t9 + "px";
-                    var e7 = this._getDropdownPosition();
-                    this.dropdownEl.style.left = e7.x + "px", this.dropdownEl.style.top = e7.y + "px", this.dropdownEl.style.height = e7.height + "px", this.dropdownEl.style.width = e7.width + "px", this.dropdownEl.style.transformOrigin = ("left" === e7.horizontalAlignment ? "0" : "100%") + " " + ("top" === e7.verticalAlignment ? "0" : "100%");
+                    var e6 = this._getDropdownPosition();
+                    this.dropdownEl.style.left = e6.x + "px", this.dropdownEl.style.top = e6.y + "px", this.dropdownEl.style.height = e6.height + "px", this.dropdownEl.style.width = e6.width + "px", this.dropdownEl.style.transformOrigin = ("left" === e6.horizontalAlignment ? "0" : "100%") + " " + ("top" === e6.verticalAlignment ? "0" : "100%");
                 }
             },
             {
@@ -2258,8 +2252,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t9, e7) {
-                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e7);
+                value: function(t9, e6) {
+                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e6);
                 }
             },
             {
@@ -2276,8 +2270,8 @@ M.anime = (function() {
             }
         ]), n9;
     }();
-    t7._dropdowns = [], window.M.Dropdown = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "dropdown", "M_Dropdown");
-})(cash, M.anime), (function(s3, i8) {
+    t7._dropdowns = [], M.Dropdown = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "dropdown", "M_Dropdown");
+})(cash, M.anime), (function(s10, i7) {
     "use strict";
     var e3 = {
         opacity: 0.5,
@@ -2292,11 +2286,11 @@ M.anime = (function() {
         startingTop: "4%",
         endingTop: "10%"
     }, t7 = function(t8) {
-        function n9(t9, e7) {
+        function n9(t9, e6) {
             _classCallCheck(this, n9);
-            var i9 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e7));
-            return (i9.el.M_Modal = i9).options = s3.extend({
-            }, n9.defaults, e7), i9.isOpen = false, i9.id = i9.$el.attr("id"), i9._openingTrigger = void 0, i9.$overlay = s3('<div class="modal-overlay"></div>'), i9.el.tabIndex = 0, i9._nthModalOpened = 0, n9._count++, i9._setupEventHandlers(), i9;
+            var i9 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e6));
+            return (i9.el.M_Modal = i9).options = s10.extend({
+            }, n9.defaults, e6), i9.isOpen = false, i9.id = i9.$el.attr("id"), i9._openingTrigger = void 0, i9.$overlay = s10('<div class="modal-overlay"></div>'), i9.el.tabIndex = 0, i9._nthModalOpened = 0, n9._count++, i9._setupEventHandlers(), i9;
         }
         return _inherits(n9, Component), _createClass(n9, [
             {
@@ -2320,10 +2314,10 @@ M.anime = (function() {
             {
                 key: "_handleTriggerClick",
                 value: function(t9) {
-                    var e7 = s3(t9.target).closest(".modal-trigger");
-                    if (e7.length) {
-                        var i9 = M.getIdFromTrigger(e7[0]), n11 = document.getElementById(i9).M_Modal;
-                        n11 && n11.open(e7), t9.preventDefault();
+                    var e6 = s10(t9.target).closest(".modal-trigger");
+                    if (e6.length) {
+                        var i9 = M.getIdFromTrigger(e6[0]), n11 = document.getElementById(i9).M_Modal;
+                        n11 && n11.open(e6), t9.preventDefault();
                     }
                 }
             },
@@ -2336,7 +2330,7 @@ M.anime = (function() {
             {
                 key: "_handleModalCloseClick",
                 value: function(t9) {
-                    s3(t9.target).closest(".modal-close").length && this.close();
+                    s10(t9.target).closest(".modal-close").length && this.close();
                 }
             },
             {
@@ -2355,19 +2349,19 @@ M.anime = (function() {
                 key: "_animateIn",
                 value: function() {
                     var t9 = this;
-                    s3.extend(this.el.style, {
+                    s10.extend(this.el.style, {
                         display: "block",
                         opacity: 0
-                    }), s3.extend(this.$overlay[0].style, {
+                    }), s10.extend(this.$overlay[0].style, {
                         display: "block",
                         opacity: 0
-                    }), i8({
+                    }), i7({
                         targets: this.$overlay[0],
                         opacity: this.options.opacity,
                         duration: this.options.inDuration,
                         easing: "easeOutQuad"
                     });
-                    var e7 = {
+                    var e6 = {
                         targets: this.el,
                         duration: this.options.inDuration,
                         easing: "easeOutCubic",
@@ -2375,10 +2369,10 @@ M.anime = (function() {
                             "function" == typeof t9.options.onOpenEnd && t9.options.onOpenEnd.call(t9, t9.el, t9._openingTrigger);
                         }
                     };
-                    this.el.classList.contains("bottom-sheet") ? s3.extend(e7, {
+                    this.el.classList.contains("bottom-sheet") ? s10.extend(e6, {
                         bottom: 0,
                         opacity: 1
-                    }) : s3.extend(e7, {
+                    }) : s10.extend(e6, {
                         top: [
                             this.options.startingTop,
                             this.options.endingTop
@@ -2392,20 +2386,20 @@ M.anime = (function() {
                             0.8,
                             1
                         ]
-                    }), i8(e7);
+                    }), i7(e6);
                 }
             },
             {
                 key: "_animateOut",
                 value: function() {
                     var t9 = this;
-                    i8({
+                    i7({
                         targets: this.$overlay[0],
                         opacity: 0,
                         duration: this.options.outDuration,
                         easing: "easeOutQuart"
                     });
-                    var e7 = {
+                    var e6 = {
                         targets: this.el,
                         duration: this.options.outDuration,
                         easing: "easeOutCubic",
@@ -2413,10 +2407,10 @@ M.anime = (function() {
                             t9.el.style.display = "none", t9.$overlay.remove(), "function" == typeof t9.options.onCloseEnd && t9.options.onCloseEnd.call(t9, t9.el);
                         }
                     };
-                    this.el.classList.contains("bottom-sheet") ? s3.extend(e7, {
+                    this.el.classList.contains("bottom-sheet") ? s10.extend(e6, {
                         bottom: "-100%",
                         opacity: 0
-                    }) : s3.extend(e7, {
+                    }) : s10.extend(e6, {
                         top: [
                             this.options.endingTop,
                             this.options.startingTop
@@ -2424,26 +2418,26 @@ M.anime = (function() {
                         opacity: 0,
                         scaleX: 0.8,
                         scaleY: 0.8
-                    }), i8(e7);
+                    }), i7(e6);
                 }
             },
             {
                 key: "open",
                 value: function(t9) {
-                    if (!this.isOpen) return this.isOpen = true, n9._modalsOpen++, this._nthModalOpened = n9._modalsOpen, this.$overlay[0].style.zIndex = 1000 + 2 * n9._modalsOpen, this.el.style.zIndex = 1000 + 2 * n9._modalsOpen + 1, this._openingTrigger = t9 ? t9[0] : void 0, "function" == typeof this.options.onOpenStart && this.options.onOpenStart.call(this, this.el, this._openingTrigger), this.options.preventScrolling && (document.body.style.overflow = "hidden"), this.el.classList.add("open"), this.el.insertAdjacentElement("afterend", this.$overlay[0]), this.options.dismissible && (this._handleKeydownBound = this._handleKeydown.bind(this), this._handleFocusBound = this._handleFocus.bind(this), document.addEventListener("keydown", this._handleKeydownBound), document.addEventListener("focus", this._handleFocusBound, true)), i8.remove(this.el), i8.remove(this.$overlay[0]), this._animateIn(), this.el.focus(), this;
+                    if (!this.isOpen) return this.isOpen = true, n9._modalsOpen++, this._nthModalOpened = n9._modalsOpen, this.$overlay[0].style.zIndex = 1000 + 2 * n9._modalsOpen, this.el.style.zIndex = 1000 + 2 * n9._modalsOpen + 1, this._openingTrigger = t9 ? t9[0] : void 0, "function" == typeof this.options.onOpenStart && this.options.onOpenStart.call(this, this.el, this._openingTrigger), this.options.preventScrolling && (document.body.style.overflow = "hidden"), this.el.classList.add("open"), this.el.insertAdjacentElement("afterend", this.$overlay[0]), this.options.dismissible && (this._handleKeydownBound = this._handleKeydown.bind(this), this._handleFocusBound = this._handleFocus.bind(this), document.addEventListener("keydown", this._handleKeydownBound), document.addEventListener("focus", this._handleFocusBound, true)), i7.remove(this.el), i7.remove(this.$overlay[0]), this._animateIn(), this.el.focus(), this;
                 }
             },
             {
                 key: "close",
                 value: function() {
-                    if (this.isOpen) return this.isOpen = false, n9._modalsOpen--, this._nthModalOpened = 0, "function" == typeof this.options.onCloseStart && this.options.onCloseStart.call(this, this.el), this.el.classList.remove("open"), 0 === n9._modalsOpen && (document.body.style.overflow = ""), this.options.dismissible && (document.removeEventListener("keydown", this._handleKeydownBound), document.removeEventListener("focus", this._handleFocusBound, true)), i8.remove(this.el), i8.remove(this.$overlay[0]), this._animateOut(), this;
+                    if (this.isOpen) return this.isOpen = false, n9._modalsOpen--, this._nthModalOpened = 0, "function" == typeof this.options.onCloseStart && this.options.onCloseStart.call(this, this.el), this.el.classList.remove("open"), 0 === n9._modalsOpen && (document.body.style.overflow = ""), this.options.dismissible && (document.removeEventListener("keydown", this._handleKeydownBound), document.removeEventListener("focus", this._handleFocusBound, true)), i7.remove(this.el), i7.remove(this.$overlay[0]), this._animateOut(), this;
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t9, e7) {
-                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e7);
+                value: function(t9, e6) {
+                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e6);
                 }
             },
             {
@@ -2471,11 +2465,11 @@ M.anime = (function() {
         onCloseStart: null,
         onCloseEnd: null
     }, t7 = function(t8) {
-        function n9(t9, e7) {
+        function n9(t9, e6) {
             _classCallCheck(this, n9);
-            var i8 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e7));
-            return (i8.el.M_Materialbox = i8).options = o7.extend({
-            }, n9.defaults, e7), i8.overlayActive = false, i8.doneAnimating = true, i8.placeholder = o7("<div></div>").addClass("material-placeholder"), i8.originalWidth = 0, i8.originalHeight = 0, i8.originInlineStyles = i8.$el.attr("style"), i8.caption = i8.el.getAttribute("data-caption") || "", i8.$el.before(i8.placeholder), i8.placeholder.append(i8.$el), i8._setupEventHandlers(), i8;
+            var i7 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e6));
+            return (i7.el.M_Materialbox = i7).options = o7.extend({
+            }, n9.defaults, e6), i7.overlayActive = false, i7.doneAnimating = true, i7.placeholder = o7("<div></div>").addClass("material-placeholder"), i7.originalWidth = 0, i7.originalHeight = 0, i7.originInlineStyles = i7.$el.attr("style"), i7.caption = i7.el.getAttribute("data-caption") || "", i7.$el.before(i7.placeholder), i7.placeholder.append(i7.$el), i7._setupEventHandlers(), i7;
         }
         return _inherits(n9, Component), _createClass(n9, [
             {
@@ -2525,15 +2519,15 @@ M.anime = (function() {
                 value: function() {
                     this.ancestorsChanged = o7();
                     for(var t9 = this.placeholder[0].parentNode; null !== t9 && !o7(t9).is(document);){
-                        var e7 = o7(t9);
-                        "visible" !== e7.css("overflow") && (e7.css("overflow", "visible"), (void 0) === this.ancestorsChanged ? this.ancestorsChanged = e7 : this.ancestorsChanged = this.ancestorsChanged.add(e7)), t9 = t9.parentNode;
+                        var e6 = o7(t9);
+                        "visible" !== e6.css("overflow") && (e6.css("overflow", "visible"), (void 0) === this.ancestorsChanged ? this.ancestorsChanged = e6 : this.ancestorsChanged = this.ancestorsChanged.add(e6)), t9 = t9.parentNode;
                     }
                 }
             },
             {
                 key: "_animateImageIn",
                 value: function() {
-                    var t9 = this, e8 = {
+                    var t9 = this, e7 = {
                         targets: this.el,
                         height: [
                             this.originalHeight,
@@ -2551,13 +2545,13 @@ M.anime = (function() {
                             t9.doneAnimating = true, "function" == typeof t9.options.onOpenEnd && t9.options.onOpenEnd.call(t9, t9.el);
                         }
                     };
-                    this.maxWidth = this.$el.css("max-width"), this.maxHeight = this.$el.css("max-height"), "none" !== this.maxWidth && (e8.maxWidth = this.newWidth), "none" !== this.maxHeight && (e8.maxHeight = this.newHeight), a5(e8);
+                    this.maxWidth = this.$el.css("max-width"), this.maxHeight = this.$el.css("max-height"), "none" !== this.maxWidth && (e7.maxWidth = this.newWidth), "none" !== this.maxHeight && (e7.maxHeight = this.newHeight), a5(e7);
                 }
             },
             {
                 key: "_animateImageOut",
                 value: function() {
-                    var t9 = this, e8 = {
+                    var t9 = this, e7 = {
                         targets: this.el,
                         width: this.originalWidth,
                         height: this.originalHeight,
@@ -2575,7 +2569,7 @@ M.anime = (function() {
                             }), t9.attrWidth && t9.$el.attr("width", t9.attrWidth), t9.attrHeight && t9.$el.attr("height", t9.attrHeight), t9.$el.removeAttr("style"), t9.originInlineStyles && t9.$el.attr("style", t9.originInlineStyles), t9.$el.removeClass("active"), t9.doneAnimating = true, t9.ancestorsChanged.length && t9.ancestorsChanged.css("overflow", ""), "function" == typeof t9.options.onCloseEnd && t9.options.onCloseEnd.call(t9, t9.el);
                         }
                     };
-                    a5(e8);
+                    a5(e7);
                 }
             },
             {
@@ -2603,12 +2597,12 @@ M.anime = (function() {
                     }).one("click", function() {
                         t9.doneAnimating && t9.close();
                     }), this.$el.before(this.$overlay);
-                    var e8 = this.$overlay[0].getBoundingClientRect();
+                    var e7 = this.$overlay[0].getBoundingClientRect();
                     this.$overlay.css({
                         width: this.windowWidth + "px",
                         height: this.windowHeight + "px",
-                        left: -1 * e8.left + "px",
-                        top: -1 * e8.top + "px"
+                        left: -1 * e7.left + "px",
+                        top: -1 * e7.top + "px"
                     }), a5.remove(this.el), a5.remove(this.$overlay[0]), a5({
                         targets: this.$overlay[0],
                         opacity: 1,
@@ -2622,8 +2616,8 @@ M.anime = (function() {
                         duration: this.options.inDuration,
                         easing: "easeOutQuad"
                     }));
-                    var i8 = 0, n12 = this.originalWidth / this.windowWidth, s3 = this.originalHeight / this.windowHeight;
-                    this.newWidth = 0, this.newHeight = 0, s3 < n12 ? (i8 = this.originalHeight / this.originalWidth, this.newWidth = 0.9 * this.windowWidth, this.newHeight = 0.9 * this.windowWidth * i8) : (i8 = this.originalWidth / this.originalHeight, this.newWidth = 0.9 * this.windowHeight * i8, this.newHeight = 0.9 * this.windowHeight), this._animateImageIn(), this._handleWindowScrollBound = this._handleWindowScroll.bind(this), this._handleWindowResizeBound = this._handleWindowResize.bind(this), this._handleWindowEscapeBound = this._handleWindowEscape.bind(this), window.addEventListener("scroll", this._handleWindowScrollBound), window.addEventListener("resize", this._handleWindowResizeBound), window.addEventListener("keyup", this._handleWindowEscapeBound);
+                    var i7 = 0, n12 = this.originalWidth / this.windowWidth, s10 = this.originalHeight / this.windowHeight;
+                    this.newWidth = 0, this.newHeight = 0, s10 < n12 ? (i7 = this.originalHeight / this.originalWidth, this.newWidth = 0.9 * this.windowWidth, this.newHeight = 0.9 * this.windowWidth * i7) : (i7 = this.originalWidth / this.originalHeight, this.newWidth = 0.9 * this.windowHeight * i7, this.newHeight = 0.9 * this.windowHeight), this._animateImageIn(), this._handleWindowScrollBound = this._handleWindowScroll.bind(this), this._handleWindowResizeBound = this._handleWindowResize.bind(this), this._handleWindowEscapeBound = this._handleWindowEscape.bind(this), window.addEventListener("scroll", this._handleWindowScrollBound), window.addEventListener("resize", this._handleWindowResizeBound), window.addEventListener("keyup", this._handleWindowEscapeBound);
                 }
             },
             {
@@ -2652,8 +2646,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t9, e8) {
-                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e8);
+                value: function(t9, e7) {
+                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e7);
                 }
             },
             {
@@ -2671,18 +2665,18 @@ M.anime = (function() {
         ]), n9;
     }();
     M.Materialbox = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "materialbox", "M_Materialbox");
-})(cash, M.anime), (function(s3) {
+})(cash, M.anime), (function(s10) {
     "use strict";
     var e3 = {
         responsiveThreshold: 0
     }, t7 = function(t8) {
-        function n9(t9, e8) {
+        function n9(t9, e7) {
             _classCallCheck(this, n9);
-            var i8 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e8));
-            return (i8.el.M_Parallax = i8).options = s3.extend({
-            }, n9.defaults, e8), i8._enabled = window.innerWidth > i8.options.responsiveThreshold, i8.$img = i8.$el.find("img").first(), i8.$img.each(function() {
-                this.complete && s3(this).trigger("load");
-            }), i8._updateParallax(), i8._setupEventHandlers(), i8._setupStyles(), n9._parallaxes.push(i8), i8;
+            var i7 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e7));
+            return (i7.el.M_Parallax = i7).options = s10.extend({
+            }, n9.defaults, e7), i7._enabled = window.innerWidth > i7.options.responsiveThreshold, i7.$img = i7.$el.find("img").first(), i7.$img.each(function() {
+                this.complete && s10(this).trigger("load");
+            }), i7._updateParallax(), i7._setupEventHandlers(), i7._setupStyles(), n9._parallaxes.push(i7), i7;
         }
         return _inherits(n9, Component), _createClass(n9, [
             {
@@ -2718,15 +2712,15 @@ M.anime = (function() {
             {
                 key: "_updateParallax",
                 value: function() {
-                    var t9 = 0 < this.$el.height() ? this.el.parentNode.offsetHeight : 500, e8 = this.$img[0].offsetHeight - t9, i8 = this.$el.offset().top + t9, n12 = this.$el.offset().top, s11 = M.getDocumentScrollTop(), o7 = window.innerHeight, a5 = e8 * ((s11 + o7 - n12) / (t9 + o7));
-                    this._enabled ? s11 < i8 && n12 < s11 + o7 && (this.$img[0].style.transform = "translate3D(-50%, " + a5 + "px, 0)") : this.$img[0].style.transform = "";
+                    var t9 = 0 < this.$el.height() ? this.el.parentNode.offsetHeight : 500, e7 = this.$img[0].offsetHeight - t9, i7 = this.$el.offset().top + t9, n12 = this.$el.offset().top, s11 = M.getDocumentScrollTop(), o7 = window.innerHeight, a5 = e7 * ((s11 + o7 - n12) / (t9 + o7));
+                    this._enabled ? s11 < i7 && n12 < s11 + o7 && (this.$img[0].style.transform = "translate3D(-50%, " + a5 + "px, 0)") : this.$img[0].style.transform = "";
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t9, e8) {
-                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e8);
+                value: function(t9, e7) {
+                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e7);
                 }
             },
             {
@@ -2739,8 +2733,8 @@ M.anime = (function() {
                 key: "_handleScroll",
                 value: function() {
                     for(var t9 = 0; t9 < n9._parallaxes.length; t9++){
-                        var e8 = n9._parallaxes[t9];
-                        e8._updateParallax.call(e8);
+                        var e7 = n9._parallaxes[t9];
+                        e7._updateParallax.call(e7);
                     }
                 }
             },
@@ -2748,8 +2742,8 @@ M.anime = (function() {
                 key: "_handleWindowResize",
                 value: function() {
                     for(var t9 = 0; t9 < n9._parallaxes.length; t9++){
-                        var e9 = n9._parallaxes[t9];
-                        e9._enabled = window.innerWidth > e9.options.responsiveThreshold;
+                        var e8 = n9._parallaxes[t9];
+                        e8._enabled = window.innerWidth > e8.options.responsiveThreshold;
                     }
                 }
             },
@@ -2762,7 +2756,7 @@ M.anime = (function() {
         ]), n9;
     }();
     t7._parallaxes = [], M.Parallax = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "parallax", "M_Parallax");
-})(cash), (function(a5, s3) {
+})(cash), (function(a5, s10) {
     "use strict";
     var e3 = {
         duration: 300,
@@ -2770,11 +2764,11 @@ M.anime = (function() {
         swipeable: false,
         responsiveThreshold: 1 / 0
     }, t7 = function(t8) {
-        function n9(t9, e10) {
+        function n9(t9, e9) {
             _classCallCheck(this, n9);
-            var i8 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e10));
-            return (i8.el.M_Tabs = i8).options = a5.extend({
-            }, n9.defaults, e10), i8.$tabLinks = i8.$el.children("li.tab").children("a"), i8.index = 0, i8._setupActiveTabLink(), i8.options.swipeable ? i8._setupSwipeableTabs() : i8._setupNormalTabs(), i8._setTabsAndTabWidth(), i8._createIndicator(), i8._setupEventHandlers(), i8;
+            var i7 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e9));
+            return (i7.el.M_Tabs = i7).options = a5.extend({
+            }, n9.defaults, e9), i7.$tabLinks = i7.$el.children("li.tab").children("a"), i7.index = 0, i7._setupActiveTabLink(), i7.options.swipeable ? i7._setupSwipeableTabs() : i7._setupNormalTabs(), i7._setTabsAndTabWidth(), i7._createIndicator(), i7._setupEventHandlers(), i7;
         }
         return _inherits(n9, Component), _createClass(n9, [
             {
@@ -2804,16 +2798,16 @@ M.anime = (function() {
             {
                 key: "_handleTabClick",
                 value: function(t9) {
-                    var e10 = this, i8 = a5(t9.target).closest("li.tab"), n12 = a5(t9.target).closest("a");
+                    var e9 = this, i7 = a5(t9.target).closest("li.tab"), n12 = a5(t9.target).closest("a");
                     if (n12.length && n12.parent().hasClass("tab")) {
-                        if (i8.hasClass("disabled")) t9.preventDefault();
+                        if (i7.hasClass("disabled")) t9.preventDefault();
                         else if (!n12.attr("target")) {
                             this.$activeTabLink.removeClass("active");
                             var s11 = this.$content;
                             this.$activeTabLink = n12, this.$content = a5(M.escapeHash(n12[0].hash)), this.$tabLinks = this.$el.children("li.tab").children("a"), this.$activeTabLink.addClass("active");
                             var o7 = this.index;
                             this.index = Math.max(this.$tabLinks.index(n12), 0), this.options.swipeable ? this._tabsCarousel && this._tabsCarousel.set(this.index, function() {
-                                "function" == typeof e10.options.onShow && e10.options.onShow.call(e10, e10.$content[0]);
+                                "function" == typeof e9.options.onShow && e9.options.onShow.call(e9, e9.$content[0]);
                             }) : this.$content.length && (this.$content[0].style.display = "block", this.$content.addClass("active"), "function" == typeof this.options.onShow && this.options.onShow.call(this, this.$content[0]), s11.length && !s11.is(this.$content) && (s11[0].style.display = "none", s11.removeClass("active"))), this._setTabsAndTabWidth(), this._animateIndicator(o7), t9.preventDefault();
                         }
                     }
@@ -2822,8 +2816,8 @@ M.anime = (function() {
             {
                 key: "_createIndicator",
                 value: function() {
-                    var t9 = this, e10 = document.createElement("li");
-                    e10.classList.add("indicator"), this.el.appendChild(e10), this._indicator = e10, setTimeout(function() {
+                    var t9 = this, e9 = document.createElement("li");
+                    e9.classList.add("indicator"), this.el.appendChild(e9), this._indicator = e9, setTimeout(function() {
                         t9._indicator.style.left = t9._calcLeftPos(t9.$activeTabLink) + "px", t9._indicator.style.right = t9._calcRightPos(t9.$activeTabLink) + "px";
                     }, 0);
                 }
@@ -2837,24 +2831,24 @@ M.anime = (function() {
             {
                 key: "_setupSwipeableTabs",
                 value: function() {
-                    var i8 = this;
+                    var i7 = this;
                     window.innerWidth > this.options.responsiveThreshold && (this.options.swipeable = false);
                     var n12 = a5();
                     this.$tabLinks.each(function(t9) {
-                        var e10 = a5(M.escapeHash(t9.hash));
-                        e10.addClass("carousel-item"), n12 = n12.add(e10);
+                        var e9 = a5(M.escapeHash(t9.hash));
+                        e9.addClass("carousel-item"), n12 = n12.add(e9);
                     });
                     var t9 = a5('<div class="tabs-content carousel carousel-slider"></div>');
                     n12.first().before(t9), t9.append(n12), n12[0].style.display = "";
-                    var e10 = this.$activeTabLink.closest(".tab").index();
+                    var e9 = this.$activeTabLink.closest(".tab").index();
                     this._tabsCarousel = M.Carousel.init(t9[0], {
                         fullWidth: true,
                         noWrap: true,
                         onCycleTo: function(t10) {
-                            var e11 = i8.index;
-                            i8.index = a5(t10).index(), i8.$activeTabLink.removeClass("active"), i8.$activeTabLink = i8.$tabLinks.eq(i8.index), i8.$activeTabLink.addClass("active"), i8._animateIndicator(e11), "function" == typeof i8.options.onShow && i8.options.onShow.call(i8, i8.$content[0]);
+                            var e10 = i7.index;
+                            i7.index = a5(t10).index(), i7.$activeTabLink.removeClass("active"), i7.$activeTabLink = i7.$tabLinks.eq(i7.index), i7.$activeTabLink.addClass("active"), i7._animateIndicator(e10), "function" == typeof i7.options.onShow && i7.options.onShow.call(i7, i7.$content[0]);
                         }
-                    }), this._tabsCarousel.set(e10);
+                    }), this._tabsCarousel.set(e9);
                 }
             },
             {
@@ -2869,8 +2863,8 @@ M.anime = (function() {
                 value: function() {
                     this.$tabLinks.not(this.$activeTabLink).each(function(t9) {
                         if (t9.hash) {
-                            var e10 = a5(M.escapeHash(t9.hash));
-                            e10.length && (e10[0].style.display = "none");
+                            var e9 = a5(M.escapeHash(t9.hash));
+                            e9.length && (e9[0].style.display = "none");
                         }
                     });
                 }
@@ -2880,8 +2874,8 @@ M.anime = (function() {
                 value: function() {
                     this.$tabLinks.each(function(t9) {
                         if (t9.hash) {
-                            var e11 = a5(M.escapeHash(t9.hash));
-                            e11.length && (e11[0].style.display = "");
+                            var e10 = a5(M.escapeHash(t9.hash));
+                            e10.length && (e10[0].style.display = "");
                         }
                     });
                 }
@@ -2913,36 +2907,36 @@ M.anime = (function() {
             {
                 key: "_animateIndicator",
                 value: function(t9) {
-                    var e12 = 0, i8 = 0;
-                    0 <= this.index - t9 ? e12 = 90 : i8 = 90;
+                    var e11 = 0, i7 = 0;
+                    0 <= this.index - t9 ? e11 = 90 : i7 = 90;
                     var n12 = {
                         targets: this._indicator,
                         left: {
                             value: this._calcLeftPos(this.$activeTabLink),
-                            delay: e12
+                            delay: e11
                         },
                         right: {
                             value: this._calcRightPos(this.$activeTabLink),
-                            delay: i8
+                            delay: i7
                         },
                         duration: this.options.duration,
                         easing: "easeOutQuad"
                     };
-                    s3.remove(this._indicator), s3(n12);
+                    s10.remove(this._indicator), s10(n12);
                 }
             },
             {
                 key: "select",
                 value: function(t9) {
-                    var e12 = this.$tabLinks.filter('[href="#' + t9 + '"]');
-                    e12.length && e12.trigger("click");
+                    var e11 = this.$tabLinks.filter('[href="#' + t9 + '"]');
+                    e11.length && e11.trigger("click");
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t9, e12) {
-                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e12);
+                value: function(t9, e11) {
+                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e11);
                 }
             },
             {
@@ -2959,10 +2953,10 @@ M.anime = (function() {
             }
         ]), n9;
     }();
-    window.M.Tabs = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "tabs", "M_Tabs");
+    M.Tabs = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "tabs", "M_Tabs");
 })(cash, M.anime), (function(d3, e3) {
     "use strict";
-    var i8 = {
+    var i7 = {
         exitDelay: 200,
         enterDelay: 0,
         html: null,
@@ -2972,11 +2966,11 @@ M.anime = (function() {
         position: "bottom",
         transitionMovement: 10
     }, t7 = function(t8) {
-        function n9(t9, e12) {
+        function n9(t9, e11) {
             _classCallCheck(this, n9);
-            var i10 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e12));
+            var i10 = _possibleConstructorReturn(this, (n9.__proto__ || Object.getPrototypeOf(n9)).call(this, n9, t9, e11));
             return (i10.el.M_Tooltip = i10).options = d3.extend({
-            }, n9.defaults, e12), i10.isOpen = false, i10.isHovered = false, i10.isFocused = false, i10._appendTooltipEl(), i10._setupEventHandlers(), i10;
+            }, n9.defaults, e11), i10.isOpen = false, i10.isHovered = false, i10.isFocused = false, i10._appendTooltipEl(), i10._setupEventHandlers(), i10;
         }
         return _inherits(n9, Component), _createClass(n9, [
             {
@@ -2990,8 +2984,8 @@ M.anime = (function() {
                 value: function() {
                     var t9 = document.createElement("div");
                     t9.classList.add("material-tooltip"), this.tooltipEl = t9;
-                    var e12 = document.createElement("div");
-                    e12.classList.add("tooltip-content"), e12.innerHTML = this.options.html, t9.appendChild(e12), document.body.appendChild(t9);
+                    var e11 = document.createElement("div");
+                    e11.classList.add("tooltip-content"), e11.innerHTML = this.options.html, t9.appendChild(e11), document.body.appendChild(t9);
                 }
             },
             {
@@ -3037,17 +3031,17 @@ M.anime = (function() {
             {
                 key: "_setEnterDelayTimeout",
                 value: function(t9) {
-                    var e12 = this;
+                    var e11 = this;
                     clearTimeout(this._enterDelayTimeout), this._enterDelayTimeout = setTimeout(function() {
-                        (e12.isHovered || e12.isFocused || t9) && e12._animateIn();
+                        (e11.isHovered || e11.isFocused || t9) && e11._animateIn();
                     }, this.options.enterDelay);
                 }
             },
             {
                 key: "_positionTooltip",
                 value: function() {
-                    var t9, e12 = this.el, i10 = this.tooltipEl, n12 = e12.offsetHeight, s3 = e12.offsetWidth, o8 = i10.offsetHeight, a5 = i10.offsetWidth, r4 = this.options.margin, l4 = void 0, h3 = void 0;
-                    this.xMovement = 0, this.yMovement = 0, l4 = e12.getBoundingClientRect().top + M.getDocumentScrollTop(), h3 = e12.getBoundingClientRect().left + M.getDocumentScrollLeft(), "top" === this.options.position ? (l4 += -o8 - r4, h3 += s3 / 2 - a5 / 2, this.yMovement = -this.options.transitionMovement) : "right" === this.options.position ? (l4 += n12 / 2 - o8 / 2, h3 += s3 + r4, this.xMovement = this.options.transitionMovement) : "left" === this.options.position ? (l4 += n12 / 2 - o8 / 2, h3 += -a5 - r4, this.xMovement = -this.options.transitionMovement) : (l4 += n12 + r4, h3 += s3 / 2 - a5 / 2, this.yMovement = this.options.transitionMovement), t9 = this._repositionWithinScreen(h3, l4, a5, o8), d3(i10).css({
+                    var t9, e11 = this.el, i10 = this.tooltipEl, n12 = e11.offsetHeight, s10 = e11.offsetWidth, o8 = i10.offsetHeight, a5 = i10.offsetWidth, r4 = this.options.margin, l4 = void 0, h3 = void 0;
+                    this.xMovement = 0, this.yMovement = 0, l4 = e11.getBoundingClientRect().top + M.getDocumentScrollTop(), h3 = e11.getBoundingClientRect().left + M.getDocumentScrollLeft(), "top" === this.options.position ? (l4 += -o8 - r4, h3 += s10 / 2 - a5 / 2, this.yMovement = -this.options.transitionMovement) : "right" === this.options.position ? (l4 += n12 / 2 - o8 / 2, h3 += s10 + r4, this.xMovement = this.options.transitionMovement) : "left" === this.options.position ? (l4 += n12 / 2 - o8 / 2, h3 += -a5 - r4, this.xMovement = -this.options.transitionMovement) : (l4 += n12 + r4, h3 += s10 / 2 - a5 / 2, this.yMovement = this.options.transitionMovement), t9 = this._repositionWithinScreen(h3, l4, a5, o8), d3(i10).css({
                         top: t9.y + "px",
                         left: t9.x + "px"
                     });
@@ -3055,15 +3049,15 @@ M.anime = (function() {
             },
             {
                 key: "_repositionWithinScreen",
-                value: function(t9, e12, i10, n12) {
-                    var s3 = M.getDocumentScrollLeft(), o8 = M.getDocumentScrollTop(), a5 = t9 - s3, r4 = e12 - o8, l4 = {
+                value: function(t9, e11, i10, n12) {
+                    var s10 = M.getDocumentScrollLeft(), o8 = M.getDocumentScrollTop(), a5 = t9 - s10, r4 = e11 - o8, l4 = {
                         left: a5,
                         top: r4,
                         width: i10,
                         height: n12
                     }, h3 = this.options.margin + this.options.transitionMovement, d4 = M.checkWithinContainer(document.body, l4, h3);
                     return d4.left ? a5 = h3 : d4.right && (a5 -= a5 + i10 - window.innerWidth), d4.top ? r4 = h3 : d4.bottom && (r4 -= r4 + n12 - window.innerHeight), {
-                        x: a5 + s3,
+                        x: a5 + s10,
                         y: r4 + o8
                     };
                 }
@@ -3122,15 +3116,15 @@ M.anime = (function() {
                 key: "_getAttributeOptions",
                 value: function() {
                     var t9 = {
-                    }, e12 = this.el.getAttribute("data-tooltip"), i10 = this.el.getAttribute("data-position");
-                    return e12 && (t9.html = e12), i10 && (t9.position = i10), t9;
+                    }, e11 = this.el.getAttribute("data-tooltip"), i10 = this.el.getAttribute("data-position");
+                    return e11 && (t9.html = e11), i10 && (t9.position = i10), t9;
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t9, e12) {
-                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e12);
+                value: function(t9, e11) {
+                    return _get(n9.__proto__ || Object.getPrototypeOf(n9), "init", this).call(this, this, t9, e11);
                 }
             },
             {
@@ -3142,31 +3136,31 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return i8;
+                    return i7;
                 }
             }
         ]), n9;
     }();
     M.Tooltip = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "tooltip", "M_Tooltip");
-})(cash, M.anime), (function(i8) {
+})(cash, M.anime), (function(i7) {
     "use strict";
     var t7 = t7 || {
     }, e3 = document.querySelectorAll.bind(document);
     function m(t8) {
-        var e12 = "";
-        for(var i10 in t8)t8.hasOwnProperty(i10) && (e12 += i10 + ":" + t8[i10] + ";");
-        return e12;
+        var e11 = "";
+        for(var i10 in t8)t8.hasOwnProperty(i10) && (e11 += i10 + ":" + t8[i10] + ";");
+        return e11;
     }
     var g = {
         duration: 750,
-        show: function(t8, e12) {
+        show: function(t8, e11) {
             if (2 === t8.button) return false;
-            var i10 = e12 || this, n9 = document.createElement("div");
+            var i10 = e11 || this, n9 = document.createElement("div");
             n9.className = "waves-ripple", i10.appendChild(n9);
-            var s3, o8, a5, r4, l4, h3, d3, u3 = (h3 = {
+            var s10, o8, a5, r4, l4, h3, d3, u3 = (h3 = {
                 top: 0,
                 left: 0
-            }, d3 = (s3 = i10) && s3.ownerDocument, o8 = d3.documentElement, (void 0) !== s3.getBoundingClientRect && (h3 = s3.getBoundingClientRect()), a5 = null !== (l4 = r4 = d3) && l4 === l4.window ? r4 : 9 === r4.nodeType && r4.defaultView, {
+            }, d3 = (s10 = i10) && s10.ownerDocument, o8 = d3.documentElement, (void 0) !== s10.getBoundingClientRect && (h3 = s10.getBoundingClientRect()), a5 = null !== (l4 = r4 = d3) && l4 === l4.window ? r4 : 9 === r4.nodeType && r4.defaultView, {
                 top: h3.top + a5.pageYOffset - o8.clientTop,
                 left: h3.left + a5.pageXOffset - o8.clientLeft
             }), c1 = t8.pageY - u3.top, p2 = t8.pageX - u3.left, v2 = "scale(" + i10.clientWidth / 100 * 10 + ")";
@@ -3179,13 +3173,13 @@ M.anime = (function() {
         },
         hide: function(t8) {
             l4.touchup(t8);
-            var e12 = this, i10 = (e12.clientWidth, null), n9 = e12.getElementsByClassName("waves-ripple");
+            var e11 = this, i10 = (e11.clientWidth, null), n9 = e11.getElementsByClassName("waves-ripple");
             if (!(0 < n9.length)) return false;
-            var s3 = (i10 = n9[n9.length - 1]).getAttribute("data-x"), o8 = i10.getAttribute("data-y"), a5 = i10.getAttribute("data-scale"), r4 = 350 - (Date.now() - Number(i10.getAttribute("data-hold")));
+            var s10 = (i10 = n9[n9.length - 1]).getAttribute("data-x"), o8 = i10.getAttribute("data-y"), a5 = i10.getAttribute("data-scale"), r4 = 350 - (Date.now() - Number(i10.getAttribute("data-hold")));
             r4 < 0 && (r4 = 0), setTimeout(function() {
                 var t9 = {
                     top: o8 + "px",
-                    left: s3 + "px",
+                    left: s10 + "px",
                     opacity: "0",
                     "-webkit-transition-duration": g.duration + "ms",
                     "-moz-transition-duration": g.duration + "ms",
@@ -3199,7 +3193,7 @@ M.anime = (function() {
                 };
                 i10.setAttribute("style", m(t9)), setTimeout(function() {
                     try {
-                        e12.removeChild(i10);
+                        e11.removeChild(i10);
                     } catch (t10) {
                         return false;
                     }
@@ -3207,55 +3201,55 @@ M.anime = (function() {
             }, r4);
         },
         wrapInput: function(t8) {
-            for(var e12 = 0; e12 < t8.length; e12++){
-                var i10 = t8[e12];
+            for(var e11 = 0; e11 < t8.length; e11++){
+                var i10 = t8[e11];
                 if ("input" === i10.tagName.toLowerCase()) {
                     var n9 = i10.parentNode;
                     if ("i" === n9.tagName.toLowerCase() && -1 !== n9.className.indexOf("waves-effect")) continue;
-                    var s3 = document.createElement("i");
-                    s3.className = i10.className + " waves-input-wrapper";
+                    var s10 = document.createElement("i");
+                    s10.className = i10.className + " waves-input-wrapper";
                     var o8 = i10.getAttribute("style");
-                    o8 || (o8 = ""), s3.setAttribute("style", o8), i10.className = "waves-button-input", i10.removeAttribute("style"), n9.replaceChild(s3, i10), s3.appendChild(i10);
+                    o8 || (o8 = ""), s10.setAttribute("style", o8), i10.className = "waves-button-input", i10.removeAttribute("style"), n9.replaceChild(s10, i10), s10.appendChild(i10);
                 }
             }
         }
     }, l4 = {
         touches: 0,
         allowEvent: function(t8) {
-            var e12 = true;
+            var e11 = true;
             return "touchstart" === t8.type ? l4.touches += 1 : "touchend" === t8.type || "touchcancel" === t8.type ? setTimeout(function() {
                 0 < l4.touches && (l4.touches -= 1);
-            }, 500) : "mousedown" === t8.type && 0 < l4.touches && (e12 = false), e12;
+            }, 500) : "mousedown" === t8.type && 0 < l4.touches && (e11 = false), e11;
         },
         touchup: function(t8) {
             l4.allowEvent(t8);
         }
     };
     function n12(t8) {
-        var e12 = function(t9) {
+        var e11 = function(t9) {
             if (false === l4.allowEvent(t9)) return null;
-            for(var e13 = null, i11 = t9.target || t9.srcElement; null !== i11.parentNode;){
+            for(var e12 = null, i11 = t9.target || t9.srcElement; null !== i11.parentNode;){
                 if (!(i11 instanceof SVGElement) && -1 !== i11.className.indexOf("waves-effect")) {
-                    e13 = i11;
+                    e12 = i11;
                     break;
                 }
                 i11 = i11.parentNode;
             }
-            return e13;
+            return e12;
         }(t8);
-        null !== e12 && (g.show(t8, e12), "ontouchstart" in i8 && (e12.addEventListener("touchend", g.hide, false), e12.addEventListener("touchcancel", g.hide, false)), e12.addEventListener("mouseup", g.hide, false), e12.addEventListener("mouseleave", g.hide, false), e12.addEventListener("dragend", g.hide, false));
+        null !== e11 && (g.show(t8, e11), "ontouchstart" in i7 && (e11.addEventListener("touchend", g.hide, false), e11.addEventListener("touchcancel", g.hide, false)), e11.addEventListener("mouseup", g.hide, false), e11.addEventListener("mouseleave", g.hide, false), e11.addEventListener("dragend", g.hide, false));
     }
     t7.displayEffect = function(t8) {
         "duration" in (t8 = t8 || {
-        }) && (g.duration = t8.duration), g.wrapInput(e3(".waves-effect")), "ontouchstart" in i8 && document.body.addEventListener("touchstart", n12, false), document.body.addEventListener("mousedown", n12, false);
+        }) && (g.duration = t8.duration), g.wrapInput(e3(".waves-effect")), "ontouchstart" in i7 && document.body.addEventListener("touchstart", n12, false), document.body.addEventListener("mousedown", n12, false);
     }, t7.attach = function(t8) {
         "input" === t8.tagName.toLowerCase() && (g.wrapInput([
             t8
-        ]), t8 = t8.parentNode), "ontouchstart" in i8 && t8.addEventListener("touchstart", n12, false), t8.addEventListener("mousedown", n12, false);
-    }, i8.Waves = t7, document.addEventListener("DOMContentLoaded", function() {
+        ]), t8 = t8.parentNode), "ontouchstart" in i7 && t8.addEventListener("touchstart", n12, false), t8.addEventListener("mousedown", n12, false);
+    }, i7.Waves = t7, document.addEventListener("DOMContentLoaded", function() {
         t7.displayEffect();
     }, false);
-})(window), (function(i8, n12) {
+})(window), (function(i7, n12) {
     "use strict";
     var t7 = {
         html: "",
@@ -3267,17 +3261,17 @@ M.anime = (function() {
         activationPercent: 0.8
     }, e3 = function() {
         function s12(t8) {
-            _classCallCheck(this, s12), this.options = i8.extend({
+            _classCallCheck(this, s12), this.options = i7.extend({
             }, s12.defaults, t8), this.message = this.options.html, this.panning = false, this.timeRemaining = this.options.displayLength, 0 === s12._toasts.length && s12._createContainer(), s12._toasts.push(this);
-            var e12 = this._createToast();
-            (e12.M_Toast = this).el = e12, this.$el = i8(e12), this._animateIn(), this._setTimer();
+            var e11 = this._createToast();
+            (e11.M_Toast = this).el = e11, this.$el = i7(e11), this._animateIn(), this._setTimer();
         }
         return _createClass(s12, [
             {
                 key: "_createToast",
                 value: function() {
                     var t8 = document.createElement("div");
-                    return t8.classList.add("toast"), this.options.classes.length && i8(t8).addClass(this.options.classes), ("object" == typeof HTMLElement ? this.message instanceof HTMLElement : this.message && "object" == typeof this.message && null !== this.message && 1 === this.message.nodeType && "string" == typeof this.message.nodeName) ? t8.appendChild(this.message) : this.message.jquery ? i8(t8).append(this.message[0]) : t8.innerHTML = this.message, s12._container.appendChild(t8), t8;
+                    return t8.classList.add("toast"), this.options.classes.length && i7(t8).addClass(this.options.classes), ("object" == typeof HTMLElement ? this.message instanceof HTMLElement : this.message && "object" == typeof this.message && null !== this.message && 1 === this.message.nodeType && "string" == typeof this.message.nodeName) ? t8.appendChild(this.message) : this.message.jquery ? i7(t8).append(this.message[0]) : t8.innerHTML = this.message, s12._container.appendChild(t8), t8;
                 }
             },
             {
@@ -3306,8 +3300,8 @@ M.anime = (function() {
                 value: function() {
                     var t8 = this;
                     window.clearInterval(this.counterInterval);
-                    var e12 = this.el.offsetWidth * this.options.activationPercent;
-                    this.wasSwiped && (this.el.style.transition = "transform .05s, opacity .05s", this.el.style.transform = "translateX(" + e12 + "px)", this.el.style.opacity = 0), n12({
+                    var e11 = this.el.offsetWidth * this.options.activationPercent;
+                    this.wasSwiped && (this.el.style.transition = "transform .05s, opacity .05s", this.el.style.transform = "translateX(" + e11 + "px)", this.el.style.opacity = 0), n12({
                         targets: this.el,
                         opacity: 0,
                         marginTop: -40,
@@ -3336,15 +3330,15 @@ M.anime = (function() {
             {
                 key: "_removeContainer",
                 value: function() {
-                    document.removeEventListener("mousemove", s12._onDragMove), document.removeEventListener("mouseup", s12._onDragEnd), i8(s12._container).remove(), s12._container = null;
+                    document.removeEventListener("mousemove", s12._onDragMove), document.removeEventListener("mouseup", s12._onDragEnd), i7(s12._container).remove(), s12._container = null;
                 }
             },
             {
                 key: "_onDragStart",
                 value: function(t8) {
-                    if (t8.target && i8(t8.target).closest(".toast").length) {
-                        var e12 = i8(t8.target).closest(".toast")[0].M_Toast;
-                        e12.panning = true, (s12._draggedToast = e12).el.classList.add("panning"), e12.el.style.transition = "", e12.startingXPos = s12._xPos(t8), e12.time = Date.now(), e12.xPos = s12._xPos(t8);
+                    if (t8.target && i7(t8.target).closest(".toast").length) {
+                        var e11 = i7(t8.target).closest(".toast")[0].M_Toast;
+                        e11.panning = true, (s12._draggedToast = e11).el.classList.add("panning"), e11.el.style.transition = "", e11.startingXPos = s12._xPos(t8), e11.time = Date.now(), e11.xPos = s12._xPos(t8);
                     }
                 }
             },
@@ -3353,10 +3347,10 @@ M.anime = (function() {
                 value: function(t8) {
                     if (s12._draggedToast) {
                         t8.preventDefault();
-                        var e13 = s12._draggedToast;
-                        e13.deltaX = Math.abs(e13.xPos - s12._xPos(t8)), e13.xPos = s12._xPos(t8), e13.velocityX = e13.deltaX / (Date.now() - e13.time), e13.time = Date.now();
-                        var i11 = e13.xPos - e13.startingXPos, n13 = e13.el.offsetWidth * e13.options.activationPercent;
-                        e13.el.style.transform = "translateX(" + i11 + "px)", e13.el.style.opacity = 1 - Math.abs(i11 / n13);
+                        var e12 = s12._draggedToast;
+                        e12.deltaX = Math.abs(e12.xPos - s12._xPos(t8)), e12.xPos = s12._xPos(t8), e12.velocityX = e12.deltaX / (Date.now() - e12.time), e12.time = Date.now();
+                        var i11 = e12.xPos - e12.startingXPos, n13 = e12.el.offsetWidth * e12.options.activationPercent;
+                        e12.el.style.transform = "translateX(" + i11 + "px)", e12.el.style.opacity = 1 - Math.abs(i11 / n13);
                     }
                 }
             },
@@ -3366,8 +3360,8 @@ M.anime = (function() {
                     if (s12._draggedToast) {
                         var t8 = s12._draggedToast;
                         t8.panning = false, t8.el.classList.remove("panning");
-                        var e14 = t8.xPos - t8.startingXPos, i12 = t8.el.offsetWidth * t8.options.activationPercent;
-                        Math.abs(e14) > i12 || 1 < t8.velocityX ? (t8.wasSwiped = true, t8.dismiss()) : (t8.el.style.transition = "transform .2s, opacity .2s", t8.el.style.transform = "", t8.el.style.opacity = ""), s12._draggedToast = null;
+                        var e13 = t8.xPos - t8.startingXPos, i12 = t8.el.offsetWidth * t8.options.activationPercent;
+                        Math.abs(e13) > i12 || 1 < t8.velocityX ? (t8.wasSwiped = true, t8.dismiss()) : (t8.el.style.transition = "transform .2s, opacity .2s", t8.el.style.transform = "", t8.el.style.opacity = ""), s12._draggedToast = null;
                     }
                 }
             },
@@ -3407,11 +3401,11 @@ M.anime = (function() {
         onCloseEnd: null,
         preventScrolling: true
     }, t7 = function(t9) {
-        function n12(t10, e15) {
+        function n12(t10, e14) {
             _classCallCheck(this, n12);
-            var i8 = _possibleConstructorReturn(this, (n12.__proto__ || Object.getPrototypeOf(n12)).call(this, n12, t10, e15));
-            return (i8.el.M_Sidenav = i8).id = i8.$el.attr("id"), i8.options = s12.extend({
-            }, n12.defaults, e15), i8.isOpen = false, i8.isFixed = i8.el.classList.contains("sidenav-fixed"), i8.isDragged = false, i8.lastWindowWidth = window.innerWidth, i8.lastWindowHeight = window.innerHeight, i8._createOverlay(), i8._createDragTarget(), i8._setupEventHandlers(), i8._setupClasses(), i8._setupFixed(), n12._sidenavs.push(i8), i8;
+            var i7 = _possibleConstructorReturn(this, (n12.__proto__ || Object.getPrototypeOf(n12)).call(this, n12, t10, e14));
+            return (i7.el.M_Sidenav = i7).id = i7.$el.attr("id"), i7.options = s12.extend({
+            }, n12.defaults, e14), i7.isOpen = false, i7.isFixed = i7.el.classList.contains("sidenav-fixed"), i7.isDragged = false, i7.lastWindowWidth = window.innerWidth, i7.lastWindowHeight = window.innerHeight, i7._createOverlay(), i7._createDragTarget(), i7._setupEventHandlers(), i7._setupClasses(), i7._setupFixed(), n12._sidenavs.push(i7), i7;
         }
         return _inherits(n12, Component), _createClass(n12, [
             {
@@ -3444,25 +3438,25 @@ M.anime = (function() {
             {
                 key: "_handleTriggerClick",
                 value: function(t10) {
-                    var e15 = s12(t10.target).closest(".sidenav-trigger");
-                    if (t10.target && e15.length) {
-                        var i8 = M.getIdFromTrigger(e15[0]), n14 = document.getElementById(i8).M_Sidenav;
-                        n14 && n14.open(e15), t10.preventDefault();
+                    var e14 = s12(t10.target).closest(".sidenav-trigger");
+                    if (t10.target && e14.length) {
+                        var i7 = M.getIdFromTrigger(e14[0]), n14 = document.getElementById(i7).M_Sidenav;
+                        n14 && n14.open(e14), t10.preventDefault();
                     }
                 }
             },
             {
                 key: "_startDrag",
                 value: function(t10) {
-                    var e15 = t10.targetTouches[0].clientX;
-                    this.isDragged = true, this._startingXpos = e15, this._xPos = this._startingXpos, this._time = Date.now(), this._width = this.el.getBoundingClientRect().width, this._overlay.style.display = "block", this._initialScrollTop = this.isOpen ? this.el.scrollTop : M.getDocumentScrollTop(), this._verticallyScrolling = false, o9.remove(this.el), o9.remove(this._overlay);
+                    var e14 = t10.targetTouches[0].clientX;
+                    this.isDragged = true, this._startingXpos = e14, this._xPos = this._startingXpos, this._time = Date.now(), this._width = this.el.getBoundingClientRect().width, this._overlay.style.display = "block", this._initialScrollTop = this.isOpen ? this.el.scrollTop : M.getDocumentScrollTop(), this._verticallyScrolling = false, o9.remove(this.el), o9.remove(this._overlay);
                 }
             },
             {
                 key: "_dragMoveUpdate",
                 value: function(t10) {
-                    var e15 = t10.targetTouches[0].clientX, i13 = this.isOpen ? this.el.scrollTop : M.getDocumentScrollTop();
-                    this.deltaX = Math.abs(this._xPos - e15), this._xPos = e15, this.velocityX = this.deltaX / (Date.now() - this._time), this._time = Date.now(), this._initialScrollTop !== i13 && (this._verticallyScrolling = true);
+                    var e14 = t10.targetTouches[0].clientX, i13 = this.isOpen ? this.el.scrollTop : M.getDocumentScrollTop();
+                    this.deltaX = Math.abs(this._xPos - e14), this._xPos = e14, this.velocityX = this.deltaX / (Date.now() - this._time), this._time = Date.now(), this._initialScrollTop !== i13 && (this._verticallyScrolling = true);
                 }
             },
             {
@@ -3470,10 +3464,10 @@ M.anime = (function() {
                 value: function(t10) {
                     if (this.options.draggable && !this._isCurrentlyFixed() && !this._verticallyScrolling) {
                         this.isDragged || this._startDrag(t10), this._dragMoveUpdate(t10);
-                        var e15 = this._xPos - this._startingXpos, i13 = 0 < e15 ? "right" : "left";
-                        e15 = Math.min(this._width, Math.abs(e15)), this.options.edge === i13 && (e15 = 0);
-                        var n15 = e15, s13 = "translateX(-100%)";
-                        "right" === this.options.edge && (s13 = "translateX(100%)", n15 = -n15), this.percentOpen = Math.min(1, e15 / this._width), this.el.style.transform = s13 + " translateX(" + n15 + "px)", this._overlay.style.opacity = this.percentOpen;
+                        var e14 = this._xPos - this._startingXpos, i13 = 0 < e14 ? "right" : "left";
+                        e14 = Math.min(this._width, Math.abs(e14)), this.options.edge === i13 && (e14 = 0);
+                        var n15 = e14, s13 = "translateX(-100%)";
+                        "right" === this.options.edge && (s13 = "translateX(100%)", n15 = -n15), this.percentOpen = Math.min(1, e14 / this._width), this.el.style.transform = s13 + " translateX(" + n15 + "px)", this._overlay.style.opacity = this.percentOpen;
                     }
                 }
             },
@@ -3489,10 +3483,10 @@ M.anime = (function() {
                     if (this.isOpen) {
                         if (!this.options.draggable || this._isCurrentlyFixed() || this._verticallyScrolling) return;
                         this.isDragged || this._startDrag(t10), this._dragMoveUpdate(t10);
-                        var e16 = this._xPos - this._startingXpos, i14 = 0 < e16 ? "right" : "left";
-                        e16 = Math.min(this._width, Math.abs(e16)), this.options.edge !== i14 && (e16 = 0);
-                        var n16 = -e16;
-                        "right" === this.options.edge && (n16 = -n16), this.percentOpen = Math.min(1, 1 - e16 / this._width), this.el.style.transform = "translateX(" + n16 + "px)", this._overlay.style.opacity = this.percentOpen;
+                        var e15 = this._xPos - this._startingXpos, i14 = 0 < e15 ? "right" : "left";
+                        e15 = Math.min(this._width, Math.abs(e15)), this.options.edge !== i14 && (e15 = 0);
+                        var n16 = -e15;
+                        "right" === this.options.edge && (n16 = -n16), this.percentOpen = Math.min(1, 1 - e15 / this._width), this.el.style.transform = "translateX(" + n16 + "px)", this._overlay.style.opacity = this.percentOpen;
                     }
                 }
             },
@@ -3588,11 +3582,11 @@ M.anime = (function() {
             {
                 key: "_animateSidenavIn",
                 value: function() {
-                    var t11 = this, e17 = "left" === this.options.edge ? -1 : 1;
-                    this.isDragged && (e17 = "left" === this.options.edge ? e17 + this.percentOpen : e17 - this.percentOpen), o9.remove(this.el), o9({
+                    var t11 = this, e16 = "left" === this.options.edge ? -1 : 1;
+                    this.isDragged && (e16 = "left" === this.options.edge ? e16 + this.percentOpen : e16 - this.percentOpen), o9.remove(this.el), o9({
                         targets: this.el,
                         translateX: [
-                            100 * e17 + "%",
+                            100 * e16 + "%",
                             0
                         ],
                         duration: this.options.inDuration,
@@ -3629,12 +3623,12 @@ M.anime = (function() {
             {
                 key: "_animateSidenavOut",
                 value: function() {
-                    var t11 = this, e17 = "left" === this.options.edge ? -1 : 1, i15 = 0;
-                    this.isDragged && (i15 = "left" === this.options.edge ? e17 + this.percentOpen : e17 - this.percentOpen), o9.remove(this.el), o9({
+                    var t11 = this, e16 = "left" === this.options.edge ? -1 : 1, i15 = 0;
+                    this.isDragged && (i15 = "left" === this.options.edge ? e16 + this.percentOpen : e16 - this.percentOpen), o9.remove(this.el), o9({
                         targets: this.el,
                         translateX: [
                             100 * i15 + "%",
-                            105 * e17 + "%"
+                            105 * e16 + "%"
                         ],
                         duration: this.options.outDuration,
                         easing: "easeOutQuad",
@@ -3662,8 +3656,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e17) {
-                    return _get(n12.__proto__ || Object.getPrototypeOf(n12), "init", this).call(this, this, t11, e17);
+                value: function(t11, e16) {
+                    return _get(n12.__proto__ || Object.getPrototypeOf(n12), "init", this).call(this, this, t11, e16);
                 }
             },
             {
@@ -3680,7 +3674,7 @@ M.anime = (function() {
             }
         ]), n12;
     }();
-    t7._sidenavs = [], window.M.Sidenav = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "sidenav", "M_Sidenav");
+    t7._sidenavs = [], M.Sidenav = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "sidenav", "M_Sidenav");
 })(cash, M.anime), (function(o9, a5) {
     "use strict";
     var e3 = {
@@ -3691,11 +3685,11 @@ M.anime = (function() {
             return 'a[href="#' + t7 + '"]';
         }
     }, t7 = function(t9) {
-        function c1(t11, e17) {
+        function c1(t11, e16) {
             _classCallCheck(this, c1);
-            var i15 = _possibleConstructorReturn(this, (c1.__proto__ || Object.getPrototypeOf(c1)).call(this, c1, t11, e17));
+            var i15 = _possibleConstructorReturn(this, (c1.__proto__ || Object.getPrototypeOf(c1)).call(this, c1, t11, e16));
             return (i15.el.M_ScrollSpy = i15).options = o9.extend({
-            }, c1.defaults, e17), c1._elements.push(i15), c1._count++, c1._increment++, i15.tickId = -1, i15.id = c1._increment, i15._setupEventHandlers(), i15._handleWindowScroll(), i15;
+            }, c1.defaults, e16), c1._elements.push(i15), c1._count++, c1._increment++, i15.tickId = -1, i15.id = c1._increment, i15._setupEventHandlers(), i15._handleWindowScroll(), i15;
         }
         return _inherits(c1, Component), _createClass(c1, [
             {
@@ -3720,9 +3714,9 @@ M.anime = (function() {
             {
                 key: "_handleTriggerClick",
                 value: function(t11) {
-                    for(var e17 = o9(t11.target), i15 = c1._elements.length - 1; 0 <= i15; i15--){
+                    for(var e16 = o9(t11.target), i15 = c1._elements.length - 1; 0 <= i15; i15--){
                         var n12 = c1._elements[i15];
-                        if (e17.is('a[href="#' + n12.$el.attr("id") + '"]')) {
+                        if (e16.is('a[href="#' + n12.$el.attr("id") + '"]')) {
                             t11.preventDefault();
                             var s12 = n12.$el.offset().top + 1;
                             a5({
@@ -3743,7 +3737,7 @@ M.anime = (function() {
                 key: "_handleWindowScroll",
                 value: function() {
                     c1._ticks++;
-                    for(var t11 = M.getDocumentScrollTop(), e17 = M.getDocumentScrollLeft(), i15 = e17 + window.innerWidth, n17 = t11 + window.innerHeight, s14 = c1._findElements(t11, i15, n17, e17), o10 = 0; o10 < s14.length; o10++){
+                    for(var t11 = M.getDocumentScrollTop(), e16 = M.getDocumentScrollLeft(), i15 = e16 + window.innerWidth, n17 = t11 + window.innerHeight, s14 = c1._findElements(t11, i15, n17, e16), o10 = 0; o10 < s14.length; o10++){
                         var a6 = s14[o10];
                         a6.tickId < 0 && a6._enter(), a6.tickId = c1._ticks;
                     }
@@ -3765,19 +3759,19 @@ M.anime = (function() {
             {
                 key: "_exit",
                 value: function() {
-                    var e17 = this;
+                    var e16 = this;
                     (c1._visibleElements = c1._visibleElements.filter(function(t11) {
                         return 0 != t11.height();
                     }))[0] && (o9(this.options.getActiveElement(c1._visibleElements[0].attr("id"))).removeClass(this.options.activeClass), (c1._visibleElements = c1._visibleElements.filter(function(t11) {
-                        return t11.attr("id") != e17.$el.attr("id");
+                        return t11.attr("id") != e16.$el.attr("id");
                     }))[0] && o9(this.options.getActiveElement(c1._visibleElements[0].attr("id"))).addClass(this.options.activeClass));
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t11, e17) {
-                    return _get(c1.__proto__ || Object.getPrototypeOf(c1), "init", this).call(this, this, t11, e17);
+                value: function(t11, e16) {
+                    return _get(c1.__proto__ || Object.getPrototypeOf(c1), "init", this).call(this, this, t11, e16);
                 }
             },
             {
@@ -3788,12 +3782,12 @@ M.anime = (function() {
             },
             {
                 key: "_findElements",
-                value: function(t11, e17, i15, n17) {
+                value: function(t11, e16, i15, n17) {
                     for(var s14 = [], o10 = 0; o10 < c1._elements.length; o10++){
                         var a7 = c1._elements[o10], r4 = t11 + a7.options.scrollOffset || 200;
                         if (0 < a7.$el.height()) {
                             var l5 = a7.$el.offset().top, h4 = a7.$el.offset().left, d3 = h4 + a7.$el.width(), u3 = l5 + a7.$el.height();
-                            !(e17 < h4 || d3 < n17 || i15 < l5 || u3 < r4) && s14.push(a7);
+                            !(e16 < h4 || d3 < n17 || i15 < l5 || u3 < r4) && s14.push(a7);
                         }
                     }
                     return s14;
@@ -3816,15 +3810,15 @@ M.anime = (function() {
         limit: 1 / 0,
         onAutocomplete: null,
         minLength: 1,
-        sortFunction: function(t7, e17, i15) {
-            return t7.indexOf(i15) - e17.indexOf(i15);
+        sortFunction: function(t7, e16, i15) {
+            return t7.indexOf(i15) - e16.indexOf(i15);
         }
     }, t7 = function(t9) {
-        function s14(t11, e17) {
+        function s14(t11, e16) {
             _classCallCheck(this, s14);
-            var i15 = _possibleConstructorReturn(this, (s14.__proto__ || Object.getPrototypeOf(s14)).call(this, s14, t11, e17));
+            var i15 = _possibleConstructorReturn(this, (s14.__proto__ || Object.getPrototypeOf(s14)).call(this, s14, t11, e16));
             return (i15.el.M_Autocomplete = i15).options = h5.extend({
-            }, s14.defaults, e17), i15.isOpen = false, i15.count = 0, i15.activeIndex = -1, i15.oldVal, i15.$inputField = i15.$el.closest(".input-field"), i15.$active = h5(), i15._mousedown = false, i15._setupDropdown(), i15._setupEventHandlers(), i15;
+            }, s14.defaults, e16), i15.isOpen = false, i15.count = 0, i15.activeIndex = -1, i15.oldVal, i15.$inputField = i15.$el.closest(".input-field"), i15.$active = h5(), i15._mousedown = false, i15._setupDropdown(), i15._setupEventHandlers(), i15;
         }
         return _inherits(s14, Component), _createClass(s14, [
             {
@@ -3848,13 +3842,13 @@ M.anime = (function() {
             {
                 key: "_setupDropdown",
                 value: function() {
-                    var e17 = this;
+                    var e16 = this;
                     this.container = document.createElement("ul"), this.container.id = "autocomplete-options-" + M.guid(), h5(this.container).addClass("autocomplete-content dropdown-content"), this.$inputField.append(this.container), this.el.setAttribute("data-target", this.container.id), this.dropdown = M.Dropdown.init(this.el, {
                         autoFocus: false,
                         closeOnClick: false,
                         coverTrigger: false,
                         onItemClick: function(t11) {
-                            e17.selectOption(h5(t11));
+                            e16.selectOption(h5(t11));
                         }
                     }), this.el.removeEventListener("click", this.dropdown._handleClickBound);
                 }
@@ -3875,16 +3869,16 @@ M.anime = (function() {
                 key: "_handleInputKeyupAndFocus",
                 value: function(t11) {
                     "keyup" === t11.type && (s14._keydown = false), this.count = 0;
-                    var e17 = this.el.value.toLowerCase();
-                    13 !== t11.keyCode && 38 !== t11.keyCode && 40 !== t11.keyCode && (this.oldVal === e17 || !M.tabPressed && "focus" === t11.type || this.open(), this.oldVal = e17);
+                    var e16 = this.el.value.toLowerCase();
+                    13 !== t11.keyCode && 38 !== t11.keyCode && 40 !== t11.keyCode && (this.oldVal === e16 || !M.tabPressed && "focus" === t11.type || this.open(), this.oldVal = e16);
                 }
             },
             {
                 key: "_handleInputKeydown",
                 value: function(t11) {
                     s14._keydown = true;
-                    var e17 = t11.keyCode, i15 = void 0, n17 = h5(this.container).children("li").length;
-                    e17 === M.keys.ENTER && 0 <= this.activeIndex ? (i15 = h5(this.container).children("li").eq(this.activeIndex)).length && (this.selectOption(i15), t11.preventDefault()) : e17 !== M.keys.ARROW_UP && e17 !== M.keys.ARROW_DOWN || (t11.preventDefault(), e17 === M.keys.ARROW_UP && 0 < this.activeIndex && this.activeIndex--, e17 === M.keys.ARROW_DOWN && this.activeIndex < n17 - 1 && this.activeIndex++, this.$active.removeClass("active"), 0 <= this.activeIndex && (this.$active = h5(this.container).children("li").eq(this.activeIndex), this.$active.addClass("active")));
+                    var e16 = t11.keyCode, i15 = void 0, n17 = h5(this.container).children("li").length;
+                    e16 === M.keys.ENTER && 0 <= this.activeIndex ? (i15 = h5(this.container).children("li").eq(this.activeIndex)).length && (this.selectOption(i15), t11.preventDefault()) : e16 !== M.keys.ARROW_UP && e16 !== M.keys.ARROW_DOWN || (t11.preventDefault(), e16 === M.keys.ARROW_UP && 0 < this.activeIndex && this.activeIndex--, e16 === M.keys.ARROW_DOWN && this.activeIndex < n17 - 1 && this.activeIndex++, this.$active.removeClass("active"), 0 <= this.activeIndex && (this.$active = h5(this.container).children("li").eq(this.activeIndex), this.$active.addClass("active")));
                 }
             },
             {
@@ -3907,9 +3901,9 @@ M.anime = (function() {
             },
             {
                 key: "_highlight",
-                value: function(t11, e17) {
-                    var i15 = e17.find("img"), n17 = e17.text().toLowerCase().indexOf("" + t11.toLowerCase()), s15 = n17 + t11.length - 1, o9 = e17.text().slice(0, n17), a5 = e17.text().slice(n17, s15 + 1), r5 = e17.text().slice(s15 + 1);
-                    e17.html("<span>" + o9 + "<span class='highlight'>" + a5 + "</span>" + r5 + "</span>"), i15.length && e17.prepend(i15);
+                value: function(t11, e16) {
+                    var i15 = e16.find("img"), n17 = e16.text().toLowerCase().indexOf("" + t11.toLowerCase()), s15 = n17 + t11.length - 1, o9 = e16.text().slice(0, n17), a5 = e16.text().slice(n17, s15 + 1), r5 = e16.text().slice(s15 + 1);
+                    e16.html("<span>" + o9 + "<span class='highlight'>" + a5 + "</span>" + r5 + "</span>"), i15.length && e16.prepend(i15);
                 }
             },
             {
@@ -3927,8 +3921,8 @@ M.anime = (function() {
             {
                 key: "selectOption",
                 value: function(t11) {
-                    var e17 = t11.text().trim();
-                    this.el.value = e17, this.$el.trigger("change"), this._resetAutocomplete(), this.close(), "function" == typeof this.options.onAutocomplete && this.options.onAutocomplete.call(this, e17);
+                    var e16 = t11.text().trim();
+                    this.el.value = e16, this.$el.trigger("change"), this._resetAutocomplete(), this.close(), "function" == typeof this.options.onAutocomplete && this.options.onAutocomplete.call(this, e16);
                 }
             },
             {
@@ -3936,20 +3930,20 @@ M.anime = (function() {
                 value: function(t11, i15) {
                     var n17 = this;
                     this._resetAutocomplete();
-                    var e17 = [];
+                    var e16 = [];
                     for(var s15 in t11)if (t11.hasOwnProperty(s15) && -1 !== s15.toLowerCase().indexOf(i15)) {
                         if (this.count >= this.options.limit) break;
                         var o9 = {
                             data: t11[s15],
                             key: s15
                         };
-                        e17.push(o9), this.count++;
+                        e16.push(o9), this.count++;
                     }
-                    if (this.options.sortFunction) e17.sort(function(t12, e18) {
-                        return n17.options.sortFunction(t12.key.toLowerCase(), e18.key.toLowerCase(), i15.toLowerCase());
+                    if (this.options.sortFunction) e16.sort(function(t12, e17) {
+                        return n17.options.sortFunction(t12.key.toLowerCase(), e17.key.toLowerCase(), i15.toLowerCase());
                     });
-                    for(var a5 = 0; a5 < e17.length; a5++){
-                        var r5 = e17[a5], l6 = h5("<li></li>");
+                    for(var a5 = 0; a5 < e16.length; a5++){
+                        var r5 = e16[a5], l6 = h5("<li></li>");
                         r5.data ? l6.append('<img src="' + r5.data + '" class="right circle"><span>' + r5.key + "</span>") : l6.append("<span>" + r5.key + "</span>"), h5(this.container).append(l6), this._highlight(i15, l6);
                     }
                 }
@@ -3970,15 +3964,15 @@ M.anime = (function() {
             {
                 key: "updateData",
                 value: function(t11) {
-                    var e17 = this.el.value.toLowerCase();
-                    this.options.data = t11, this.isOpen && this._renderDropdown(t11, e17);
+                    var e16 = this.el.value.toLowerCase();
+                    this.options.data = t11, this.isOpen && this._renderDropdown(t11, e16);
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t11, e17) {
-                    return _get(s14.__proto__ || Object.getPrototypeOf(s14), "init", this).call(this, this, t11, e17);
+                value: function(t11, e16) {
+                    return _get(s14.__proto__ || Object.getPrototypeOf(s14), "init", this).call(this, this, t11, e16);
                 }
             },
             {
@@ -4021,21 +4015,21 @@ M.anime = (function() {
         }), d4(document).ready(function() {
             M.updateTextFields();
         }), d4(document).on("reset", function(t7) {
-            var e17 = d4(t7.target);
-            e17.is("form") && (e17.find(n18).removeClass("valid").removeClass("invalid"), e17.find(n18).each(function(t9) {
+            var e16 = d4(t7.target);
+            e16.is("form") && (e16.find(n18).removeClass("valid").removeClass("invalid"), e16.find(n18).each(function(t9) {
                 this.value.length && d4(this).siblings("label").removeClass("active");
             }), setTimeout(function() {
-                e17.find("select").each(function() {
+                e16.find("select").each(function() {
                     this.M_FormSelect && d4(this).trigger("change");
                 });
             }, 0));
         }), document.addEventListener("focus", function(t7) {
             d4(t7.target).is(n18) && d4(t7.target).siblings("label, .prefix").addClass("active");
         }, true), document.addEventListener("blur", function(t7) {
-            var e17 = d4(t7.target);
-            if (e17.is(n18)) {
+            var e16 = d4(t7.target);
+            if (e16.is(n18)) {
                 var i16 = ".prefix";
-                0 === e17[0].value.length && true !== e17[0].validity.badInput && null === e17.attr("placeholder") && (i16 += ", label"), e17.siblings(i16).removeClass("active"), M.validate_field(e17);
+                0 === e16[0].value.length && true !== e16[0].validity.badInput && null === e16.attr("placeholder") && (i16 += ", label"), e16.siblings(i16).removeClass("active"), M.validate_field(e16);
             }
         }, true);
         d4(document).on("keyup", "input[type=radio], input[type=checkbox]", function(t7) {
@@ -4052,29 +4046,29 @@ M.anime = (function() {
         }), d4(document).on("keydown", t7, function() {
             M.textareaAutoResize(d4(this));
         }), d4(document).on("change", '.file-field input[type="file"]', function() {
-            for(var t9 = d4(this).closest(".file-field").find("input.file-path"), e17 = d4(this)[0].files, i17 = [], n19 = 0; n19 < e17.length; n19++)i17.push(e17[n19].name);
+            for(var t9 = d4(this).closest(".file-field").find("input.file-path"), e16 = d4(this)[0].files, i17 = [], n19 = 0; n19 < e16.length; n19++)i17.push(e16[n19].name);
             t9[0].value = i17.join(", "), t9.trigger("change");
         });
     });
 })(cash), (function(s15, o11) {
     "use strict";
-    var e17 = {
+    var e16 = {
         indicators: true,
         height: 400,
         duration: 500,
         interval: 6000
     }, t7 = function(t9) {
-        function n18(t11, e18) {
+        function n18(t11, e17) {
             _classCallCheck(this, n18);
-            var i17 = _possibleConstructorReturn(this, (n18.__proto__ || Object.getPrototypeOf(n18)).call(this, n18, t11, e18));
+            var i17 = _possibleConstructorReturn(this, (n18.__proto__ || Object.getPrototypeOf(n18)).call(this, n18, t11, e17));
             return (i17.el.M_Slider = i17).options = s15.extend({
-            }, n18.defaults, e18), i17.$slider = i17.$el.find(".slides"), i17.$slides = i17.$slider.children("li"), i17.activeIndex = i17.$slides.filter(function(t12) {
+            }, n18.defaults, e17), i17.$slider = i17.$el.find(".slides"), i17.$slides = i17.$slider.children("li"), i17.activeIndex = i17.$slides.filter(function(t12) {
                 return s15(t12).hasClass("active");
             }).first().index(), -1 != i17.activeIndex && (i17.$active = i17.$slides.eq(i17.activeIndex)), i17._setSliderHeight(), i17.$slides.find(".caption").each(function(t12) {
                 i17._animateCaptionIn(t12, 0);
             }), i17.$slides.find("img").each(function(t12) {
-                var e19 = "data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
-                s15(t12).attr("src") !== e19 && (s15(t12).css("background-image", 'url("' + s15(t12).attr("src") + '")'), s15(t12).attr("src", e19));
+                var e18 = "data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+                s15(t12).attr("src") !== e18 && (s15(t12).css("background-image", 'url("' + s15(t12).attr("src") + '")'), s15(t12).attr("src", e18));
             }), i17._setupIndicators(), i17.$active ? i17.$active.css("display", "block") : (i17.$slides.first().addClass("active"), o11({
                 targets: i17.$slides.first()[0],
                 opacity: 1,
@@ -4101,26 +4095,26 @@ M.anime = (function() {
             {
                 key: "_setupEventHandlers",
                 value: function() {
-                    var e18 = this;
+                    var e17 = this;
                     this._handleIntervalBound = this._handleInterval.bind(this), this._handleIndicatorClickBound = this._handleIndicatorClick.bind(this), this.options.indicators && this.$indicators.each(function(t11) {
-                        t11.addEventListener("click", e18._handleIndicatorClickBound);
+                        t11.addEventListener("click", e17._handleIndicatorClickBound);
                     });
                 }
             },
             {
                 key: "_removeEventHandlers",
                 value: function() {
-                    var e18 = this;
+                    var e17 = this;
                     this.options.indicators && this.$indicators.each(function(t11) {
-                        t11.removeEventListener("click", e18._handleIndicatorClickBound);
+                        t11.removeEventListener("click", e17._handleIndicatorClickBound);
                     });
                 }
             },
             {
                 key: "_handleIndicatorClick",
                 value: function(t11) {
-                    var e18 = s15(t11.target).index();
-                    this.set(e18);
+                    var e17 = s15(t11.target).index();
+                    this.set(e17);
                 }
             },
             {
@@ -4132,11 +4126,11 @@ M.anime = (function() {
             },
             {
                 key: "_animateCaptionIn",
-                value: function(t11, e18) {
+                value: function(t11, e17) {
                     var i17 = {
                         targets: t11,
                         opacity: 0,
-                        duration: e18,
+                        duration: e17,
                         easing: "easeOutQuad"
                     };
                     s15(t11).hasClass("center-align") ? i17.translateY = -100 : s15(t11).hasClass("right-align") ? i17.translateX = 100 : s15(t11).hasClass("left-align") && (i17.translateX = -100), o11(i17);
@@ -4152,7 +4146,7 @@ M.anime = (function() {
                 key: "_setupIndicators",
                 value: function() {
                     var n19 = this;
-                    this.options.indicators && (this.$indicators = s15('<ul class="indicators"></ul>'), this.$slides.each(function(t11, e18) {
+                    this.options.indicators && (this.$indicators = s15('<ul class="indicators"></ul>'), this.$slides.each(function(t11, e17) {
                         var i17 = s15('<li class="indicator-item"></li>');
                         n19.$indicators.append(i17[0]);
                     }), this.$el.append(this.$indicators[0]), this.$indicators = this.$indicators.children("li.indicator-item"));
@@ -4167,7 +4161,7 @@ M.anime = (function() {
             {
                 key: "set",
                 value: function(t11) {
-                    var e18 = this;
+                    var e17 = this;
                     if (t11 >= this.$slides.length ? t11 = 0 : t11 < 0 && (t11 = this.$slides.length - 1), this.activeIndex != t11) {
                         this.$active = this.$slides.eq(this.activeIndex);
                         var i17 = this.$active.find(".caption");
@@ -4177,7 +4171,7 @@ M.anime = (function() {
                             duration: this.options.duration,
                             easing: "easeOutQuad",
                             complete: function() {
-                                e18.$slides.not(".active").each(function(t12) {
+                                e17.$slides.not(".active").each(function(t12) {
                                     o11({
                                         targets: t12,
                                         opacity: 0,
@@ -4234,8 +4228,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e18) {
-                    return _get(n18.__proto__ || Object.getPrototypeOf(n18), "init", this).call(this, this, t11, e18);
+                value: function(t11, e17) {
+                    return _get(n18.__proto__ || Object.getPrototypeOf(n18), "init", this).call(this, this, t11, e17);
                 }
             },
             {
@@ -4247,7 +4241,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e17;
+                    return e16;
                 }
             }
         ]), n18;
@@ -4258,22 +4252,22 @@ M.anime = (function() {
         if (n18(this).children(".card-reveal").length) {
             var i18 = n18(t7.target).closest(".card");
             (void 0) === i18.data("initialOverflow") && i18.data("initialOverflow", (void 0) === i18.css("overflow") ? "" : i18.css("overflow"));
-            var e17 = n18(this).find(".card-reveal");
+            var e16 = n18(this).find(".card-reveal");
             n18(t7.target).is(n18(".card-reveal .card-title")) || n18(t7.target).is(n18(".card-reveal .card-title i")) ? s15({
-                targets: e17[0],
+                targets: e16[0],
                 translateY: 0,
                 duration: 225,
                 easing: "easeInOutQuad",
                 complete: function(t9) {
-                    var e18 = t9.animatables[0].target;
-                    n18(e18).css({
+                    var e17 = t9.animatables[0].target;
+                    n18(e17).css({
                         display: "none"
                     }), i18.css("overflow", i18.data("initialOverflow"));
                 }
-            }) : (n18(t7.target).is(n18(".card .activator")) || n18(t7.target).is(n18(".card .activator i"))) && (i18.css("overflow", "hidden"), e17.css({
+            }) : (n18(t7.target).is(n18(".card .activator")) || n18(t7.target).is(n18(".card .activator i"))) && (i18.css("overflow", "hidden"), e16.css({
                 display: "block"
             }), s15({
-                targets: e17[0],
+                targets: e16[0],
                 translateY: "-100%",
                 duration: 300,
                 easing: "easeInOutQuad"
@@ -4282,7 +4276,7 @@ M.anime = (function() {
     });
 })(cash, M.anime), (function(h6) {
     "use strict";
-    var e18 = {
+    var e17 = {
         data: [],
         placeholder: "",
         secondaryPlaceholder: "",
@@ -4293,11 +4287,11 @@ M.anime = (function() {
         onChipSelect: null,
         onChipDelete: null
     }, t7 = function(t9) {
-        function l8(t11, e19) {
+        function l8(t11, e18) {
             _classCallCheck(this, l8);
-            var i19 = _possibleConstructorReturn(this, (l8.__proto__ || Object.getPrototypeOf(l8)).call(this, l8, t11, e19));
+            var i19 = _possibleConstructorReturn(this, (l8.__proto__ || Object.getPrototypeOf(l8)).call(this, l8, t11, e18));
             return (i19.el.M_Chips = i19).options = h6.extend({
-            }, l8.defaults, e19), i19.$el.addClass("chips input-field"), i19.chipsData = [], i19.$chips = h6(), i19._setupInput(), i19.hasAutocomplete = 0 < Object.keys(i19.options.autocompleteOptions).length, i19.$input.attr("id") || i19.$input.attr("id", M.guid()), i19.options.data.length && (i19.chipsData = i19.options.data, i19._renderChips(i19.chipsData)), i19.hasAutocomplete && i19._setupAutocomplete(), i19._setPlaceholder(), i19._setupLabel(), i19._setupEventHandlers(), i19;
+            }, l8.defaults, e18), i19.$el.addClass("chips input-field"), i19.chipsData = [], i19.$chips = h6(), i19._setupInput(), i19.hasAutocomplete = 0 < Object.keys(i19.options.autocompleteOptions).length, i19.$input.attr("id") || i19.$input.attr("id", M.guid()), i19.options.data.length && (i19.chipsData = i19.options.data, i19._renderChips(i19.chipsData)), i19.hasAutocomplete && i19._setupAutocomplete(), i19._setPlaceholder(), i19._setupLabel(), i19._setupEventHandlers(), i19;
         }
         return _inherits(l8, Component), _createClass(l8, [
             {
@@ -4327,9 +4321,9 @@ M.anime = (function() {
             {
                 key: "_handleChipClick",
                 value: function(t11) {
-                    var e19 = h6(t11.target).closest(".chip"), i19 = h6(t11.target).is(".close");
-                    if (e19.length) {
-                        var n18 = e19.index();
+                    var e18 = h6(t11.target).closest(".chip"), i19 = h6(t11.target).is(".close");
+                    if (e18.length) {
+                        var n18 = e18.index();
                         i19 ? (this.deleteChip(n18), this.$input[0].focus()) : this.selectChip(n18);
                     } else this.$input[0].focus();
                 }
@@ -4361,12 +4355,12 @@ M.anime = (function() {
                 key: "_renderChip",
                 value: function(t11) {
                     if (t11.tag) {
-                        var e19 = document.createElement("div"), i19 = document.createElement("i");
-                        if (e19.classList.add("chip"), e19.textContent = t11.tag, e19.setAttribute("tabindex", 0), h6(i19).addClass("material-icons close"), i19.textContent = "close", t11.image) {
+                        var e18 = document.createElement("div"), i19 = document.createElement("i");
+                        if (e18.classList.add("chip"), e18.textContent = t11.tag, e18.setAttribute("tabindex", 0), h6(i19).addClass("material-icons close"), i19.textContent = "close", t11.image) {
                             var n19 = document.createElement("img");
-                            n19.setAttribute("src", t11.image), e19.insertBefore(n19, e19.firstChild);
+                            n19.setAttribute("src", t11.image), e18.insertBefore(n19, e18.firstChild);
                         }
-                        return e19.appendChild(i19), e19;
+                        return e18.appendChild(i19), e18;
                     }
                 }
             },
@@ -4375,8 +4369,8 @@ M.anime = (function() {
                 value: function() {
                     this.$chips.remove();
                     for(var t11 = 0; t11 < this.chipsData.length; t11++){
-                        var e20 = this._renderChip(this.chipsData[t11]);
-                        this.$el.append(e20), this.$chips.add(e20);
+                        var e19 = this._renderChip(this.chipsData[t11]);
+                        this.$el.append(e19), this.$chips.add(e19);
                     }
                     this.$el.append(this.$input[0]);
                 }
@@ -4384,11 +4378,11 @@ M.anime = (function() {
             {
                 key: "_setupAutocomplete",
                 value: function() {
-                    var e21 = this;
+                    var e20 = this;
                     this.options.autocompleteOptions.onAutocomplete = function(t11) {
-                        e21.addChip({
+                        e20.addChip({
                             tag: t11
-                        }), e21.$input[0].value = "", e21.$input[0].focus();
+                        }), e20.$input[0].value = "", e20.$input[0].focus();
                     }, this.autocomplete = M.Autocomplete.init(this.$input[0], this.options.autocompleteOptions);
                 }
             },
@@ -4414,11 +4408,11 @@ M.anime = (function() {
                 key: "_isValid",
                 value: function(t11) {
                     if (t11.hasOwnProperty("tag") && "" !== t11.tag) {
-                        for(var e21 = false, i20 = 0; i20 < this.chipsData.length; i20++)if (this.chipsData[i20].tag === t11.tag) {
-                            e21 = true;
+                        for(var e20 = false, i20 = 0; i20 < this.chipsData.length; i20++)if (this.chipsData[i20].tag === t11.tag) {
+                            e20 = true;
                             break;
                         }
-                        return !e21;
+                        return !e20;
                     }
                     return false;
                 }
@@ -4427,32 +4421,32 @@ M.anime = (function() {
                 key: "addChip",
                 value: function(t11) {
                     if (this._isValid(t11) && !(this.chipsData.length >= this.options.limit)) {
-                        var e22 = this._renderChip(t11);
-                        this.$chips.add(e22), this.chipsData.push(t11), h6(this.$input).before(e22), this._setPlaceholder(), "function" == typeof this.options.onChipAdd && this.options.onChipAdd.call(this, this.$el, e22);
+                        var e21 = this._renderChip(t11);
+                        this.$chips.add(e21), this.chipsData.push(t11), h6(this.$input).before(e21), this._setPlaceholder(), "function" == typeof this.options.onChipAdd && this.options.onChipAdd.call(this, this.$el, e21);
                     }
                 }
             },
             {
                 key: "deleteChip",
                 value: function(t11) {
-                    var e23 = this.$chips.eq(t11);
+                    var e22 = this.$chips.eq(t11);
                     this.$chips.eq(t11).remove(), this.$chips = this.$chips.filter(function(t12) {
                         return 0 <= h6(t12).index();
-                    }), this.chipsData.splice(t11, 1), this._setPlaceholder(), "function" == typeof this.options.onChipDelete && this.options.onChipDelete.call(this, this.$el, e23[0]);
+                    }), this.chipsData.splice(t11, 1), this._setPlaceholder(), "function" == typeof this.options.onChipDelete && this.options.onChipDelete.call(this, this.$el, e22[0]);
                 }
             },
             {
                 key: "selectChip",
                 value: function(t11) {
-                    var e23 = this.$chips.eq(t11);
-                    (this._selectedChip = e23)[0].focus(), "function" == typeof this.options.onChipSelect && this.options.onChipSelect.call(this, this.$el, e23[0]);
+                    var e22 = this.$chips.eq(t11);
+                    (this._selectedChip = e22)[0].focus(), "function" == typeof this.options.onChipSelect && this.options.onChipSelect.call(this, this.$el, e22[0]);
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t11, e23) {
-                    return _get(l8.__proto__ || Object.getPrototypeOf(l8), "init", this).call(this, this, t11, e23);
+                value: function(t11, e22) {
+                    return _get(l8.__proto__ || Object.getPrototypeOf(l8), "init", this).call(this, this, t11, e22);
                 }
             },
             {
@@ -4465,9 +4459,9 @@ M.anime = (function() {
                 key: "_handleChipsKeydown",
                 value: function(t11) {
                     l8._keydown = true;
-                    var e23 = h6(t11.target).closest(".chips"), i21 = t11.target && e23.length;
+                    var e22 = h6(t11.target).closest(".chips"), i21 = t11.target && e22.length;
                     if (!h6(t11.target).is("input, textarea") && i21) {
-                        var n20 = e23[0].M_Chips;
+                        var n20 = e22[0].M_Chips;
                         if (8 === t11.keyCode || 46 === t11.keyCode) {
                             t11.preventDefault();
                             var s15 = n20.chipsData.length;
@@ -4504,7 +4498,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), l8;
@@ -4517,17 +4511,17 @@ M.anime = (function() {
     });
 })(cash), (function(s16) {
     "use strict";
-    var e18 = {
+    var e17 = {
         top: 0,
         bottom: 1 / 0,
         offset: 0,
         onPositionChange: null
     }, t7 = function(t9) {
-        function n21(t11, e23) {
+        function n21(t11, e22) {
             _classCallCheck(this, n21);
-            var i21 = _possibleConstructorReturn(this, (n21.__proto__ || Object.getPrototypeOf(n21)).call(this, n21, t11, e23));
+            var i21 = _possibleConstructorReturn(this, (n21.__proto__ || Object.getPrototypeOf(n21)).call(this, n21, t11, e22));
             return (i21.el.M_Pushpin = i21).options = s16.extend({
-            }, n21.defaults, e23), i21.originalOffset = i21.el.offsetTop, n21._pushpins.push(i21), i21._setupEventHandlers(), i21._updatePosition(), i21;
+            }, n21.defaults, e22), i21.originalOffset = i21.el.offsetTop, n21._pushpins.push(i21), i21._setupEventHandlers(), i21._updatePosition(), i21;
         }
         return _inherits(n21, Component), _createClass(n21, [
             {
@@ -4566,8 +4560,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e23) {
-                    return _get(n21.__proto__ || Object.getPrototypeOf(n21), "init", this).call(this, this, t11, e23);
+                value: function(t11, e22) {
+                    return _get(n21.__proto__ || Object.getPrototypeOf(n21), "init", this).call(this, this, t11, e22);
                 }
             },
             {
@@ -4585,7 +4579,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), n21;
@@ -4593,18 +4587,18 @@ M.anime = (function() {
     t7._pushpins = [], M.Pushpin = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "pushpin", "M_Pushpin");
 })(cash), (function(r8, s16) {
     "use strict";
-    var e18 = {
+    var e17 = {
         direction: "top",
         hoverEnabled: true,
         toolbarEnabled: false
     };
     r8.fn.reverse = [].reverse;
     var t7 = function(t9) {
-        function n21(t11, e23) {
+        function n21(t11, e22) {
             _classCallCheck(this, n21);
-            var i21 = _possibleConstructorReturn(this, (n21.__proto__ || Object.getPrototypeOf(n21)).call(this, n21, t11, e23));
+            var i21 = _possibleConstructorReturn(this, (n21.__proto__ || Object.getPrototypeOf(n21)).call(this, n21, t11, e22));
             return (i21.el.M_FloatingActionButton = i21).options = r8.extend({
-            }, n21.defaults, e23), i21.isOpen = false, i21.$anchor = i21.$el.children("a").first(), i21.$menu = i21.$el.children("ul").first(), i21.$floatingBtns = i21.$el.find("ul .btn-floating"), i21.$floatingBtnsReverse = i21.$el.find("ul .btn-floating").reverse(), i21.offsetY = 0, i21.offsetX = 0, i21.$el.addClass("direction-" + i21.options.direction), "top" === i21.options.direction ? i21.offsetY = 40 : "right" === i21.options.direction ? i21.offsetX = -40 : "bottom" === i21.options.direction ? i21.offsetY = -40 : i21.offsetX = 40, i21._setupEventHandlers(), i21;
+            }, n21.defaults, e22), i21.isOpen = false, i21.$anchor = i21.$el.children("a").first(), i21.$menu = i21.$el.children("ul").first(), i21.$floatingBtns = i21.$el.find("ul .btn-floating"), i21.$floatingBtnsReverse = i21.$el.find("ul .btn-floating").reverse(), i21.offsetY = 0, i21.offsetX = 0, i21.$el.addClass("direction-" + i21.options.direction), "top" === i21.options.direction ? i21.offsetY = 40 : "right" === i21.options.direction ? i21.offsetX = -40 : "bottom" === i21.options.direction ? i21.offsetY = -40 : i21.offsetX = 40, i21._setupEventHandlers(), i21;
         }
         return _inherits(n21, Component), _createClass(n21, [
             {
@@ -4652,7 +4646,7 @@ M.anime = (function() {
             {
                 key: "_animateInFAB",
                 value: function() {
-                    var e23 = this;
+                    var e22 = this;
                     this.$el.addClass("active");
                     var i21 = 0;
                     this.$floatingBtnsReverse.each(function(t11) {
@@ -4664,11 +4658,11 @@ M.anime = (function() {
                                 1
                             ],
                             translateY: [
-                                e23.offsetY,
+                                e22.offsetY,
                                 0
                             ],
                             translateX: [
-                                e23.offsetX,
+                                e22.offsetX,
                                 0
                             ],
                             duration: 275,
@@ -4681,18 +4675,18 @@ M.anime = (function() {
             {
                 key: "_animateOutFAB",
                 value: function() {
-                    var e23 = this;
+                    var e22 = this;
                     this.$floatingBtnsReverse.each(function(t11) {
                         s16.remove(t11), s16({
                             targets: t11,
                             opacity: 0,
                             scale: 0.4,
-                            translateY: e23.offsetY,
-                            translateX: e23.offsetX,
+                            translateY: e22.offsetY,
+                            translateX: e22.offsetX,
                             duration: 175,
                             easing: "easeOutQuad",
                             complete: function() {
-                                e23.$el.removeClass("active");
+                                e22.$el.removeClass("active");
                             }
                         });
                     });
@@ -4701,7 +4695,7 @@ M.anime = (function() {
             {
                 key: "_animateInToolbar",
                 value: function() {
-                    var t11, e23 = this, i21 = window.innerWidth, n22 = window.innerHeight, s17 = this.el.getBoundingClientRect(), o12 = r8('<div class="fab-backdrop"></div>'), a9 = this.$anchor.css("background-color");
+                    var t11, e22 = this, i21 = window.innerWidth, n22 = window.innerHeight, s17 = this.el.getBoundingClientRect(), o12 = r8('<div class="fab-backdrop"></div>'), a9 = this.$anchor.css("background-color");
                     this.$anchor.append(o12), this.offsetX = s17.left - i21 / 2 + s17.width / 2, this.offsetY = n22 - s17.bottom, t11 = i21 / o12[0].clientWidth, this.btnBottom = s17.bottom, this.btnLeft = s17.left, this.btnWidth = s17.width, this.$el.addClass("active"), this.$el.css({
                         "text-align": "center",
                         width: "100%",
@@ -4715,23 +4709,23 @@ M.anime = (function() {
                     }), o12.css({
                         "background-color": a9
                     }), setTimeout(function() {
-                        e23.$el.css({
+                        e22.$el.css({
                             transform: "",
                             transition: "transform .2s cubic-bezier(0.550, 0.085, 0.680, 0.530), background-color 0s linear .2s"
-                        }), e23.$anchor.css({
+                        }), e22.$anchor.css({
                             overflow: "visible",
                             transform: "",
                             transition: "transform .2s"
                         }), setTimeout(function() {
-                            e23.$el.css({
+                            e22.$el.css({
                                 overflow: "hidden",
                                 "background-color": a9
                             }), o12.css({
                                 transform: "scale(" + t11 + ")",
                                 transition: "transform .2s cubic-bezier(0.550, 0.055, 0.675, 0.190)"
-                            }), e23.$menu.children("li").children("a").css({
+                            }), e22.$menu.children("li").children("a").css({
                                 opacity: 1
-                            }), e23._handleDocumentClickBound = e23._handleDocumentClick.bind(e23), window.addEventListener("scroll", e23._handleCloseBound, true), document.body.addEventListener("click", e23._handleDocumentClickBound, true);
+                            }), e22._handleDocumentClickBound = e22._handleDocumentClick.bind(e22), window.addEventListener("scroll", e22._handleCloseBound, true), document.body.addEventListener("click", e22._handleDocumentClickBound, true);
                         }, 100);
                     }, 0);
                 }
@@ -4739,8 +4733,8 @@ M.anime = (function() {
             {
                 key: "_animateOutToolbar",
                 value: function() {
-                    var t11 = this, e23 = window.innerWidth, i21 = window.innerHeight, n22 = this.$el.find(".fab-backdrop"), s17 = this.$anchor.css("background-color");
-                    this.offsetX = this.btnLeft - e23 / 2 + this.btnWidth / 2, this.offsetY = i21 - this.btnBottom, this.$el.removeClass("active"), this.$el.css({
+                    var t11 = this, e22 = window.innerWidth, i21 = window.innerHeight, n22 = this.$el.find(".fab-backdrop"), s17 = this.$anchor.css("background-color");
+                    this.offsetX = this.btnLeft - e22 / 2 + this.btnWidth / 2, this.offsetY = i21 - this.btnBottom, this.$el.removeClass("active"), this.$el.css({
                         "background-color": "transparent",
                         transition: "none"
                     }), this.$anchor.css({
@@ -4777,8 +4771,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e23) {
-                    return _get(n21.__proto__ || Object.getPrototypeOf(n21), "init", this).call(this, this, t11, e23);
+                value: function(t11, e22) {
+                    return _get(n21.__proto__ || Object.getPrototypeOf(n21), "init", this).call(this, this, t11, e22);
                 }
             },
             {
@@ -4790,7 +4784,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), n21;
@@ -4798,7 +4792,7 @@ M.anime = (function() {
     M.FloatingActionButton = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "floatingActionButton", "M_FloatingActionButton");
 })(cash, M.anime), (function(g) {
     "use strict";
-    var e18 = {
+    var e17 = {
         autoClose: false,
         format: "mmm dd, yyyy",
         parse: null,
@@ -4889,12 +4883,12 @@ M.anime = (function() {
         onClose: null,
         onDraw: null
     }, t7 = function(t9) {
-        function B(t11, e23) {
+        function B(t11, e22) {
             _classCallCheck(this, B);
-            var i21 = _possibleConstructorReturn(this, (B.__proto__ || Object.getPrototypeOf(B)).call(this, B, t11, e23));
+            var i21 = _possibleConstructorReturn(this, (B.__proto__ || Object.getPrototypeOf(B)).call(this, B, t11, e22));
             (i21.el.M_Datepicker = i21).options = g.extend({
-            }, B.defaults, e23), e23 && e23.hasOwnProperty("i18n") && "object" == typeof e23.i18n && (i21.options.i18n = g.extend({
-            }, B.defaults.i18n, e23.i18n)), i21.options.minDate && i21.options.minDate.setHours(0, 0, 0, 0), i21.options.maxDate && i21.options.maxDate.setHours(0, 0, 0, 0), i21.id = M.guid(), i21._setupVariables(), i21._insertHTMLIntoDOM(), i21._setupModal(), i21._setupEventHandlers(), i21.options.defaultDate || (i21.options.defaultDate = new Date(Date.parse(i21.el.value)));
+            }, B.defaults, e22), e22 && e22.hasOwnProperty("i18n") && "object" == typeof e22.i18n && (i21.options.i18n = g.extend({
+            }, B.defaults.i18n, e22.i18n)), i21.options.minDate && i21.options.minDate.setHours(0, 0, 0, 0), i21.options.maxDate && i21.options.maxDate.setHours(0, 0, 0, 0), i21.id = M.guid(), i21._setupVariables(), i21._insertHTMLIntoDOM(), i21._setupModal(), i21._setupEventHandlers(), i21.options.defaultDate || (i21.options.defaultDate = new Date(Date.parse(i21.el.value)));
             var n21 = i21.options.defaultDate;
             return B._isDate(n21) ? i21.options.setDefaultDate ? (i21.setDate(n21, true), i21.setInputValue()) : i21.gotoDate(n21) : i21.gotoDate(new Date), i21.isOpen = false, i21;
         }
@@ -4910,8 +4904,8 @@ M.anime = (function() {
                 value: function() {
                     var t11 = this.calendarEl.querySelector(".orig-select-year");
                     t11 && M.FormSelect.getInstance(t11).destroy();
-                    var e23 = this.calendarEl.querySelector(".orig-select-month");
-                    e23 && M.FormSelect.getInstance(e23).destroy();
+                    var e22 = this.calendarEl.querySelector(".orig-select-month");
+                    e22 && M.FormSelect.getInstance(e22).destroy();
                 }
             },
             {
@@ -4936,19 +4930,19 @@ M.anime = (function() {
             {
                 key: "toString",
                 value: function(t11) {
-                    var e23 = this;
+                    var e22 = this;
                     return t11 = t11 || this.options.format, B._isDate(this.date) ? t11.split(/(d{1,4}|m{1,4}|y{4}|yy|!.)/g).map(function(t12) {
-                        return e23.formats[t12] ? e23.formats[t12]() : t12;
+                        return e22.formats[t12] ? e22.formats[t12]() : t12;
                     }).join("") : "";
                 }
             },
             {
                 key: "setDate",
-                value: function(t11, e23) {
+                value: function(t11, e22) {
                     if (!t11) return this.date = null, this._renderDateDisplay(), this.draw();
                     if ("string" == typeof t11 && (t11 = new Date(Date.parse(t11))), B._isDate(t11)) {
                         var i21 = this.options.minDate, n21 = this.options.maxDate;
-                        B._isDate(i21) && t11 < i21 ? t11 = i21 : B._isDate(n21) && n21 < t11 && (t11 = n21), this.date = new Date(t11.getTime()), this._renderDateDisplay(), B._setToStartOfDay(this.date), this.gotoDate(this.date), e23 || "function" != typeof this.options.onSelect || this.options.onSelect.call(this, this.date);
+                        B._isDate(i21) && t11 < i21 ? t11 = i21 : B._isDate(n21) && n21 < t11 && (t11 = n21), this.date = new Date(t11.getTime()), this._renderDateDisplay(), B._setToStartOfDay(this.date), this.gotoDate(this.date), e22 || "function" != typeof this.options.onSelect || this.options.onSelect.call(this, this.date);
                     }
                 }
             },
@@ -4963,20 +4957,20 @@ M.anime = (function() {
             {
                 key: "_renderDateDisplay",
                 value: function() {
-                    var t11 = B._isDate(this.date) ? this.date : new Date, e23 = this.options.i18n, i22 = e23.weekdaysShort[t11.getDay()], n22 = e23.monthsShort[t11.getMonth()], s16 = t11.getDate();
+                    var t11 = B._isDate(this.date) ? this.date : new Date, e22 = this.options.i18n, i22 = e22.weekdaysShort[t11.getDay()], n22 = e22.monthsShort[t11.getMonth()], s16 = t11.getDate();
                     this.yearTextEl.innerHTML = t11.getFullYear(), this.dateTextEl.innerHTML = i22 + ", " + n22 + " " + s16;
                 }
             },
             {
                 key: "gotoDate",
                 value: function(t11) {
-                    var e23 = true;
+                    var e22 = true;
                     if (B._isDate(t11)) {
                         if (this.calendars) {
                             var i22 = new Date(this.calendars[0].year, this.calendars[0].month, 1), n22 = new Date(this.calendars[this.calendars.length - 1].year, this.calendars[this.calendars.length - 1].month, 1), s16 = t11.getTime();
-                            n22.setMonth(n22.getMonth() + 1), n22.setDate(n22.getDate() - 1), e23 = s16 < i22.getTime() || n22.getTime() < s16;
+                            n22.setMonth(n22.getMonth() + 1), n22.setDate(n22.getDate() - 1), e22 = s16 < i22.getTime() || n22.getTime() < s16;
                         }
-                        e23 && (this.calendars = [
+                        e22 && (this.calendars = [
                             {
                                 month: t11.getMonth(),
                                 year: t11.getFullYear()
@@ -5011,13 +5005,13 @@ M.anime = (function() {
             },
             {
                 key: "render",
-                value: function(t11, e23, i23) {
-                    var n23 = this.options, s17 = new Date, o12 = B._getDaysInMonth(t11, e23), a9 = new Date(t11, e23, 1).getDay(), r8 = [], l8 = [];
+                value: function(t11, e22, i23) {
+                    var n23 = this.options, s17 = new Date, o12 = B._getDaysInMonth(t11, e22), a9 = new Date(t11, e22, 1).getDay(), r8 = [], l8 = [];
                     B._setToStartOfDay(s17), 0 < n23.firstDay && (a9 -= n23.firstDay) < 0 && (a9 += 7);
-                    for(var h6 = 0 === e23 ? 11 : e23 - 1, d4 = 11 === e23 ? 0 : e23 + 1, u4 = 0 === e23 ? t11 - 1 : t11, c1 = 11 === e23 ? t11 + 1 : t11, p2 = B._getDaysInMonth(u4, h6), v2 = o12 + a9, f2 = v2; 7 < f2;)f2 -= 7;
+                    for(var h6 = 0 === e22 ? 11 : e22 - 1, d4 = 11 === e22 ? 0 : e22 + 1, u4 = 0 === e22 ? t11 - 1 : t11, c1 = 11 === e22 ? t11 + 1 : t11, p2 = B._getDaysInMonth(u4, h6), v2 = o12 + a9, f2 = v2; 7 < f2;)f2 -= 7;
                     v2 += 7 - f2;
                     for(var m = false, g1 = 0, _ = 0; g1 < v2; g1++){
-                        var y = new Date(t11, e23, g1 - a9 + 1), k = !!B._isDate(this.date) && B._compareDates(y, this.date), b = B._compareDates(y, s17), w = -1 !== n23.events.indexOf(y.toDateString()), C = g1 < a9 || o12 + a9 <= g1, E = g1 - a9 + 1, M = e23, O = t11, x = n23.startRange && B._compareDates(n23.startRange, y), L = n23.endRange && B._compareDates(n23.endRange, y), T = n23.startRange && n23.endRange && n23.startRange < y && y < n23.endRange;
+                        var y = new Date(t11, e22, g1 - a9 + 1), k = !!B._isDate(this.date) && B._compareDates(y, this.date), b = B._compareDates(y, s17), w = -1 !== n23.events.indexOf(y.toDateString()), C = g1 < a9 || o12 + a9 <= g1, E = g1 - a9 + 1, M = e22, O = t11, x = n23.startRange && B._compareDates(n23.startRange, y), L = n23.endRange && B._compareDates(n23.endRange, y), T = n23.startRange && n23.endRange && n23.startRange < y && y < n23.endRange;
                         C && (g1 < a9 ? (E = p2 + E, M = h6, O = u4) : (E -= o12, M = d4, O = c1));
                         var $ = {
                             day: E,
@@ -5041,31 +5035,31 @@ M.anime = (function() {
             {
                 key: "renderDay",
                 value: function(t11) {
-                    var e23 = [], i23 = "false";
+                    var e22 = [], i23 = "false";
                     if (t11.isEmpty) {
                         if (!t11.showDaysInNextAndPreviousMonths) return '<td class="is-empty"></td>';
-                        e23.push("is-outside-current-month"), e23.push("is-selection-disabled");
+                        e22.push("is-outside-current-month"), e22.push("is-selection-disabled");
                     }
-                    return t11.isDisabled && e23.push("is-disabled"), t11.isToday && e23.push("is-today"), t11.isSelected && (e23.push("is-selected"), i23 = "true"), t11.hasEvent && e23.push("has-event"), t11.isInRange && e23.push("is-inrange"), t11.isStartRange && e23.push("is-startrange"), t11.isEndRange && e23.push("is-endrange"), '<td data-day="' + t11.day + '" class="' + e23.join(" ") + '" aria-selected="' + i23 + '"><button class="datepicker-day-button" type="button" data-year="' + t11.year + '" data-month="' + t11.month + '" data-day="' + t11.day + '">' + t11.day + "</button></td>";
+                    return t11.isDisabled && e22.push("is-disabled"), t11.isToday && e22.push("is-today"), t11.isSelected && (e22.push("is-selected"), i23 = "true"), t11.hasEvent && e22.push("has-event"), t11.isInRange && e22.push("is-inrange"), t11.isStartRange && e22.push("is-startrange"), t11.isEndRange && e22.push("is-endrange"), '<td data-day="' + t11.day + '" class="' + e22.join(" ") + '" aria-selected="' + i23 + '"><button class="datepicker-day-button" type="button" data-year="' + t11.year + '" data-month="' + t11.month + '" data-day="' + t11.day + '">' + t11.day + "</button></td>";
                 }
             },
             {
                 key: "renderRow",
-                value: function(t11, e23, i23) {
-                    return '<tr class="datepicker-row' + (i23 ? " is-selected" : "") + '">' + (e23 ? t11.reverse() : t11).join("") + "</tr>";
+                value: function(t11, e22, i23) {
+                    return '<tr class="datepicker-row' + (i23 ? " is-selected" : "") + '">' + (e22 ? t11.reverse() : t11).join("") + "</tr>";
                 }
             },
             {
                 key: "renderTable",
-                value: function(t11, e23, i23) {
-                    return '<div class="datepicker-table-wrapper"><table cellpadding="0" cellspacing="0" class="datepicker-table" role="grid" aria-labelledby="' + i23 + '">' + this.renderHead(t11) + this.renderBody(e23) + "</table></div>";
+                value: function(t11, e22, i23) {
+                    return '<div class="datepicker-table-wrapper"><table cellpadding="0" cellspacing="0" class="datepicker-table" role="grid" aria-labelledby="' + i23 + '">' + this.renderHead(t11) + this.renderBody(e22) + "</table></div>";
                 }
             },
             {
                 key: "renderHead",
                 value: function(t11) {
-                    var e23 = void 0, i23 = [];
-                    for(e23 = 0; e23 < 7; e23++)i23.push('<th scope="col"><abbr title="' + this.renderDayName(t11, e23) + '">' + this.renderDayName(t11, e23, true) + "</abbr></th>");
+                    var e22 = void 0, i23 = [];
+                    for(e22 = 0; e22 < 7; e22++)i23.push('<th scope="col"><abbr title="' + this.renderDayName(t11, e22) + '">' + this.renderDayName(t11, e22, true) + "</abbr></th>");
                     return "<thead><tr>" + (t11.isRTL ? i23.reverse() : i23).join("") + "</tr></thead>";
                 }
             },
@@ -5077,9 +5071,9 @@ M.anime = (function() {
             },
             {
                 key: "renderTitle",
-                value: function(t11, e23, i23, n23, s17, o12) {
+                value: function(t11, e22, i23, n23, s17, o12) {
                     var a9, r8, l8 = void 0, h6 = void 0, d4 = void 0, u4 = this.options, c1 = i23 === u4.minYear, p2 = i23 === u4.maxYear, v2 = '<div id="' + o12 + '" class="datepicker-controls" role="heading" aria-live="assertive">', f2 = true, m = true;
-                    for(d4 = [], l8 = 0; l8 < 12; l8++)d4.push('<option value="' + (i23 === s17 ? l8 - e23 : 12 + l8 - e23) + '"' + (l8 === n23 ? ' selected="selected"' : "") + (c1 && l8 < u4.minMonth || p2 && l8 > u4.maxMonth ? 'disabled="disabled"' : "") + ">" + u4.i18n.months[l8] + "</option>");
+                    for(d4 = [], l8 = 0; l8 < 12; l8++)d4.push('<option value="' + (i23 === s17 ? l8 - e22 : 12 + l8 - e22) + '"' + (l8 === n23 ? ' selected="selected"' : "") + (c1 && l8 < u4.minMonth || p2 && l8 > u4.maxMonth ? 'disabled="disabled"' : "") + ">" + u4.i18n.months[l8] + "</option>");
                     for(a9 = '<select class="datepicker-select orig-select-month" tabindex="-1">' + d4.join("") + "</select>", g.isArray(u4.yearRange) ? (l8 = u4.yearRange[0], h6 = u4.yearRange[1] + 1) : (l8 = i23 - u4.yearRange, h6 = 1 + i23 + u4.yearRange), d4 = []; l8 < h6 && l8 <= u4.maxYear; l8++)l8 >= u4.minYear && d4.push('<option value="' + l8 + '" ' + (l8 === i23 ? 'selected="selected"' : "") + ">" + l8 + "</option>");
                     r8 = '<select class="datepicker-select orig-select-year" tabindex="-1">' + d4.join("") + "</select>";
                     v2 += '<button class="month-prev' + (f2 ? "" : " is-disabled") + '" type="button"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/><path d="M0-.5h24v24H0z" fill="none"/></svg></button>', v2 += '<div class="selects-container">', u4.showMonthAfterYear ? v2 += r8 + a9 : v2 += a9 + r8, v2 += "</div>", c1 && (0 === n23 || u4.minMonth >= n23) && (f2 = false), p2 && (11 === n23 || u4.maxMonth <= n23) && (m = false);
@@ -5090,9 +5084,9 @@ M.anime = (function() {
                 key: "draw",
                 value: function(t11) {
                     if (this.isOpen || t11) {
-                        var e23, i23 = this.options, n23 = i23.minYear, s17 = i23.maxYear, o12 = i23.minMonth, a9 = i23.maxMonth, r8 = "";
-                        this._y <= n23 && (this._y = n23, !isNaN(o12) && this._m < o12 && (this._m = o12)), this._y >= s17 && (this._y = s17, !isNaN(a9) && this._m > a9 && (this._m = a9)), e23 = "datepicker-title-" + Math.random().toString(36).replace(/[^a-z]+/g, "").substr(0, 2);
-                        for(var l8 = 0; l8 < 1; l8++)this._renderDateDisplay(), r8 += this.renderTitle(this, l8, this.calendars[l8].year, this.calendars[l8].month, this.calendars[0].year, e23) + this.render(this.calendars[l8].year, this.calendars[l8].month, e23);
+                        var e22, i23 = this.options, n23 = i23.minYear, s17 = i23.maxYear, o12 = i23.minMonth, a9 = i23.maxMonth, r8 = "";
+                        this._y <= n23 && (this._y = n23, !isNaN(o12) && this._m < o12 && (this._m = o12)), this._y >= s17 && (this._y = s17, !isNaN(a9) && this._m > a9 && (this._m = a9)), e22 = "datepicker-title-" + Math.random().toString(36).replace(/[^a-z]+/g, "").substr(0, 2);
+                        for(var l8 = 0; l8 < 1; l8++)this._renderDateDisplay(), r8 += this.renderTitle(this, l8, this.calendars[l8].year, this.calendars[l8].month, this.calendars[0].year, e22) + this.render(this.calendars[l8].year, this.calendars[l8].month, e22);
                         this.destroySelects(), this.calendarEl.innerHTML = r8;
                         var h6 = this.calendarEl.querySelector(".orig-select-year"), d4 = this.calendarEl.querySelector(".orig-select-month");
                         M.FormSelect.init(h6, {
@@ -5120,39 +5114,39 @@ M.anime = (function() {
             {
                 key: "_setupVariables",
                 value: function() {
-                    var e24 = this;
+                    var e23 = this;
                     this.$modalEl = g(B._template), this.modalEl = this.$modalEl[0], this.calendarEl = this.modalEl.querySelector(".datepicker-calendar"), this.yearTextEl = this.modalEl.querySelector(".year-text"), this.dateTextEl = this.modalEl.querySelector(".date-text"), this.options.showClearBtn && (this.clearBtn = this.modalEl.querySelector(".datepicker-clear")), this.doneBtn = this.modalEl.querySelector(".datepicker-done"), this.cancelBtn = this.modalEl.querySelector(".datepicker-cancel"), this.formats = {
                         d: function() {
-                            return e24.date.getDate();
+                            return e23.date.getDate();
                         },
                         dd: function() {
-                            var t11 = e24.date.getDate();
+                            var t11 = e23.date.getDate();
                             return (t11 < 10 ? "0" : "") + t11;
                         },
                         ddd: function() {
-                            return e24.options.i18n.weekdaysShort[e24.date.getDay()];
+                            return e23.options.i18n.weekdaysShort[e23.date.getDay()];
                         },
                         dddd: function() {
-                            return e24.options.i18n.weekdays[e24.date.getDay()];
+                            return e23.options.i18n.weekdays[e23.date.getDay()];
                         },
                         m: function() {
-                            return e24.date.getMonth() + 1;
+                            return e23.date.getMonth() + 1;
                         },
                         mm: function() {
-                            var t11 = e24.date.getMonth() + 1;
+                            var t11 = e23.date.getMonth() + 1;
                             return (t11 < 10 ? "0" : "") + t11;
                         },
                         mmm: function() {
-                            return e24.options.i18n.monthsShort[e24.date.getMonth()];
+                            return e23.options.i18n.monthsShort[e23.date.getMonth()];
                         },
                         mmmm: function() {
-                            return e24.options.i18n.months[e24.date.getMonth()];
+                            return e23.options.i18n.months[e23.date.getMonth()];
                         },
                         yy: function() {
-                            return ("" + e24.date.getFullYear()).slice(2);
+                            return ("" + e23.date.getFullYear()).slice(2);
                         },
                         yyyy: function() {
-                            return e24.date.getFullYear();
+                            return e23.date.getFullYear();
                         }
                     };
                 }
@@ -5179,8 +5173,8 @@ M.anime = (function() {
                 key: "_handleCalendarClick",
                 value: function(t11) {
                     if (this.isOpen) {
-                        var e24 = g(t11.target);
-                        e24.hasClass("is-disabled") || (!e24.hasClass("datepicker-day-button") || e24.hasClass("is-empty") || e24.parent().hasClass("is-disabled") ? e24.closest(".month-prev").length ? this.prevMonth() : e24.closest(".month-next").length && this.nextMonth() : (this.setDate(new Date(t11.target.getAttribute("data-year"), t11.target.getAttribute("data-month"), t11.target.getAttribute("data-day"))), this.options.autoClose && this._finishSelection()));
+                        var e23 = g(t11.target);
+                        e23.hasClass("is-disabled") || (!e23.hasClass("datepicker-day-button") || e23.hasClass("is-empty") || e23.parent().hasClass("is-disabled") ? e23.closest(".month-prev").length ? this.prevMonth() : e23.closest(".month-next").length && this.nextMonth() : (this.setDate(new Date(t11.target.getAttribute("data-year"), t11.target.getAttribute("data-month"), t11.target.getAttribute("data-day"))), this.options.autoClose && this._finishSelection()));
                     }
                 }
             },
@@ -5217,15 +5211,15 @@ M.anime = (function() {
             {
                 key: "_handleInputChange",
                 value: function(t11) {
-                    var e25 = void 0;
-                    t11.firedBy !== this && (e25 = this.options.parse ? this.options.parse(this.el.value, this.options.format) : new Date(Date.parse(this.el.value)), B._isDate(e25) && this.setDate(e25));
+                    var e24 = void 0;
+                    t11.firedBy !== this && (e24 = this.options.parse ? this.options.parse(this.el.value, this.options.format) : new Date(Date.parse(this.el.value)), B._isDate(e24) && this.setDate(e24));
                 }
             },
             {
                 key: "renderDayName",
-                value: function(t11, e25, i24) {
-                    for(e25 += t11.firstDay; 7 <= e25;)e25 -= 7;
-                    return i24 ? t11.i18n.weekdaysAbbrev[e25] : t11.i18n.weekdays[e25];
+                value: function(t11, e24, i24) {
+                    for(e24 += t11.firstDay; 7 <= e24;)e24 -= 7;
+                    return i24 ? t11.i18n.weekdaysAbbrev[e24] : t11.i18n.weekdays[e24];
                 }
             },
             {
@@ -5249,8 +5243,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e25) {
-                    return _get(B.__proto__ || Object.getPrototypeOf(B), "init", this).call(this, this, t11, e25);
+                value: function(t11, e24) {
+                    return _get(B.__proto__ || Object.getPrototypeOf(B), "init", this).call(this, this, t11, e24);
                 }
             },
             {
@@ -5262,8 +5256,8 @@ M.anime = (function() {
             {
                 key: "_isWeekend",
                 value: function(t11) {
-                    var e25 = t11.getDay();
-                    return 0 === e25 || 6 === e25;
+                    var e24 = t11.getDay();
+                    return 0 === e24 || 6 === e24;
                 }
             },
             {
@@ -5274,7 +5268,7 @@ M.anime = (function() {
             },
             {
                 key: "_getDaysInMonth",
-                value: function(t11, e25) {
+                value: function(t11, e24) {
                     return [
                         31,
                         B._isLeapYear(t11) ? 29 : 28,
@@ -5288,7 +5282,7 @@ M.anime = (function() {
                         31,
                         30,
                         31
-                    ][e25];
+                    ][e24];
                 }
             },
             {
@@ -5299,8 +5293,8 @@ M.anime = (function() {
             },
             {
                 key: "_compareDates",
-                value: function(t11, e25) {
-                    return t11.getTime() === e25.getTime();
+                value: function(t11, e24) {
+                    return t11.getTime() === e24.getTime();
                 }
             },
             {
@@ -5318,7 +5312,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), B;
@@ -5345,7 +5339,7 @@ M.anime = (function() {
     ].join(""), M.Datepicker = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "datepicker", "M_Datepicker");
 })(cash), (function(h7) {
     "use strict";
-    var e18 = {
+    var e17 = {
         dialRadius: 135,
         outerRadius: 105,
         innerRadius: 70,
@@ -5369,11 +5363,11 @@ M.anime = (function() {
         onCloseEnd: null,
         onSelect: null
     }, t7 = function(t9) {
-        function f2(t11, e25) {
+        function f2(t11, e24) {
             _classCallCheck(this, f2);
-            var i24 = _possibleConstructorReturn(this, (f2.__proto__ || Object.getPrototypeOf(f2)).call(this, f2, t11, e25));
+            var i24 = _possibleConstructorReturn(this, (f2.__proto__ || Object.getPrototypeOf(f2)).call(this, f2, t11, e24));
             return (i24.el.M_Timepicker = i24).options = h7.extend({
-            }, f2.defaults, e25), i24.id = M.guid(), i24._insertHTMLIntoDOM(), i24._setupModal(), i24._setupVariables(), i24._setupEventHandlers(), i24._clockSetup(), i24._pickerSetup(), i24;
+            }, f2.defaults, e24), i24.id = M.guid(), i24._insertHTMLIntoDOM(), i24._setupModal(), i24._setupVariables(), i24._setupEventHandlers(), i24._clockSetup(), i24._pickerSetup(), i24;
         }
         return _inherits(f2, Component), _createClass(f2, [
             {
@@ -5410,7 +5404,7 @@ M.anime = (function() {
                 key: "_handleClockClickStart",
                 value: function(t11) {
                     t11.preventDefault();
-                    var e25 = this.plate.getBoundingClientRect(), i24 = e25.left, n24 = e25.top;
+                    var e24 = this.plate.getBoundingClientRect(), i24 = e24.left, n24 = e24.top;
                     this.x0 = i24 + this.options.dialRadius, this.y0 = n24 + this.options.dialRadius, this.moved = false;
                     var s18 = f2._Pos(t11);
                     this.dx = s18.x - this.x0, this.dy = s18.y - this.y0, this.setHand(this.dx, this.dy, false), document.addEventListener("mousemove", this._handleDocumentClickMoveBound), document.addEventListener("touchmove", this._handleDocumentClickMoveBound), document.addEventListener("mouseup", this._handleDocumentClickEndBound), document.addEventListener("touchend", this._handleDocumentClickEndBound);
@@ -5420,18 +5414,18 @@ M.anime = (function() {
                 key: "_handleDocumentClickMove",
                 value: function(t11) {
                     t11.preventDefault();
-                    var e25 = f2._Pos(t11), i24 = e25.x - this.x0, n24 = e25.y - this.y0;
+                    var e24 = f2._Pos(t11), i24 = e24.x - this.x0, n24 = e24.y - this.y0;
                     this.moved = true, this.setHand(i24, n24, false, true);
                 }
             },
             {
                 key: "_handleDocumentClickEnd",
                 value: function(t11) {
-                    var e25 = this;
+                    var e24 = this;
                     t11.preventDefault(), document.removeEventListener("mouseup", this._handleDocumentClickEndBound), document.removeEventListener("touchend", this._handleDocumentClickEndBound);
                     var i24 = f2._Pos(t11), n24 = i24.x - this.x0, s18 = i24.y - this.y0;
                     this.moved && n24 === this.dx && s18 === this.dy && this.setHand(n24, s18), "hours" === this.currentView ? this.showView("minutes", this.options.duration / 2) : this.options.autoClose && (h7(this.minutesView).addClass("timepicker-dial-out"), setTimeout(function() {
-                        e25.done();
+                        e24.done();
                     }, this.options.duration / 2)), "function" == typeof this.options.onSelect && this.options.onSelect.call(this, this.hours, this.minutes), document.removeEventListener("mousemove", this._handleDocumentClickMoveBound), document.removeEventListener("touchmove", this._handleDocumentClickMoveBound);
                 }
             },
@@ -5470,8 +5464,8 @@ M.anime = (function() {
                     this.options.showClearBtn && t11.css({
                         visibility: ""
                     });
-                    var e25 = h7('<div class="confirmation-btns"></div>');
-                    h7('<button class="btn-flat timepicker-close waves-effect" type="button" tabindex="' + (this.options.twelveHour ? "3" : "1") + '">' + this.options.i18n.cancel + "</button>").appendTo(e25).on("click", this.close.bind(this)), h7('<button class="btn-flat timepicker-close waves-effect" type="button" tabindex="' + (this.options.twelveHour ? "3" : "1") + '">' + this.options.i18n.done + "</button>").appendTo(e25).on("click", this.done.bind(this)), e25.appendTo(this.footer);
+                    var e24 = h7('<div class="confirmation-btns"></div>');
+                    h7('<button class="btn-flat timepicker-close waves-effect" type="button" tabindex="' + (this.options.twelveHour ? "3" : "1") + '">' + this.options.i18n.cancel + "</button>").appendTo(e24).on("click", this.close.bind(this)), h7('<button class="btn-flat timepicker-close waves-effect" type="button" tabindex="' + (this.options.twelveHour ? "3" : "1") + '">' + this.options.i18n.done + "</button>").appendTo(e24).on("click", this.done.bind(this)), e24.appendTo(this.footer);
                 }
             },
             {
@@ -5483,7 +5477,7 @@ M.anime = (function() {
             {
                 key: "_buildSVGClock",
                 value: function() {
-                    var t11 = this.options.dialRadius, e25 = this.options.tickRadius, i24 = 2 * t11, n24 = f2._createSVGEl("svg");
+                    var t11 = this.options.dialRadius, e24 = this.options.tickRadius, i24 = 2 * t11, n24 = f2._createSVGEl("svg");
                     n24.setAttribute("class", "timepicker-svg"), n24.setAttribute("width", i24), n24.setAttribute("height", i24);
                     var s18 = f2._createSVGEl("g");
                     s18.setAttribute("transform", "translate(" + t11 + "," + t11 + ")");
@@ -5492,19 +5486,19 @@ M.anime = (function() {
                     var a10 = f2._createSVGEl("line");
                     a10.setAttribute("x1", 0), a10.setAttribute("y1", 0);
                     var r9 = f2._createSVGEl("circle");
-                    r9.setAttribute("class", "timepicker-canvas-bg"), r9.setAttribute("r", e25), s18.appendChild(a10), s18.appendChild(r9), s18.appendChild(o13), n24.appendChild(s18), this._canvas.appendChild(n24), this.hand = a10, this.bg = r9, this.bearing = o13, this.g = s18;
+                    r9.setAttribute("class", "timepicker-canvas-bg"), r9.setAttribute("r", e24), s18.appendChild(a10), s18.appendChild(r9), s18.appendChild(o13), n24.appendChild(s18), this._canvas.appendChild(n24), this.hand = a10, this.bg = r9, this.bearing = o13, this.g = s18;
                 }
             },
             {
                 key: "_buildHoursView",
                 value: function() {
                     var t11 = h7('<div class="timepicker-tick"></div>');
-                    if (this.options.twelveHour) for(var e25 = 1; e25 < 13; e25 += 1){
-                        var i24 = t11.clone(), n24 = e25 / 6 * Math.PI, s18 = this.options.outerRadius;
+                    if (this.options.twelveHour) for(var e24 = 1; e24 < 13; e24 += 1){
+                        var i24 = t11.clone(), n24 = e24 / 6 * Math.PI, s18 = this.options.outerRadius;
                         i24.css({
                             left: this.options.dialRadius + Math.sin(n24) * s18 - this.options.tickRadius + "px",
                             top: this.options.dialRadius - Math.cos(n24) * s18 - this.options.tickRadius + "px"
-                        }), i24.html(0 === e25 ? "00" : e25), this.hoursView.appendChild(i24[0]);
+                        }), i24.html(0 === e24 ? "00" : e24), this.hoursView.appendChild(i24[0]);
                     }
                     else for(var o13 = 0; o13 < 24; o13 += 1){
                         var a10 = t11.clone(), r9 = o13 / 6 * Math.PI, l9 = 0 < o13 && o13 < 13 ? this.options.innerRadius : this.options.outerRadius;
@@ -5518,20 +5512,20 @@ M.anime = (function() {
             {
                 key: "_buildMinutesView",
                 value: function() {
-                    for(var t11 = h7('<div class="timepicker-tick"></div>'), e25 = 0; e25 < 60; e25 += 5){
-                        var i25 = t11.clone(), n25 = e25 / 30 * Math.PI;
+                    for(var t11 = h7('<div class="timepicker-tick"></div>'), e24 = 0; e24 < 60; e24 += 5){
+                        var i25 = t11.clone(), n25 = e24 / 30 * Math.PI;
                         i25.css({
                             left: this.options.dialRadius + Math.sin(n25) * this.options.outerRadius - this.options.tickRadius + "px",
                             top: this.options.dialRadius - Math.cos(n25) * this.options.outerRadius - this.options.tickRadius + "px"
-                        }), i25.html(f2._addLeadingZero(e25)), this.minutesView.appendChild(i25[0]);
+                        }), i25.html(f2._addLeadingZero(e24)), this.minutesView.appendChild(i25[0]);
                     }
                 }
             },
             {
                 key: "_handleAmPmClick",
                 value: function(t11) {
-                    var e25 = h7(t11.target);
-                    this.amOrPm = e25.hasClass("am-btn") ? "AM" : "PM", this._updateAmPmView();
+                    var e24 = h7(t11.target);
+                    this.amOrPm = e24.hasClass("am-btn") ? "AM" : "PM", this._updateAmPmView();
                 }
             },
             {
@@ -5545,10 +5539,10 @@ M.anime = (function() {
                 value: function() {
                     var t11 = ((this.el.value || this.options.defaultTime || "") + "").split(":");
                     if (this.options.twelveHour && (void 0) !== t11[1] && (0 < t11[1].toUpperCase().indexOf("AM") ? this.amOrPm = "AM" : this.amOrPm = "PM", t11[1] = t11[1].replace("AM", "").replace("PM", "")), "now" === t11[0]) {
-                        var e25 = new Date(+new Date + this.options.fromNow);
+                        var e24 = new Date(+new Date + this.options.fromNow);
                         t11 = [
-                            e25.getHours(),
-                            e25.getMinutes()
+                            e24.getHours(),
+                            e24.getMinutes()
                         ], this.options.twelveHour && (this.amOrPm = 12 <= t11[0] && t11[0] < 24 ? "PM" : "AM");
                     }
                     this.hours = +t11[0] || 0, this.minutes = +t11[1] || 0, this.spanHours.innerHTML = this.hours, this.spanMinutes.innerHTML = f2._addLeadingZero(this.minutes), this._updateAmPmView();
@@ -5556,10 +5550,10 @@ M.anime = (function() {
             },
             {
                 key: "showView",
-                value: function(t11, e26) {
+                value: function(t11, e25) {
                     "minutes" === t11 && h7(this.hoursView).css("visibility");
                     var i26 = "hours" === t11, n26 = i26 ? this.hoursView : this.minutesView, s19 = i26 ? this.minutesView : this.hoursView;
-                    this.currentView = t11, h7(this.spanHours).toggleClass("text-primary", i26), h7(this.spanMinutes).toggleClass("text-primary", !i26), s19.classList.add("timepicker-dial-out"), h7(n26).css("visibility", "visible").removeClass("timepicker-dial-out"), this.resetClock(e26), clearTimeout(this.toggleViewTimer), this.toggleViewTimer = setTimeout(function() {
+                    this.currentView = t11, h7(this.spanHours).toggleClass("text-primary", i26), h7(this.spanMinutes).toggleClass("text-primary", !i26), s19.classList.add("timepicker-dial-out"), h7(n26).css("visibility", "visible").removeClass("timepicker-dial-out"), this.resetClock(e25), clearTimeout(this.toggleViewTimer), this.toggleViewTimer = setTimeout(function() {
                         h7(s19).css("visibility", "hidden");
                     }, this.options.duration);
                 }
@@ -5567,7 +5561,7 @@ M.anime = (function() {
             {
                 key: "resetClock",
                 value: function(t11) {
-                    var e26 = this.currentView, i26 = this[e26], n26 = "hours" === e26, s19 = i26 * (Math.PI / (n26 ? 6 : 30)), o13 = n26 && 0 < i26 && i26 < 13 ? this.options.innerRadius : this.options.outerRadius, a11 = Math.sin(s19) * o13, r10 = -Math.cos(s19) * o13, l10 = this;
+                    var e25 = this.currentView, i26 = this[e25], n26 = "hours" === e25, s19 = i26 * (Math.PI / (n26 ? 6 : 30)), o13 = n26 && 0 < i26 && i26 < 13 ? this.options.innerRadius : this.options.outerRadius, a11 = Math.sin(s19) * o13, r10 = -Math.cos(s19) * o13, l10 = this;
                     t11 ? (h7(this.canvas).addClass("timepicker-canvas-out"), setTimeout(function() {
                         h7(l10.canvas).removeClass("timepicker-canvas-out"), l10.setHand(a11, r10);
                     }, t11)) : this.setHand(a11, r10);
@@ -5575,8 +5569,8 @@ M.anime = (function() {
             },
             {
                 key: "setHand",
-                value: function(t11, e26, i26) {
-                    var n26 = this, s19 = Math.atan2(t11, -e26), o13 = "hours" === this.currentView, a11 = Math.PI / (o13 || i26 ? 6 : 30), r10 = Math.sqrt(t11 * t11 + e26 * e26), l10 = o13 && r10 < (this.options.outerRadius + this.options.innerRadius) / 2, h8 = l10 ? this.options.innerRadius : this.options.outerRadius;
+                value: function(t11, e25, i26) {
+                    var n26 = this, s19 = Math.atan2(t11, -e25), o13 = "hours" === this.currentView, a11 = Math.PI / (o13 || i26 ? 6 : 30), r10 = Math.sqrt(t11 * t11 + e25 * e25), l10 = o13 && r10 < (this.options.outerRadius + this.options.innerRadius) / 2, h8 = l10 ? this.options.innerRadius : this.options.outerRadius;
                     this.options.twelveHour && (h8 = this.options.outerRadius), s19 < 0 && (s19 = 2 * Math.PI + s19);
                     var d5 = Math.round(s19 / a11);
                     s19 = d5 * a11, this.options.twelveHour ? o13 ? 0 === d5 && (d5 = 12) : (i26 && (d5 *= 5), 60 === d5 && (d5 = 0)) : o13 ? (12 === d5 && (d5 = 0), d5 = l10 ? 0 === d5 ? 12 : d5 : 0 === d5 ? 0 : d5 + 12) : (i26 && (d5 *= 5), 60 === d5 && (d5 = 0)), this[this.currentView] !== d5 && this.vibrate && this.options.vibrate && (this.vibrateTimer || (navigator[this.vibrate](10), this.vibrateTimer = setTimeout(function() {
@@ -5600,9 +5594,9 @@ M.anime = (function() {
             },
             {
                 key: "done",
-                value: function(t11, e26) {
-                    var i26 = this.el.value, n26 = e26 ? "" : f2._addLeadingZero(this.hours) + ":" + f2._addLeadingZero(this.minutes);
-                    this.time = n26, !e26 && this.options.twelveHour && (n26 = n26 + " " + this.amOrPm), (this.el.value = n26) !== i26 && this.$el.trigger("change"), this.close(), this.el.focus();
+                value: function(t11, e25) {
+                    var i26 = this.el.value, n26 = e25 ? "" : f2._addLeadingZero(this.hours) + ":" + f2._addLeadingZero(this.minutes);
+                    this.time = n26, !e25 && this.options.twelveHour && (n26 = n26 + " " + this.amOrPm), (this.el.value = n26) !== i26 && this.$el.trigger("change"), this.close(), this.el.focus();
                 }
             },
             {
@@ -5614,8 +5608,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e26) {
-                    return _get(f2.__proto__ || Object.getPrototypeOf(f2), "init", this).call(this, this, t11, e26);
+                value: function(t11, e25) {
+                    return _get(f2.__proto__ || Object.getPrototypeOf(f2), "init", this).call(this, this, t11, e25);
                 }
             },
             {
@@ -5651,7 +5645,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), f2;
@@ -5684,13 +5678,13 @@ M.anime = (function() {
     ].join(""), M.Timepicker = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "timepicker", "M_Timepicker");
 })(cash), (function(s19) {
     "use strict";
-    var e18 = {
+    var e17 = {
     }, t7 = function(t9) {
-        function n26(t11, e26) {
+        function n26(t11, e25) {
             _classCallCheck(this, n26);
-            var i26 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t11, e26));
+            var i26 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t11, e25));
             return (i26.el.M_CharacterCounter = i26).options = s19.extend({
-            }, n26.defaults, e26), i26.isInvalid = false, i26.isValidLength = false, i26._setupCounter(), i26._setupEventHandlers(), i26;
+            }, n26.defaults, e25), i26.isInvalid = false, i26.isValidLength = false, i26._setupCounter(), i26._setupEventHandlers(), i26;
         }
         return _inherits(n26, Component), _createClass(n26, [
             {
@@ -5730,9 +5724,9 @@ M.anime = (function() {
             {
                 key: "updateCounter",
                 value: function() {
-                    var t11 = +this.$el.attr("data-length"), e26 = this.el.value.length;
-                    this.isValidLength = e26 <= t11;
-                    var i26 = e26;
+                    var t11 = +this.$el.attr("data-length"), e25 = this.el.value.length;
+                    this.isValidLength = e25 <= t11;
+                    var i26 = e25;
                     t11 && (i26 += "/" + t11, this._validateInput()), s19(this.counterEl).html(i26);
                 }
             },
@@ -5745,8 +5739,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e26) {
-                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t11, e26);
+                value: function(t11, e25) {
+                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t11, e25);
                 }
             },
             {
@@ -5758,7 +5752,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), n26;
@@ -5766,7 +5760,7 @@ M.anime = (function() {
     M.CharacterCounter = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "characterCounter", "M_CharacterCounter");
 })(cash), (function(b) {
     "use strict";
-    var e18 = {
+    var e17 = {
         duration: 200,
         dist: -100,
         shift: 0,
@@ -5777,14 +5771,14 @@ M.anime = (function() {
         noWrap: false,
         onCycleTo: null
     }, t7 = function(t9) {
-        function i26(t11, e26) {
+        function i26(t11, e25) {
             _classCallCheck(this, i26);
-            var n26 = _possibleConstructorReturn(this, (i26.__proto__ || Object.getPrototypeOf(i26)).call(this, i26, t11, e26));
+            var n26 = _possibleConstructorReturn(this, (i26.__proto__ || Object.getPrototypeOf(i26)).call(this, i26, t11, e25));
             return (n26.el.M_Carousel = n26).options = b.extend({
-            }, i26.defaults, e26), n26.hasMultipleSlides = 1 < n26.$el.find(".carousel-item").length, n26.showIndicators = n26.options.indicators && n26.hasMultipleSlides, n26.noWrap = n26.options.noWrap || !n26.hasMultipleSlides, n26.pressed = false, n26.dragged = false, n26.offset = n26.target = 0, n26.images = [], n26.itemWidth = n26.$el.find(".carousel-item").first().innerWidth(), n26.itemHeight = n26.$el.find(".carousel-item").first().innerHeight(), n26.dim = 2 * n26.itemWidth + n26.options.padding || 1, n26._autoScrollBound = n26._autoScroll.bind(n26), n26._trackBound = n26._track.bind(n26), n26.options.fullWidth && (n26.options.dist = 0, n26._setCarouselHeight(), n26.showIndicators && n26.$el.find(".carousel-fixed-item").addClass("with-indicators")), n26.$indicators = b('<ul class="indicators"></ul>'), n26.$el.find(".carousel-item").each(function(t12, e27) {
+            }, i26.defaults, e25), n26.hasMultipleSlides = 1 < n26.$el.find(".carousel-item").length, n26.showIndicators = n26.options.indicators && n26.hasMultipleSlides, n26.noWrap = n26.options.noWrap || !n26.hasMultipleSlides, n26.pressed = false, n26.dragged = false, n26.offset = n26.target = 0, n26.images = [], n26.itemWidth = n26.$el.find(".carousel-item").first().innerWidth(), n26.itemHeight = n26.$el.find(".carousel-item").first().innerHeight(), n26.dim = 2 * n26.itemWidth + n26.options.padding || 1, n26._autoScrollBound = n26._autoScroll.bind(n26), n26._trackBound = n26._track.bind(n26), n26.options.fullWidth && (n26.options.dist = 0, n26._setCarouselHeight(), n26.showIndicators && n26.$el.find(".carousel-fixed-item").addClass("with-indicators")), n26.$indicators = b('<ul class="indicators"></ul>'), n26.$el.find(".carousel-item").each(function(t12, e26) {
                 if (n26.images.push(t12), n26.showIndicators) {
                     var i27 = b('<li class="indicator-item"></li>');
-                    0 === e27 && i27[0].classList.add("active"), n26.$indicators.append(i27);
+                    0 === e26 && i27[0].classList.add("active"), n26.$indicators.append(i27);
                 }
             }), n26.showIndicators && n26.$el.append(n26.$indicators), n26.count = n26.images.length, n26.options.numVisible = Math.min(n26.count, n26.options.numVisible), n26.xform = "transform", [
                 "webkit",
@@ -5792,8 +5786,8 @@ M.anime = (function() {
                 "O",
                 "ms"
             ].every(function(t12) {
-                var e27 = t12 + "Transform";
-                return (void 0) === document.body.style[e27] || (n26.xform = e27, false);
+                var e26 = t12 + "Transform";
+                return (void 0) === document.body.style[e26] || (n26.xform = e26, false);
             }), n26._setupEventHandlers(), n26._scroll(n26.offset), n26;
         }
         return _inherits(i26, Component), _createClass(i26, [
@@ -5807,7 +5801,7 @@ M.anime = (function() {
                 key: "_setupEventHandlers",
                 value: function() {
                     var i28 = this;
-                    this._handleCarouselTapBound = this._handleCarouselTap.bind(this), this._handleCarouselDragBound = this._handleCarouselDrag.bind(this), this._handleCarouselReleaseBound = this._handleCarouselRelease.bind(this), this._handleCarouselClickBound = this._handleCarouselClick.bind(this), (void 0) !== window.ontouchstart && (this.el.addEventListener("touchstart", this._handleCarouselTapBound), this.el.addEventListener("touchmove", this._handleCarouselDragBound), this.el.addEventListener("touchend", this._handleCarouselReleaseBound)), this.el.addEventListener("mousedown", this._handleCarouselTapBound), this.el.addEventListener("mousemove", this._handleCarouselDragBound), this.el.addEventListener("mouseup", this._handleCarouselReleaseBound), this.el.addEventListener("mouseleave", this._handleCarouselReleaseBound), this.el.addEventListener("click", this._handleCarouselClickBound), this.showIndicators && this.$indicators && (this._handleIndicatorClickBound = this._handleIndicatorClick.bind(this), this.$indicators.find(".indicator-item").each(function(t11, e26) {
+                    this._handleCarouselTapBound = this._handleCarouselTap.bind(this), this._handleCarouselDragBound = this._handleCarouselDrag.bind(this), this._handleCarouselReleaseBound = this._handleCarouselRelease.bind(this), this._handleCarouselClickBound = this._handleCarouselClick.bind(this), (void 0) !== window.ontouchstart && (this.el.addEventListener("touchstart", this._handleCarouselTapBound), this.el.addEventListener("touchmove", this._handleCarouselDragBound), this.el.addEventListener("touchend", this._handleCarouselReleaseBound)), this.el.addEventListener("mousedown", this._handleCarouselTapBound), this.el.addEventListener("mousemove", this._handleCarouselDragBound), this.el.addEventListener("mouseup", this._handleCarouselReleaseBound), this.el.addEventListener("mouseleave", this._handleCarouselReleaseBound), this.el.addEventListener("click", this._handleCarouselClickBound), this.showIndicators && this.$indicators && (this._handleIndicatorClickBound = this._handleIndicatorClick.bind(this), this.$indicators.find(".indicator-item").each(function(t11, e25) {
                         t11.addEventListener("click", i28._handleIndicatorClickBound);
                     }));
                     var t11 = M.throttle(this._handleResize, 200);
@@ -5818,7 +5812,7 @@ M.anime = (function() {
                 key: "_removeEventHandlers",
                 value: function() {
                     var i28 = this;
-                    (void 0) !== window.ontouchstart && (this.el.removeEventListener("touchstart", this._handleCarouselTapBound), this.el.removeEventListener("touchmove", this._handleCarouselDragBound), this.el.removeEventListener("touchend", this._handleCarouselReleaseBound)), this.el.removeEventListener("mousedown", this._handleCarouselTapBound), this.el.removeEventListener("mousemove", this._handleCarouselDragBound), this.el.removeEventListener("mouseup", this._handleCarouselReleaseBound), this.el.removeEventListener("mouseleave", this._handleCarouselReleaseBound), this.el.removeEventListener("click", this._handleCarouselClickBound), this.showIndicators && this.$indicators && this.$indicators.find(".indicator-item").each(function(t11, e26) {
+                    (void 0) !== window.ontouchstart && (this.el.removeEventListener("touchstart", this._handleCarouselTapBound), this.el.removeEventListener("touchmove", this._handleCarouselDragBound), this.el.removeEventListener("touchend", this._handleCarouselReleaseBound)), this.el.removeEventListener("mousedown", this._handleCarouselTapBound), this.el.removeEventListener("mousemove", this._handleCarouselDragBound), this.el.removeEventListener("mouseup", this._handleCarouselReleaseBound), this.el.removeEventListener("mouseleave", this._handleCarouselReleaseBound), this.el.removeEventListener("click", this._handleCarouselClickBound), this.showIndicators && this.$indicators && this.$indicators.find(".indicator-item").each(function(t11, e25) {
                         t11.removeEventListener("click", i28._handleIndicatorClickBound);
                     }), window.removeEventListener("resize", this._handleThrottledResizeBound);
                 }
@@ -5832,9 +5826,9 @@ M.anime = (function() {
             {
                 key: "_handleCarouselDrag",
                 value: function(t11) {
-                    var e26 = void 0, i28 = void 0, n26 = void 0;
+                    var e25 = void 0, i28 = void 0, n26 = void 0;
                     if (this.pressed) {
-                        if (e26 = this._xpos(t11), i28 = this._ypos(t11), n26 = this.reference - e26, Math.abs(this.referenceY - i28) < 30 && !this.verticalDragged) (2 < n26 || n26 < -2) && (this.dragged = true, this.reference = e26, this._scroll(this.offset + n26));
+                        if (e25 = this._xpos(t11), i28 = this._ypos(t11), n26 = this.reference - e25, Math.abs(this.referenceY - i28) < 30 && !this.verticalDragged) (2 < n26 || n26 < -2) && (this.dragged = true, this.reference = e25, this._scroll(this.offset + n26));
                         else {
                             if (this.dragged) return t11.preventDefault(), t11.stopPropagation(), false;
                             this.verticalDragged = true;
@@ -5854,8 +5848,8 @@ M.anime = (function() {
                 value: function(t11) {
                     if (this.dragged) return t11.preventDefault(), t11.stopPropagation(), false;
                     if (!this.options.fullWidth) {
-                        var e26 = b(t11.target).closest(".carousel-item").index();
-                        0 !== this._wrap(this.center) - e26 && (t11.preventDefault(), t11.stopPropagation()), this._cycleTo(e26);
+                        var e25 = b(t11.target).closest(".carousel-item").index();
+                        0 !== this._wrap(this.center) - e25 && (t11.preventDefault(), t11.stopPropagation()), this._cycleTo(e25);
                     }
                 }
             },
@@ -5863,8 +5857,8 @@ M.anime = (function() {
                 key: "_handleIndicatorClick",
                 value: function(t11) {
                     t11.stopPropagation();
-                    var e27 = b(t11.target).closest(".indicator-item");
-                    e27.length && this._cycleTo(e27.index());
+                    var e26 = b(t11.target).closest(".indicator-item");
+                    e26.length && this._cycleTo(e26.index());
                 }
             },
             {
@@ -5876,7 +5870,7 @@ M.anime = (function() {
             {
                 key: "_setCarouselHeight",
                 value: function(t11) {
-                    var i28 = this, e27 = this.$el.find(".carousel-item.active").length ? this.$el.find(".carousel-item.active").first() : this.$el.find(".carousel-item").first(), n26 = e27.find("img").first();
+                    var i28 = this, e26 = this.$el.find(".carousel-item.active").length ? this.$el.find(".carousel-item.active").first() : this.$el.find(".carousel-item").first(), n26 = e26.find("img").first();
                     if (n26.length) {
                         if (n26[0].complete) {
                             var s19 = n26.height();
@@ -5885,11 +5879,11 @@ M.anime = (function() {
                                 var o13 = n26[0].naturalWidth, a11 = n26[0].naturalHeight, r10 = this.$el.width() / o13 * a11;
                                 this.$el.css("height", r10 + "px");
                             }
-                        } else n26.one("load", function(t12, e28) {
+                        } else n26.one("load", function(t12, e27) {
                             i28.$el.css("height", t12.offsetHeight + "px");
                         });
                     } else if (!t11) {
-                        var l10 = e27.height();
+                        var l10 = e26.height();
                         this.$el.css("height", l10 + "px");
                     }
                 }
@@ -5915,23 +5909,23 @@ M.anime = (function() {
             {
                 key: "_track",
                 value: function() {
-                    var t11, e27, i28, n26;
-                    e27 = (t11 = Date.now()) - this.timestamp, this.timestamp = t11, i28 = this.offset - this.frame, this.frame = this.offset, n26 = 1000 * i28 / (1 + e27), this.velocity = 0.8 * n26 + 0.2 * this.velocity;
+                    var t11, e26, i28, n26;
+                    e26 = (t11 = Date.now()) - this.timestamp, this.timestamp = t11, i28 = this.offset - this.frame, this.frame = this.offset, n26 = 1000 * i28 / (1 + e26), this.velocity = 0.8 * n26 + 0.2 * this.velocity;
                 }
             },
             {
                 key: "_autoScroll",
                 value: function() {
-                    var t11 = void 0, e27 = void 0;
-                    this.amplitude && (t11 = Date.now() - this.timestamp, 2 < (e27 = this.amplitude * Math.exp(-t11 / this.options.duration)) || e27 < -2 ? (this._scroll(this.target - e27), requestAnimationFrame(this._autoScrollBound)) : this._scroll(this.target));
+                    var t11 = void 0, e26 = void 0;
+                    this.amplitude && (t11 = Date.now() - this.timestamp, 2 < (e26 = this.amplitude * Math.exp(-t11 / this.options.duration)) || e26 < -2 ? (this._scroll(this.target - e26), requestAnimationFrame(this._autoScrollBound)) : this._scroll(this.target));
                 }
             },
             {
                 key: "_scroll",
                 value: function(t11) {
-                    var e27 = this;
+                    var e26 = this;
                     this.$el.hasClass("scrolling") || this.el.classList.add("scrolling"), null != this.scrollingTimeout && window.clearTimeout(this.scrollingTimeout), this.scrollingTimeout = window.setTimeout(function() {
-                        e27.$el.removeClass("scrolling");
+                        e26.$el.removeClass("scrolling");
                     }, this.options.duration);
                     var i28, n26, s20, o14, a12 = void 0, r13 = void 0, l12 = void 0, h7 = void 0, d5 = void 0, u4 = void 0, c1 = this.center, p2 = 1 / this.options.numVisible;
                     if (this.offset = "number" == typeof t11 ? t11 : this.offset, this.center = Math.floor((this.offset + this.dim / 2) / this.dim), o14 = -(s20 = (n26 = this.offset - this.center * this.dim) < 0 ? 1 : -1) * n26 * 2 / this.dim, i28 = this.count >> 1, this.options.fullWidth ? (l12 = "translateX(0)", u4 = 1) : (l12 = "translateX(" + (this.el.clientWidth - this.itemWidth) / 2 + "px) ", l12 += "translateY(" + (this.el.clientHeight - this.itemHeight) / 2 + "px)", u4 = 1 - p2 * o14), this.showIndicators) {
@@ -5966,56 +5960,56 @@ M.anime = (function() {
             },
             {
                 key: "_updateItemStyle",
-                value: function(t11, e27, i28, n26) {
-                    t11.style[this.xform] = n26, t11.style.zIndex = i28, t11.style.opacity = e27, t11.style.visibility = "visible";
+                value: function(t11, e26, i28, n26) {
+                    t11.style[this.xform] = n26, t11.style.zIndex = i28, t11.style.opacity = e26, t11.style.visibility = "visible";
                 }
             },
             {
                 key: "_cycleTo",
-                value: function(t11, e27) {
+                value: function(t11, e26) {
                     var i28 = this.center % this.count - t11;
-                    this.noWrap || (i28 < 0 ? Math.abs(i28 + this.count) < Math.abs(i28) && (i28 += this.count) : 0 < i28 && Math.abs(i28 - this.count) < i28 && (i28 -= this.count)), this.target = this.dim * Math.round(this.offset / this.dim), i28 < 0 ? this.target += this.dim * Math.abs(i28) : 0 < i28 && (this.target -= this.dim * i28), "function" == typeof e27 && (this.oneTimeCallback = e27), this.offset !== this.target && (this.amplitude = this.target - this.offset, this.timestamp = Date.now(), requestAnimationFrame(this._autoScrollBound));
+                    this.noWrap || (i28 < 0 ? Math.abs(i28 + this.count) < Math.abs(i28) && (i28 += this.count) : 0 < i28 && Math.abs(i28 - this.count) < i28 && (i28 -= this.count)), this.target = this.dim * Math.round(this.offset / this.dim), i28 < 0 ? this.target += this.dim * Math.abs(i28) : 0 < i28 && (this.target -= this.dim * i28), "function" == typeof e26 && (this.oneTimeCallback = e26), this.offset !== this.target && (this.amplitude = this.target - this.offset, this.timestamp = Date.now(), requestAnimationFrame(this._autoScrollBound));
                 }
             },
             {
                 key: "next",
                 value: function(t11) {
                     ((void 0) === t11 || isNaN(t11)) && (t11 = 1);
-                    var e27 = this.center + t11;
-                    if (e27 >= this.count || e27 < 0) {
+                    var e26 = this.center + t11;
+                    if (e26 >= this.count || e26 < 0) {
                         if (this.noWrap) return;
-                        e27 = this._wrap(e27);
+                        e26 = this._wrap(e26);
                     }
-                    this._cycleTo(e27);
+                    this._cycleTo(e26);
                 }
             },
             {
                 key: "prev",
                 value: function(t11) {
                     ((void 0) === t11 || isNaN(t11)) && (t11 = 1);
-                    var e27 = this.center - t11;
-                    if (e27 >= this.count || e27 < 0) {
+                    var e26 = this.center - t11;
+                    if (e26 >= this.count || e26 < 0) {
                         if (this.noWrap) return;
-                        e27 = this._wrap(e27);
+                        e26 = this._wrap(e26);
                     }
-                    this._cycleTo(e27);
+                    this._cycleTo(e26);
                 }
             },
             {
                 key: "set",
-                value: function(t11, e27) {
+                value: function(t11, e26) {
                     if (((void 0) === t11 || isNaN(t11)) && (t11 = 0), t11 > this.count || t11 < 0) {
                         if (this.noWrap) return;
                         t11 = this._wrap(t11);
                     }
-                    this._cycleTo(t11, e27);
+                    this._cycleTo(t11, e26);
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t11, e27) {
-                    return _get(i26.__proto__ || Object.getPrototypeOf(i26), "init", this).call(this, this, t11, e27);
+                value: function(t11, e26) {
+                    return _get(i26.__proto__ || Object.getPrototypeOf(i26), "init", this).call(this, this, t11, e26);
                 }
             },
             {
@@ -6027,7 +6021,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), i26;
@@ -6035,15 +6029,15 @@ M.anime = (function() {
     M.Carousel = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "carousel", "M_Carousel");
 })(cash), (function(S) {
     "use strict";
-    var e18 = {
+    var e17 = {
         onOpen: void 0,
         onClose: void 0
     }, t7 = function(t9) {
-        function n26(t11, e27) {
+        function n26(t11, e26) {
             _classCallCheck(this, n26);
-            var i26 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t11, e27));
+            var i26 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t11, e26));
             return (i26.el.M_TapTarget = i26).options = S.extend({
-            }, n26.defaults, e27), i26.isOpen = false, i26.$origin = S("#" + i26.$el.attr("data-target")), i26._setup(), i26._calculatePositioning(), i26._setupEventHandlers(), i26;
+            }, n26.defaults, e26), i26.isOpen = false, i26.$origin = S("#" + i26.$el.attr("data-target")), i26._setup(), i26._calculatePositioning(), i26._setupEventHandlers(), i26;
         }
         return _inherits(n26, Component), _createClass(n26, [
             {
@@ -6100,7 +6094,7 @@ M.anime = (function() {
                 key: "_calculatePositioning",
                 value: function() {
                     var t11 = "fixed" === this.$origin.css("position");
-                    if (!t11) for(var e27 = this.$origin.parents(), i26 = 0; i26 < e27.length && !(t11 = "fixed" == S(e27[i26]).css("position")); i26++);
+                    if (!t11) for(var e26 = this.$origin.parents(), i26 = 0; i26 < e26.length && !(t11 = "fixed" == S(e26[i26]).css("position")); i26++);
                     var n27 = this.$origin.outerWidth(), s20 = this.$origin.outerHeight(), o14 = t11 ? this.$origin.offset().top - M.getDocumentScrollTop() : this.$origin.offset().top, a12 = t11 ? this.$origin.offset().left - M.getDocumentScrollLeft() : this.$origin.offset().left, r13 = window.innerWidth, l12 = window.innerHeight, h7 = r13 / 2, d5 = l12 / 2, u4 = a12 <= h7, c1 = h7 < a12, p2 = o14 <= d5, v3 = d5 < o14, f3 = 0.25 * r13 <= a12 && a12 <= 0.75 * r13, m = this.$el.outerWidth(), g = this.$el.outerHeight(), _ = o14 + s20 / 2 - g / 2, y = a12 + n27 / 2 - m / 2, k = t11 ? "fixed" : "absolute", b = f3 ? m : m / 2 + n27, w = g / 2, C = p2 ? g / 2 : 0, E = u4 && !f3 ? m / 2 - n27 : 0, O = n27, x = v3 ? "bottom" : "top", L = 2 * n27, T = L, $ = g / 2 - T / 2, B = m / 2 - L / 2, D = {
                     };
                     D.top = p2 ? _ + "px" : "", D.right = c1 ? r13 - y - m + "px" : "", D.bottom = v3 ? l12 - _ - g + "px" : "", D.left = u4 ? y + "px" : "", D.position = k, S(this.wrapper).css(D), S(this.contentEl).css({
@@ -6135,8 +6129,8 @@ M.anime = (function() {
         ], [
             {
                 key: "init",
-                value: function(t11, e27) {
-                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t11, e27);
+                value: function(t11, e26) {
+                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t11, e26);
                 }
             },
             {
@@ -6148,7 +6142,7 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), n26;
@@ -6156,16 +6150,16 @@ M.anime = (function() {
     M.TapTarget = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "tapTarget", "M_TapTarget");
 })(cash), (function(d5) {
     "use strict";
-    var e18 = {
+    var e17 = {
         classes: "",
         dropdownOptions: {
         }
     }, t7 = function(t9) {
-        function n26(t11, e27) {
+        function n26(t11, e26) {
             _classCallCheck(this, n26);
-            var i26 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t11, e27));
+            var i26 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t11, e26));
             return i26.$el.hasClass("browser-default") ? _possibleConstructorReturn(i26) : ((i26.el.M_FormSelect = i26).options = d5.extend({
-            }, n26.defaults, e27), i26.isMultiple = i26.$el.prop("multiple"), i26.el.tabIndex = -1, i26._keysSelected = {
+            }, n26.defaults, e26), i26.isMultiple = i26.$el.prop("multiple"), i26.el.tabIndex = -1, i26._keysSelected = {
             }, i26._valueDict = {
             }, i26._setupDropdown(), i26._setupEventHandlers(), i26);
         }
@@ -6179,18 +6173,18 @@ M.anime = (function() {
             {
                 key: "_setupEventHandlers",
                 value: function() {
-                    var e27 = this;
+                    var e26 = this;
                     this._handleSelectChangeBound = this._handleSelectChange.bind(this), this._handleOptionClickBound = this._handleOptionClick.bind(this), this._handleInputClickBound = this._handleInputClick.bind(this), d5(this.dropdownOptions).find("li:not(.optgroup)").each(function(t11) {
-                        t11.addEventListener("click", e27._handleOptionClickBound);
+                        t11.addEventListener("click", e26._handleOptionClickBound);
                     }), this.el.addEventListener("change", this._handleSelectChangeBound), this.input.addEventListener("click", this._handleInputClickBound);
                 }
             },
             {
                 key: "_removeEventHandlers",
                 value: function() {
-                    var e27 = this;
+                    var e26 = this;
                     d5(this.dropdownOptions).find("li:not(.optgroup)").each(function(t11) {
-                        t11.removeEventListener("click", e27._handleOptionClickBound);
+                        t11.removeEventListener("click", e26._handleOptionClickBound);
                     }), this.el.removeEventListener("change", this._handleSelectChangeBound), this.input.removeEventListener("click", this._handleInputClickBound);
                 }
             },
@@ -6204,13 +6198,13 @@ M.anime = (function() {
                 key: "_handleOptionClick",
                 value: function(t11) {
                     t11.preventDefault();
-                    var e27 = d5(t11.target).closest("li")[0], i26 = e27.id;
-                    if (!d5(e27).hasClass("disabled") && !d5(e27).hasClass("optgroup") && i26.length) {
+                    var e26 = d5(t11.target).closest("li")[0], i26 = e26.id;
+                    if (!d5(e26).hasClass("disabled") && !d5(e26).hasClass("optgroup") && i26.length) {
                         var n27 = true;
                         if (this.isMultiple) {
                             var s20 = d5(this.dropdownOptions).find("li.disabled.selected");
                             s20.length && (s20.removeClass("selected"), s20.find('input[type="checkbox"]').prop("checked", false), this._toggleEntryFromArray(s20[0].id)), n27 = this._toggleEntryFromArray(i26);
-                        } else d5(this.dropdownOptions).find("li").removeClass("selected"), d5(e27).toggleClass("selected", n27);
+                        } else d5(this.dropdownOptions).find("li").removeClass("selected"), d5(e26).toggleClass("selected", n27);
                         d5(this._valueDict[i26].el).prop("selected") !== n27 && (d5(this._valueDict[i26].el).prop("selected", n27), this.$el.trigger("change"));
                     }
                     t11.stopPropagation();
@@ -6228,37 +6222,37 @@ M.anime = (function() {
                     var n28 = this;
                     this.wrapper = document.createElement("div"), d5(this.wrapper).addClass("select-wrapper " + this.options.classes), this.$el.before(d5(this.wrapper)), this.wrapper.appendChild(this.el), this.el.disabled && this.wrapper.classList.add("disabled"), this.$selectOptions = this.$el.children("option, optgroup"), this.dropdownOptions = document.createElement("ul"), this.dropdownOptions.id = "select-options-" + M.guid(), d5(this.dropdownOptions).addClass("dropdown-content select-dropdown " + (this.isMultiple ? "multiple-select-dropdown" : "")), this.$selectOptions.length && this.$selectOptions.each(function(t11) {
                         if (d5(t11).is("option")) {
-                            var e27 = void 0;
-                            e27 = n28.isMultiple ? n28._appendOptionWithIcon(n28.$el, t11, "multiple") : n28._appendOptionWithIcon(n28.$el, t11), n28._addOptionToValueDict(t11, e27);
+                            var e26 = void 0;
+                            e26 = n28.isMultiple ? n28._appendOptionWithIcon(n28.$el, t11, "multiple") : n28._appendOptionWithIcon(n28.$el, t11), n28._addOptionToValueDict(t11, e26);
                         } else if (d5(t11).is("optgroup")) {
                             var i26 = d5(t11).children("option");
                             d5(n28.dropdownOptions).append(d5('<li class="optgroup"><span>' + t11.getAttribute("label") + "</span></li>")[0]), i26.each(function(t12) {
-                                var e28 = n28._appendOptionWithIcon(n28.$el, t12, "optgroup-option");
-                                n28._addOptionToValueDict(t12, e28);
+                                var e27 = n28._appendOptionWithIcon(n28.$el, t12, "optgroup-option");
+                                n28._addOptionToValueDict(t12, e27);
                             });
                         }
                     }), this.$el.after(this.dropdownOptions), this.input = document.createElement("input"), d5(this.input).addClass("select-dropdown dropdown-trigger"), this.input.setAttribute("type", "text"), this.input.setAttribute("readonly", "true"), this.input.setAttribute("data-target", this.dropdownOptions.id), this.el.disabled && d5(this.input).prop("disabled", "true"), this.$el.before(this.input), this._setValueToInput();
                     var t11 = d5('<svg class="caret" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
                     if (this.$el.before(t11[0]), !this.el.disabled) {
-                        var e28 = d5.extend({
+                        var e27 = d5.extend({
                         }, this.options.dropdownOptions);
-                        e28.onOpenEnd = function(t12) {
-                            var e29 = d5(n28.dropdownOptions).find(".selected").first();
-                            if (n28.dropdown.isScrollable && e29.length) {
-                                var i28 = e29[0].getBoundingClientRect().top - n28.dropdownOptions.getBoundingClientRect().top;
+                        e27.onOpenEnd = function(t12) {
+                            var e28 = d5(n28.dropdownOptions).find(".selected").first();
+                            if (e28.length && (M.keyDown = true, n28.dropdown.focusedIndex = e28.index(), n28.dropdown._focusFocusedItem(), M.keyDown = false, n28.dropdown.isScrollable)) {
+                                var i28 = e28[0].getBoundingClientRect().top - n28.dropdownOptions.getBoundingClientRect().top;
                                 i28 -= n28.dropdownOptions.clientHeight / 2, n28.dropdownOptions.scrollTop = i28;
                             }
-                        }, this.isMultiple && (e28.closeOnClick = false), this.dropdown = M.Dropdown.init(this.input, e28);
+                        }, this.isMultiple && (e27.closeOnClick = false), this.dropdown = M.Dropdown.init(this.input, e27);
                     }
                     this._setSelectedStates();
                 }
             },
             {
                 key: "_addOptionToValueDict",
-                value: function(t11, e29) {
+                value: function(t11, e28) {
                     var i29 = Object.keys(this._valueDict).length, n28 = this.dropdownOptions.id + i29, s21 = {
                     };
-                    e29.id = n28, s21.el = t11, s21.optionEl = e29, this._valueDict[n28] = s21;
+                    e28.id = n28, s21.el = t11, s21.optionEl = e28, this._valueDict[n28] = s21;
                 }
             },
             {
@@ -6269,10 +6263,10 @@ M.anime = (function() {
             },
             {
                 key: "_appendOptionWithIcon",
-                value: function(t11, e29, i29) {
-                    var n28 = e29.disabled ? "disabled " : "", s21 = "optgroup-option" === i29 ? "optgroup-option " : "", o14 = this.isMultiple ? '<label><input type="checkbox"' + n28 + '"/><span>' + e29.innerHTML + "</span></label>" : e29.innerHTML, a12 = d5("<li></li>"), r13 = d5("<span></span>");
+                value: function(t11, e28, i29) {
+                    var n28 = e28.disabled ? "disabled " : "", s21 = "optgroup-option" === i29 ? "optgroup-option " : "", o14 = this.isMultiple ? '<label><input type="checkbox"' + n28 + '"/><span>' + e28.innerHTML + "</span></label>" : e28.innerHTML, a12 = d5("<li></li>"), r13 = d5("<span></span>");
                     r13.html(o14), a12.addClass(n28 + " " + s21), a12.append(r13);
-                    var l12 = e29.getAttribute("data-icon");
+                    var l12 = e28.getAttribute("data-icon");
                     if (l12) {
                         var h7 = d5('<img alt="" src="' + l12 + '">');
                         a12.prepend(h7);
@@ -6283,8 +6277,8 @@ M.anime = (function() {
             {
                 key: "_toggleEntryFromArray",
                 value: function(t11) {
-                    var e29 = !this._keysSelected.hasOwnProperty(t11), i29 = d5(this._valueDict[t11].optionEl);
-                    return e29 ? this._keysSelected[t11] = true : delete this._keysSelected[t11], i29.toggleClass("selected", e29), i29.find('input[type="checkbox"]').prop("checked", e29), i29.prop("selected", e29), e29;
+                    var e28 = !this._keysSelected.hasOwnProperty(t11), i29 = d5(this._valueDict[t11].optionEl);
+                    return e28 ? this._keysSelected[t11] = true : delete this._keysSelected[t11], i29.toggleClass("selected", e28), i29.find('input[type="checkbox"]').prop("checked", e28), i29.prop("selected", e28), e28;
                 }
             },
             {
@@ -6293,8 +6287,8 @@ M.anime = (function() {
                     var i29 = [];
                     if (this.$el.find("option").each(function(t11) {
                         if (d5(t11).prop("selected")) {
-                            var e29 = d5(t11).text();
-                            i29.push(e29);
+                            var e28 = d5(t11).text();
+                            i29.push(e28);
                         }
                     }), !i29.length) {
                         var t11 = this.$el.find("option:disabled").eq(0);
@@ -6308,30 +6302,30 @@ M.anime = (function() {
                 value: function() {
                     for(var t12 in this._keysSelected = {
                     }, this._valueDict){
-                        var e30 = this._valueDict[t12], i29 = d5(e30.el).prop("selected");
-                        d5(e30.optionEl).find('input[type="checkbox"]').prop("checked", i29), i29 ? (this._activateOption(d5(this.dropdownOptions), d5(e30.optionEl)), this._keysSelected[t12] = true) : d5(e30.optionEl).removeClass("selected");
+                        var e29 = this._valueDict[t12], i29 = d5(e29.el).prop("selected");
+                        d5(e29.optionEl).find('input[type="checkbox"]').prop("checked", i29), i29 ? (this._activateOption(d5(this.dropdownOptions), d5(e29.optionEl)), this._keysSelected[t12] = true) : d5(e29.optionEl).removeClass("selected");
                     }
                 }
             },
             {
                 key: "_activateOption",
-                value: function(t12, e31) {
-                    e31 && (this.isMultiple || t12.find("li.selected").removeClass("selected"), d5(e31).addClass("selected"));
+                value: function(t12, e30) {
+                    e30 && (this.isMultiple || t12.find("li.selected").removeClass("selected"), d5(e30).addClass("selected"));
                 }
             },
             {
                 key: "getSelectedValues",
                 value: function() {
                     var t12 = [];
-                    for(var e31 in this._keysSelected)t12.push(this._valueDict[e31].el.value);
+                    for(var e30 in this._keysSelected)t12.push(this._valueDict[e30].el.value);
                     return t12;
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t12, e31) {
-                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t12, e31);
+                value: function(t12, e30) {
+                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t12, e30);
                 }
             },
             {
@@ -6343,21 +6337,21 @@ M.anime = (function() {
             {
                 key: "defaults",
                 get: function() {
-                    return e18;
+                    return e17;
                 }
             }
         ]), n26;
     }();
     M.FormSelect = t7, M.jQueryLoaded && M.initializeJqueryWrapper(t7, "formSelect", "M_FormSelect");
-})(cash), (function(s21, e18) {
+})(cash), (function(s21, e17) {
     "use strict";
     var i30 = {
     }, t7 = function(t9) {
-        function n26(t12, e31) {
+        function n26(t12, e30) {
             _classCallCheck(this, n26);
-            var i31 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t12, e31));
+            var i31 = _possibleConstructorReturn(this, (n26.__proto__ || Object.getPrototypeOf(n26)).call(this, n26, t12, e30));
             return (i31.el.M_Range = i31).options = s21.extend({
-            }, n26.defaults, e31), i31._mousedown = false, i31._setupThumb(), i31._setupEventHandlers(), i31;
+            }, n26.defaults, e30), i31._mousedown = false, i31._setupThumb(), i31._setupEventHandlers(), i31;
         }
         return _inherits(n26, Component), _createClass(n26, [
             {
@@ -6390,8 +6384,8 @@ M.anime = (function() {
                 key: "_handleRangeMousedownTouchstart",
                 value: function(t12) {
                     if (s21(this.value).html(this.$el.val()), this._mousedown = true, this.$el.addClass("active"), s21(this.thumb).hasClass("active") || this._showRangeBubble(), "input" !== t12.type) {
-                        var e31 = this._calcRangeOffset();
-                        s21(this.thumb).addClass("active").css("left", e31 + "px");
+                        var e30 = this._calcRangeOffset();
+                        s21(this.thumb).addClass("active").css("left", e30 + "px");
                     }
                 }
             },
@@ -6416,7 +6410,7 @@ M.anime = (function() {
                 value: function() {
                     if (!this._mousedown) {
                         var t13 = 7 + parseInt(this.$el.css("padding-left")) + "px";
-                        s21(this.thumb).hasClass("active") && (e18.remove(this.thumb), e18({
+                        s21(this.thumb).hasClass("active") && (e17.remove(this.thumb), e17({
                             targets: this.thumb,
                             height: 0,
                             width: 0,
@@ -6444,7 +6438,7 @@ M.anime = (function() {
                 key: "_showRangeBubble",
                 value: function() {
                     var t14 = -7 + parseInt(s21(this.thumb).parent().css("padding-left")) + "px";
-                    e18.remove(this.thumb), e18({
+                    e17.remove(this.thumb), e17({
                         targets: this.thumb,
                         height: 30,
                         width: 30,
@@ -6458,15 +6452,15 @@ M.anime = (function() {
             {
                 key: "_calcRangeOffset",
                 value: function() {
-                    var t14 = this.$el.width() - 15, e32 = parseFloat(this.$el.attr("max")) || 100, i31 = parseFloat(this.$el.attr("min")) || 0;
-                    return (parseFloat(this.$el.val()) - i31) / (e32 - i31) * t14;
+                    var t14 = this.$el.width() - 15, e31 = parseFloat(this.$el.attr("max")) || 100, i31 = parseFloat(this.$el.attr("min")) || 0;
+                    return (parseFloat(this.$el.val()) - i31) / (e31 - i31) * t14;
                 }
             }
         ], [
             {
                 key: "init",
-                value: function(t14, e32) {
-                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t14, e32);
+                value: function(t14, e31) {
+                    return _get(n26.__proto__ || Object.getPrototypeOf(n26), "init", this).call(this, this, t14, e31);
                 }
             },
             {

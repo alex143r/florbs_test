@@ -163,8 +163,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel *.html",
-    "build": "parcel build *.html --public-url ./"
+    "start": "parcel *.html ",
+    "build": "parcel build *.html"
   },
   "repository": {
     "type": "git",
